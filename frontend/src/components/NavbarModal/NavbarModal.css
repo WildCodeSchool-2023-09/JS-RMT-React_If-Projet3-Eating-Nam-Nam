@@ -24,16 +24,8 @@
     text-decoration: none;
     font-size: 17px;
   }
+}
 
-  .nav-menu-modal a.active:after {
-    content: "";
-    overflow: hidden;
-    position: fixed;
-    border: 2px solid #fe0a3d;
-    border-radius: 10px;
-    padding: 22px 75px;
-    bottom: 0;
-    transform: translateX(-67%);
-    pointer-events: none;
-  }
+path:active {
+  fill: #f18a3d;
 }

@@ -21,6 +21,7 @@
 .nav-log {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .nav-log a {
   color: #2e2e2e;
@@ -30,14 +31,6 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
-
-/* HOVER */
-
-.nav-menu a:hover,
-.nav-log a:hover {
-  color: #fe8a1b;
-  transition: background-color 0.9s ease-in-out;
 }
 
 @media screen and (max-width: 1200px) {
@@ -69,4 +62,37 @@
   .nav-logo2 {
     display: none;
   }
+}
+
+.nav-menu a.active:after,
+.nav-log a.active:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fe8a1b;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.nav-menu a::after,
+.nav-log a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fe8a1b;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-menu a:hover::after,
+.nav-log a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
