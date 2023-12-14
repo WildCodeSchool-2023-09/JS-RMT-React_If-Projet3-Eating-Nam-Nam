@@ -1,0 +1,39 @@
+@media screen and (min-width: 1200px) {
+  .nav-menu-modal {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav-menu-modal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .nav-menu-modal a {
+    color: #2e2e2e;
+    overflow: hidden;
+    font-weight: 500;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav-menu-modal a.active:after {
+    content: "";
+    overflow: hidden;
+    position: fixed;
+    border: 2px solid #fe0a3d;
+    border-radius: 10px;
+    padding: 22px 75px;
+    bottom: 0;
+    transform: translateX(-67%);
+    pointer-events: none;
+  }
+}
