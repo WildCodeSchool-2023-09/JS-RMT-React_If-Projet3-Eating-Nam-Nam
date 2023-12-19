@@ -59,7 +59,6 @@ const seed = async () => {
       queries.push(database.query(user[i]));
     }
 
-
     // Wait for all the insertion queries to complete
     await Promise.all(queries);
 
