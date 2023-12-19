@@ -54,7 +54,6 @@ const seed = async () => {
     for (let i = 0; i < auth.length; i += 1) {
       queries.push(database.query(auth[i]));
     }
-    
     for (let i = 0; i < user.length; i += 1) {
       queries.push(database.query(user[i]));
     }
