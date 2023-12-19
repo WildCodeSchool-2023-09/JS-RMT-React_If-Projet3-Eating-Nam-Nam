@@ -9,7 +9,7 @@ create table auth (
   id int primary key auto_increment not null,
   mail VARCHAR(255) not null,
   password VARCHAR(255) not null,
-  isadmin BOOLEAN
+  is_admin BOOLEAN DEFAULT false
 );
 
 
@@ -20,8 +20,8 @@ create table user (
   picture VARCHAR(255) not null,
   regime_id int not null,
   auth_id int not null,
-  date_created DATE,
-  date_update DATE,
+  date_created TIMESTAMP,
+  date_update TIMESTAMP,
   Foreign Key (regime_id) REFERENCES regime(id),
   Foreign Key (auth_id) REFERENCES auth(id)
 );
