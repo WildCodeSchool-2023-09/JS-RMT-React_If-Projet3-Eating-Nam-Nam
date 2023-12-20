@@ -2,12 +2,12 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 import profile from "../../assets/logo-profile.svg";
-import "./NavbarModal.css";
+import "./NavbarMobile.css";
 
-function NavbarModal() {
+function NavbarMobile() {
   return (
     <div>
-      <nav className="nav-menu-modal">
+      <nav className="nav-menu-mobile">
         <NavLink to="/recipes">
           <svg
             width="50px"
@@ -48,4 +48,4 @@ function NavbarModal() {
   );
 }
 
-export default NavbarModal;
+export default NavbarMobile;

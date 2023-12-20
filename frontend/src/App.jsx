@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
-import NavbarModal from "./components/NavbarModal/NavbarModal";
+import NavbarMobile from "./components/NavbarMobile/NavbarMobile";
 
 import "../index.css";
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <NavbarModal />
+      <NavbarMobile />
       <Outlet />
     </>
   );
