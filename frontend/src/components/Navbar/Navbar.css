@@ -1,4 +1,5 @@
 .nav {
+  z-index: 100;
   display: grid;
   width: 100%;
   top: 0;
