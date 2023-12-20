@@ -1,9 +1,11 @@
 import React from "react";
-import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+
 import mainLogoName from "../../assets/logo-ENN-name-hor.svg";
 import mainLogoName2 from "../../assets/logo-ENN-name-ver.svg";
 import profile from "../../assets/logo-profile.svg";
+
+import "./Navbar.css";
 
 function NavBar() {
   return (
@@ -18,7 +20,7 @@ function NavBar() {
         <NavLink to="/about">About ENN</NavLink>
       </nav>
       <nav className="nav-log">
-        <NavLink to="login">Log In</NavLink>
+        <NavLink to="/login">Log In</NavLink>
         <NavLink to="/signup">Sign Up</NavLink>
         <img src={profile} className="profile-logo" alt="profile_logo" />
       </nav>

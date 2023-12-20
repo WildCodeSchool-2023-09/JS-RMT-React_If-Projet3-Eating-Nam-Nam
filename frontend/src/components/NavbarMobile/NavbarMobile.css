@@ -1,10 +1,10 @@
 @media screen and (min-width: 1200px) {
-  .nav-menu-modal {
+  .nav-menu-mobile {
     display: none;
   }
 }
 @media screen and (max-width: 1200px) {
-  .nav-menu-modal {
+  .nav-menu-mobile {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -16,7 +16,7 @@
     bottom: 0;
   }
 
-  .nav-menu-modal a {
+  .nav-menu-mobile a {
     color: #2e2e2e;
     overflow: hidden;
     font-weight: 500;
