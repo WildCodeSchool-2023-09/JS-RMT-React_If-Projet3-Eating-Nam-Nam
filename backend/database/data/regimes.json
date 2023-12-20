@@ -1,0 +1,21 @@
+[
+  { "name": "Flexitarien", "description": " Mange de tout" },
+  { "name": "Végétarien", "description": " Ne mange ni poisson" },
+  {
+    "name": "Cétogène",
+    "description": " Privilégie uniquement les aliments à haute teneur en gras saturé"
+  },
+  { "name": "Végétalien", "description": " Ne mange ni viande" },
+  {
+    "name": "Végan",
+    "description": " Ne consomme aucun aliment ou produit en lien avec un animal"
+  },
+  {
+    "name": "Sans gluten",
+    "description": " Ne peut pas consommer de gluten pour des raisons de santé"
+  },
+  {
+    "name": "Sans lactose",
+    "description": " Ne peut pas consommer de produits laitiers"
+  }
+]

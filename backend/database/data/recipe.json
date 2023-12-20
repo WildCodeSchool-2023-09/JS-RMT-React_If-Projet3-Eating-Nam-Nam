@@ -1,0 +1,400 @@
+[
+  {
+    "picture": "fakepicture.jpg",
+    "section": "starter, dish",
+    "recipe": "Butternut cream soup with cinnamon",
+    "ingredients": [
+      "pepper",
+      "butter",
+      "fresh cream",
+      "cube broth",
+      "onion",
+      "butternut",
+      "cinnamon "
+    ],
+    "preparationTime": 15,
+    "cookingTime": 30,
+    "regime": "Vegetarian, Flexitarian ",
+    "difficulty": "easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "dessert",
+    "recipe": "Chocolate Rochers",
+    "ingredients": [
+      "dark chocolate",
+      "milk chocolate",
+      "butter",
+      "vanilla sugar",
+      "almond sticks"
+    ],
+    "preparationTime": 20,
+    "cookingTime": "Chill: approx. 1 h",
+    "regime": "Vétarisme ",
+    "difficulty": "medium",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "stater, dish",
+    "recipe": "Mushrooms with scrambled eggs",
+    "ingredients": [
+      "giant button mushrooms",
+      "salt",
+      "egg",
+      "milk",
+      "chives",
+      "nutmeg",
+      "pepper",
+      "country bacon"
+    ],
+    "prepareTime": 18,
+    "cookingTime": 12,
+    "diet": "Flexitarian, Lactose Free",
+    "difficulty": "difficulty",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "starter, dish",
+    "recipe": "Corn salad",
+    "ingredients": [
+      "lime",
+      "rapeseed oil",
+      "half sour cream",
+      "salt",
+      "pepper",
+      "corn kernels",
+      "red pepper",
+      "coriander"
+    ],
+    "preparationTime": 15,
+    "cookingTime": 0,
+    "diet": "Veterinarianism, lactose-free,",
+    "difficulty": "easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "starter, dish",
+    "recipe": "Pumpkin slices",
+    "ingredients": [
+      "pumpkin",
+      "olive oil",
+      "rosemary",
+      "ground almonds",
+      "grated sbrinz",
+      "sugar",
+      "salt",
+      "pepper"
+    ],
+    "preparationTime": 15,
+    "cookingTime": 20,
+    "diet": "Veterinarianism, Vegetarianism, lactose-free",
+    "difficulty": "medium",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "dessert",
+    "recipe": "Strawberry yogurt",
+    "ingredients": [
+      "strawberry",
+      "natural yogurt",
+      "vanilla powder",
+      "liquid honey",
+      "natural pistachios"
+    ],
+    "preparationTime": 10,
+    "cookingTime": 0,
+    "diet": ["Veterinarianism", "lactose-free"],
+    "difficulty": "easy",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dessert",
+    "recipe": "Apple pie",
+    "ingredients": [
+      "semi-white flour",
+      "salt",
+      "sugar",
+      "butter",
+      "water",
+      "apples",
+      "icing sugar"
+    ],
+    "preparationTime": 30,
+    "cookingTime": 20,
+    "diet": "Veterinarianism, lactose-free,",
+    "difficulty": "easy",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dessert",
+    "recipe": "Cherry mousse",
+    "ingredients": [
+      "cherries",
+      "maraschino",
+      "fresh egg yolks",
+      "cornstarch",
+      "white chocolate",
+      "half-cream"
+    ],
+    "preparationTime": 45,
+    "cookingTime": 0,
+    "diet": "Veterinarianism",
+    "difficulty": "easy",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dessert",
+    "recipe": "Pears with saffron",
+    "ingredients": [
+      "white wine",
+      "sugar",
+      "saffron threads",
+      "pears",
+      "vanilla ice cream"
+    ],
+    "preparationTime": 20,
+    "cookingTime": 0,
+    "diet": "Veterinarianism",
+    "difficulty": "easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Starter, dish",
+    "recipe": "Baked eggplant",
+    "ingredients": [
+      "oil, salt",
+      "pepper",
+      "organic lemon",
+      "salt",
+      "cherry tomatoes",
+      "feta",
+      "thyme",
+      "blackberries",
+      "eggplant"
+    ],
+    "preparationTime": "10",
+    "cookingTime": "25",
+    "diet": "Veterinarianism, lactose-free,",
+    "difficulty": "easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dessert",
+    "recipe": "Carrot muffins",
+    "ingredients": [
+      "butter",
+      "sugar",
+      "salt",
+      "eggs",
+      "milk",
+      "carrots",
+      "ground almonds",
+      "flour",
+      "baking powder",
+      "cinnamon",
+      "mascarpone",
+      "icing sugar",
+      "lemon juice",
+      "marzipan carrots"
+    ],
+    "preparationTime": 25,
+    "cookingTime": "25",
+    "diet": "Veterinarianism",
+    "difficulty": "Medium",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dish",
+    "recipe": "Stuffed tomatoes",
+    "ingredients": [
+      "lean quark",
+      "grated sbrinz",
+      "grated gruyere",
+      "eggs",
+      "nutmeg",
+      "pepper",
+      "oregano",
+      "tomatoes",
+      "salt",
+      "bacon"
+    ],
+    "preparationTime": 20,
+    "cookingTime": 20,
+    "regime": "jfebkv",
+    "difficulty": "Medium",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": " ",
+    "recipe": "Japanese rice (Gohan)",
+    "ingredients": [
+      "sesame seeds",
+      "sushi rice",
+      "water",
+      "mirin",
+      "nori seaweed"
+    ],
+    "preparationTime": 30,
+    "cookingTime": 10,
+    "diet": "Veterinarianism, Vegetarianism, lactose-free,",
+    "difficulty": "Easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Starter, Dish",
+    "recipe": "Focaccia with olives and arugula",
+    "ingredients": [
+      "salt",
+      "flour",
+      "yeast",
+      "olive oil",
+      "pitted black olives",
+      "anchovy fillets",
+      "garlic clove",
+      "mozzarella",
+      "arugula",
+      "flower of salt"
+    ],
+    "preparationTime": 55,
+    "cookingTime": 15,
+    "regime": "fffff",
+    "difficulty": "Easy",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dish",
+    "recipe": "Beef and sage spaghetti carbonara",
+    "ingredients": [
+      "spaghetti",
+      "olive oil",
+      "sage",
+      "minced beef",
+      "salt",
+      "pepper",
+      "onion",
+      "meat broth",
+      "demi-cream",
+      "eggs ",
+      "grated parmesan",
+      "sage"
+    ],
+    "preparationTime": 30,
+    "cookingTime": 20,
+    "regime": "dddd",
+    "difficulty": "Medium",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dish",
+    "recipe": "Diavolo Chickens",
+    "ingredients": [
+      "free-range chicken",
+      "olive oil",
+      "salt",
+      "mustard",
+      "white wine",
+      "lemon juice",
+      "Worcestershire sauce",
+      "Cayenne pepper",
+      "breadcrumbs",
+      " parsley"
+    ],
+    "preparationTime": 20,
+    "cookingTime": 60,
+    "diet": "lactose-free",
+    "difficulty": "Easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Starter,Dish",
+    "recipe": "Lemon marinade",
+    "ingredients": [
+      "lemon",
+      "lime",
+      "sunflower oil",
+      "Worcestershire sauce",
+      "lemongrass",
+      "white pepper or lemon pepper"
+    ],
+    "preparationTime": 15,
+    "cookingTime": 0,
+    "diet": "Veterinarianism,Veterinarianism, lactose-free,",
+    "difficulty": "Easy",
+    "allergen": false
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Dish",
+    "recipe": "Leek lasagna",
+    "ingredients": [
+      "leek",
+      "fresh cream",
+      "vegetable broth",
+      "salt",
+      "pepper",
+      "slices of bacon",
+      "green lasagna sheets (Barilla Collezione)"
+    ],
+    "preparationTime": 10,
+    "cookingTime": 25,
+    "regime": "aaa",
+    "difficulty": "Medium",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Starters, Dish",
+    "recipe": "Salmon rolls",
+    "ingredients": [
+      "noodle dough",
+      "salt water",
+      "smoked salmon",
+      "sour cream",
+      "wasabi paste",
+      "dill",
+      "salt"
+    ],
+    "preparationTime": 30,
+    "cookingTime": 0,
+    "regime": "ddd",
+    "difficulty": "easy",
+    "allergen": true
+  },
+  {
+    "picture": "fakepicture.jpg",
+    "section": "Desert",
+    "recipe": "Kiwi-lime salad and coconut sauce",
+    "ingredients": [
+      "coconut milk",
+      "white almond puree",
+      "agave syrup",
+      "hulled almonds",
+      "vanilla pod",
+      "salt",
+      "limes",
+      "kiwi",
+      "pistachios natures"
+    ],
+    "preparationTime": 35,
+    "cookingTime": 0,
+    "diet": "Veterinarianism,Veterinarianism",
+    "difficulty": "easy",
+    "allergen": true
+  }
+]
