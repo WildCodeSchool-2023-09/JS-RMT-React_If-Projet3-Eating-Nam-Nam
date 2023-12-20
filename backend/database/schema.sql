@@ -26,3 +26,37 @@ create table user (
   Foreign Key (auth_id) REFERENCES auth(id)
 );
 
+create table ingredient (
+  id int primary key auto_increment not null,
+  name VARCHAR(255) not null,
+  quantity VARCHAR(255) not null,
+  image VARCHAR(255) not null,
+  calorie VARCHAR(255) not null,
+  carbonhydrate VARCHAR(255) not null,
+  protein VARCHAR(255) not null,
+  lipid VARCHAR(255) not null,
+  fiber VARCHAR(255) not null,
+  isValidate BOOLEAN DEFAULT false,
+  category VARCHAR(255)
+);
+
+create table recipe (
+  id int primary key auto_increment not null,
+  picture VARCHAR(255) not null,
+	section VARCHAR(255) not null,
+  name VARCHAR(255) not null,
+  ingredients VARCHAR(255) not null,
+ 	preparationTime TIME not null,
+  cookingTime TIME not null,
+ 	regime VARCHAR(255) not null,
+  difficulty VARCHAR(255) not null,
+  allergen BOOLEAN not null
+);
+
+create table recipe_ingr (
+  id int primary key auto_increment not null,
+  recipe_id INT NOT NULL,
+  ingr_id INT NOT NULL,
+  Foreign Key (recipe_id) REFERENCES recipe(id),
+  Foreign Key (ingr_id) REFERENCES ingredient(id)
+);
