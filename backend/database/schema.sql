@@ -1,3 +1,4 @@
+-- SQLBook: Code
 create table regime (
   id int primary key auto_increment not null,
   name VARCHAR(255) not null,
@@ -20,8 +21,8 @@ create table user (
   picture VARCHAR(255) not null,
   regime_id int not null,
   auth_id int not null,
-  date_created TIMESTAMP,
-  date_update TIMESTAMP,
+  date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  date_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   Foreign Key (regime_id) REFERENCES regime(id),
   Foreign Key (auth_id) REFERENCES auth(id)
 );
@@ -36,20 +37,18 @@ create table ingredient (
   protein VARCHAR(255) not null,
   lipid VARCHAR(255) not null,
   fiber VARCHAR(255) not null,
-  isValidate BOOLEAN DEFAULT false,
+  is_validated BOOLEAN DEFAULT false,
   category VARCHAR(255)
 );
 
 create table recipe (
   id int primary key auto_increment not null,
   picture VARCHAR(255) not null,
-	section VARCHAR(255) not null,
+	section ENUM('Starter', 'Dish', 'Dessert') not null,
   name VARCHAR(255) not null,
-  ingredients VARCHAR(255) not null,
- 	preparationTime TIME not null,
-  cookingTime TIME not null,
- 	regime VARCHAR(255) not null,
-  difficulty VARCHAR(255) not null,
+ 	preparation_time INTEGER not null,
+  cooking_time INTEGER not null,
+  difficulty ENUM('Easy', 'Medium', 'Difficult') not null,
   allergen BOOLEAN not null
 );
 
