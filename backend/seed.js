@@ -264,13 +264,35 @@ const seed = async () => {
         category: "vegetable",
       },
     ];
-    for (let i = 0; i < 1; i += 1) {
+    for (let i = 0; i < seedData.length; i += 1) {
+      const {
+        name,
+        quantity,
+        image,
+        calorie,
+        carbonhydrate,
+        protein,
+        lipid,
+        fiber,
+        isValidate,
+        category,
+      } = seedData[i];
       queries.push(
         database.query(
           `INSERT INTO ingredient(name, quantity,image, calorie, carbonhydrate, protein, lipid, fiber, isValidate, category)
-           VALUES (${seedData[i].name},${seedData[i].quantity},${seedData[i].image},${seedData[i].calorie},
-           ${seedData[i].carbonhydrate},${seedData[i].protein},${seedData[i].lipid},${seedData[i].fiber},${seedData[i].isValidate},
-           ${seedData[i].category})`
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          [
+            name,
+            quantity,
+            image,
+            calorie,
+            carbonhydrate,
+            protein,
+            lipid,
+            fiber,
+            isValidate,
+            category,
+          ]
         )
       );
     }
