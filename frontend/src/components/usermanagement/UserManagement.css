@@ -1,0 +1,66 @@
+.containForm {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 350px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 30px;
+  border: 1px solid #feba1c;
+  border-radius: 10px;
+}
+
+.containSubmit {
+  text-align: center;
+}
+
+.form input {
+  width: 200px;
+}
+
+.tableUserManagement table {
+  margin: 0 auto;
+}
+
+.tableUserManagement table,
+.tableUserManagement th,
+.tableUserManagement td {
+  border: 1px solid transparent;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.tableUserManagement img {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.buttonDelete,
+.buttonPut,
+.buttonSubmit {
+  width: 100px;
+  height: auto;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+.buttonSubmit {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttonDelete:hover,
+  .buttonPut:hover,
+  .buttonSubmit:hover {
+    color: #ffd910;
+  }
+}

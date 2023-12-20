@@ -1,0 +1,31 @@
+.containNavbar {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.containNavbar img {
+  width: 150px;
+  height: auto;
+}
+
+.containNavbar nav a {
+  margin-right: 10px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.containNavbar nav a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .containNavbar img {
+    width: 200px;
+  }
+
+  .containNavbar nav a {
+    margin-right: 50px;
+  }
+}
