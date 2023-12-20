@@ -1,0 +1,24 @@
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  font-family: "Now", sans-serif;
+  color: #2e2e2e;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Now", sans-serif;
+  }
+}
+
+body {
+  height: 100%;
+  background: #fffcf4;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
