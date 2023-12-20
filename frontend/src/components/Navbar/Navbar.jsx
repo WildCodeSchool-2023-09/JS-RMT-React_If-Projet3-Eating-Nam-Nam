@@ -20,7 +20,7 @@ function NavBar() {
         <NavLink to="/about">About ENN</NavLink>
       </nav>
       <nav className="nav-log">
-        <NavLink to="login">Log In</NavLink>
+        <NavLink to="/login">Log In</NavLink>
         <NavLink to="/signup">Sign Up</NavLink>
         <img src={profile} className="profile-logo" alt="profile_logo" />
       </nav>
