@@ -1,0 +1,31 @@
+@media screen and (min-width: 1200px) {
+  .nav-menu-modal {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav-menu-modal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .nav-menu-modal a {
+    color: #2e2e2e;
+    overflow: hidden;
+    font-weight: 500;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+}
+
+path:active {
+  fill: #f18a3d;
+}
