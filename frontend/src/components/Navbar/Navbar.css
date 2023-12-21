@@ -1,0 +1,98 @@
+.nav {
+  display: grid;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: fixed;
+  align-items: center;
+  overflow: hidden;
+}
+
+.nav-menu a {
+  color: #2e2e2e;
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.nav-log {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-log a {
+  color: #2e2e2e;
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr 0.5fr 0.3fr;
+  }
+
+  .nav-log,
+  .nav-menu,
+  .nav-logo {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-logo2 {
+    width: 100px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-logo2 {
+    display: none;
+  }
+}
+
+.nav-menu a.active:after,
+.nav-log a.active:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fe8a1b;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.nav-menu a::after,
+.nav-log a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fe8a1b;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-menu a:hover::after,
+.nav-log a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

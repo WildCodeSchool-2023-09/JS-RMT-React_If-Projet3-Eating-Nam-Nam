@@ -1,0 +1,19 @@
+[
+  {
+    "mail": "valeriane.chevalier@gmail.com",
+    "password": "valériane",
+    "is_admin": 1
+  },
+  { "mail": "g.duffort@gmail.com", "password": "grégory", "is_admin": 1 },
+  { "mail": "thd.dps@gmail.com", "password": "thibaud", "is_admin": 1 },
+  {
+    "mail": "leslie.moraud@gmail.com",
+    "password": "leslie",
+    "is_admin": 1
+  },
+  {
+    "mail": "tonton.roger@gmail.com",
+    "password": "tontonRoger",
+    "is_admin": 0
+  }
+]
