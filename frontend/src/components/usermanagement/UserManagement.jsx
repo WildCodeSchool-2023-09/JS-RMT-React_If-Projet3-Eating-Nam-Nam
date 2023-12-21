@@ -144,8 +144,8 @@ function UserManagement() {
             </button>
           </div>
         </form>
-        <ToastContainer />
       </div>
+      <ToastContainer />
       <table>
         <thead>
           <th>Id</th>
