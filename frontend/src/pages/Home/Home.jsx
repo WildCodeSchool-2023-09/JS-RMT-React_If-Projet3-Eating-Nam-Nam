@@ -7,10 +7,43 @@ function Home() {
   return (
     <>
       <h1 className="h1-home">
-        Discover,
-        <br /> Create,
-        <br /> Share new recipes
+        Discover, create, share <br />
+        new recipes & flavors!
       </h1>
+      <div className="home-elements">
+        <svg
+          width="100"
+          height="129"
+          viewBox="0 0 100 129"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clipPath="url(#clip0_125_77)">
+            <path
+              d="M47.9807 33.8895L44.1706 42.6026L37.1194 48.2373L30.8384 50.3244L18.4817 62.9316L16.8671 76.2643L18.8958 90.9902L28.1207 105.903L31.1848 113.1L30.9446 118.016L35.2078 114.76L44.0471 112.068L58.7564 101.338L67.7882 88.339L72.1506 66.3408L66.6682 54.8632L55.9582 46.2957L50.2229 41.8893L47.9807 33.8895Z"
+              fill="#F6CD00"
+            />
+            <path
+              d="M47.9444 35.872L66.1658 18.8974L81.7867 16.7727L99.9868 23.607L88.1181 32.5183L74.2368 37.6394L58.0986 39.0757L47.9444 35.872Z"
+              fill="#006834"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_125_77">
+              <rect
+                width="58.9225"
+                height="114.162"
+                fill="white"
+                transform="translate(46) rotate(23.6185)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <Link to="/signup" className="home-link-square">
+          Sign Up Now
+        </Link>
+      </div>
       <div className="home-page">
         <div className="square-img-text">
           <div className="square-img">
