@@ -1,9 +1,9 @@
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .nav-menu-mobile {
     display: none;
   }
 }
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .nav-menu-mobile {
     display: flex;
     justify-content: space-around;
