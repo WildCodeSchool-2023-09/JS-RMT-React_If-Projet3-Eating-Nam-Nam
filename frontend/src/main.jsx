@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import Admin from "./pages/admin/Admin";
+import Management from "./components/management/Management";
 import App from "./App";
 
 import Home from "./pages/Home";
@@ -39,6 +40,16 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LogIn />,
+      },
+    ],
+  },
+  {
+    path: "/administration/",
+    element: <Admin />,
+    children: [
+      {
+        path: "management",
+        element: <Management />,
       },
     ],
   },
