@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 import "./UserManagement.css";
 
 function UserManagement() {
