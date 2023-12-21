@@ -1,4 +1,5 @@
 const AbstractManager = require("./AbstractManager");
+const client = require("../../database/client");
 
 class UserManager extends AbstractManager {
   constructor() {
@@ -8,6 +9,7 @@ class UserManager extends AbstractManager {
   }
 
   // The C of CRUD - Create operation
+  /*
 
   async create(user) {
     // Execute the SQL INSERT query to add a new user to the "user" table
@@ -18,9 +20,11 @@ class UserManager extends AbstractManager {
     // Return the ID of the newly inserted user
     return result.insertId;
   }
+  */
 
   // The Rs of CRUD - Read operations
 
+  /*
   async read(id) {
     // Execute the SQL SELECT query to retrieve a specific user by its ID
     const [rows] = await this.database.query(
@@ -31,10 +35,11 @@ class UserManager extends AbstractManager {
     // Return the first row of the result, which represents the user
     return rows[0];
   }
+  */
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all users from the "user" table
-    const [rows] = await this.database.query(
+    const [rows] = await client.query(
       `select id, username, DATE_FORMAT(birthday, "%Y-%m-%d")birthday, picture, regime_id, auth_id from ${this.table}`
     );
 
@@ -47,20 +52,20 @@ class UserManager extends AbstractManager {
 
   async update(id, user) {
     // Execute the SQL SELECT query to retrieve a specific user by its ID
-    const [result] = await this.database.query(
+    const [result] = await client.query(
       `UPDATE ${this.table} set ? WHERE id = ?`,
       [user, id]
     );
 
     // Return the first row of the result, which represents the item
-    return result.affectedRows;
+    return result;
   }
 
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove a user by its ID
 
   async delete(id) {
-    const result = await this.database.query(
+    const result = await client.query(
       `DELETE FROM ${this.table} WHERE id = ?`,
       [id]
     );
