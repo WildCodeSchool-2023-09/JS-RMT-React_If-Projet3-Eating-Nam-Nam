@@ -7,7 +7,7 @@ function Terms() {
     <div className="terms-square">
       <div className="terms">
         <h4>Terms and Conditions Welcome to Eating Nam Nam!</h4>
-        <p>
+        <p className="terms-p">
           These terms and conditions outline the rules and regulations for the
           use of Eating Nam nam's Website, located at eatingnamnam.com. By
           accessing this website we assume you accept these terms and
