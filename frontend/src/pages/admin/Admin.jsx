@@ -4,7 +4,7 @@ import "./Admin.css";
 
 function Admin() {
   return (
-    <div className="containDashboard">
+    <div className="contain-dashboard">
       <h1>Dashboard</h1>
       <Outlet />
       <NavbarAdmin />
