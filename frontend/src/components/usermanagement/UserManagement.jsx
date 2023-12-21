@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
 import "./UserManagement.css";
 
 function UserManagement() {
+  const [formVisible, setFormVisible] = useState("none");
   const [users, setUsers] = useState([]);
   const [userValue, setUserValue] = useState({
     username: "",
@@ -11,12 +14,23 @@ function UserManagement() {
     regime_id: 0,
   });
 
+  const showToastMessage = () => {
+    toast.success("Les données ont bien été modifiée !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const showToastErrorMessage = () => {
+    toast.error("Il y a eu une erreur les données n'ont pas été modifiée !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
   const getUsers = async () => {
     try {
       const myUsers = await axios
         .get(`${import.meta.env.VITE_BACKEND_URL}/api/users`)
         .then((res) => res.data);
-      console.info(myUsers);
       setUsers(myUsers);
     } catch (error) {
       console.error(error);
@@ -37,15 +51,18 @@ function UserManagement() {
     }
   };
 
-  const putUser = async () => {
+  const putUser = async (event) => {
+    event.preventDefault();
     try {
       await axios.put(
         `${import.meta.env.VITE_BACKEND_URL}/api/users/${userValue.id}`,
         userValue
       );
+      showToastMessage();
       getUsers();
+      setFormVisible("none");
     } catch (error) {
-      console.error(error);
+      showToastErrorMessage();
     }
   };
 
@@ -54,8 +71,7 @@ function UserManagement() {
   }, []);
 
   const loadUser = (user) => {
-    const form = document.querySelector(".form");
-    form.style.display = "grid";
+    setFormVisible("grid");
     setUserValue(user);
   };
 
@@ -75,15 +91,15 @@ function UserManagement() {
   };
 
   return (
-    <div className="tableUserManagement">
-      <div className="containForm">
+    <div className="table-user-management">
+      <div className="contain-form">
         <form
           onSubmit={handleRequest}
           className="form"
-          style={{ display: "none" }}
+          style={{ display: formVisible }}
         >
           <label>
-            Username :{" "}
+            Username :
             <input
               type="text"
               name="username"
@@ -93,7 +109,7 @@ function UserManagement() {
             />
           </label>
           <label>
-            Birthday :{" "}
+            Birthday :
             <input
               type="date"
               name="birthday"
@@ -103,7 +119,7 @@ function UserManagement() {
             />
           </label>
           <label>
-            Picture :{" "}
+            Picture :
             <input
               type="text"
               name="picture"
@@ -113,7 +129,7 @@ function UserManagement() {
             />
           </label>
           <label>
-            Regime :{" "}
+            Regime :
             <input
               type="number"
               name="regime_id"
@@ -122,12 +138,13 @@ function UserManagement() {
               required
             />
           </label>
-          <div className="containSubmit">
-            <button type="submit" className="buttonSubmit">
+          <div className="contain-submit">
+            <button type="submit" className="button-submit">
               Modifier
             </button>
           </div>
         </form>
+        <ToastContainer />
       </div>
       <table>
         <thead>
@@ -150,7 +167,7 @@ function UserManagement() {
                   <button
                     type="button"
                     onClick={() => deleteUser(user.id)}
-                    className="buttonDelete"
+                    className="button-delete"
                   >
                     Delete
                   </button>
@@ -159,7 +176,7 @@ function UserManagement() {
                   <button
                     type="button"
                     onClick={() => loadUser(user)}
-                    className="buttonPut"
+                    className="button-put"
                   >
                     Put
                   </button>

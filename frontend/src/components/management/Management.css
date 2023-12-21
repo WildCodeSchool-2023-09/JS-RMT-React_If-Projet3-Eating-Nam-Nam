@@ -1,11 +1,11 @@
-.containManagement {
+.contain-management {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   text-align: center;
 }
 
-.userManagement {
+.user-management {
   background-color: white;
   width: 300px;
   margin: 0 auto;
@@ -15,19 +15,19 @@
 }
 
 @media screen and (min-width: 480px) {
-  .userManagement {
+  .user-management {
     width: 400px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .userManagement {
+  .user-management {
     width: 700px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .userManagement {
+  .user-management {
     width: 1000px;
   }
 }

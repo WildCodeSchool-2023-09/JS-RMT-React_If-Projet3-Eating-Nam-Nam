@@ -3,16 +3,10 @@ import "./Management.css";
 
 function AdminUsers() {
   return (
-    <div className="containManagement">
-      <div className="userManagement">
+    <div className="contain-management">
+      <div className="user-management">
         <h3>Users</h3>
         <UserManagement />
-      </div>
-      <div className="recipeManagement">
-        <h3>Recipes</h3>
-      </div>
-      <div className="ingredientManagement">
-        <h3>Ingredients</h3>
       </div>
     </div>
   );
