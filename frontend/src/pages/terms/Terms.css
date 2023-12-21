@@ -1,0 +1,14 @@
+.terms {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  width: 60%;
+}
+
+.terms-square {
+  margin-top: 200px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
