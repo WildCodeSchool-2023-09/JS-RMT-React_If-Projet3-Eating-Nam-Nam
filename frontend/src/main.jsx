@@ -11,6 +11,7 @@ import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
+import Terms from "./pages/terms/Terms";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LogIn />,
+      },
+      {
+        path: "/terms",
+        element: <Terms />,
       },
     ],
   },
