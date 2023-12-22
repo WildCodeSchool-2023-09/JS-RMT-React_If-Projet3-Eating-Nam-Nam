@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";
-import SignUp from "./pages/SignUp";
+import SignUp from "./pages/signUp/SignUp";
 import LogIn from "./pages/LogIn";
 
 const router = createBrowserRouter([
