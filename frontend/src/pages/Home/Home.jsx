@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import FrameSvgText from "../../components/FrameSvgText/FrameSvgText";
 import "./Home.css";
 
 function Home() {
@@ -45,118 +46,21 @@ function Home() {
         </Link>
       </div>
       <div className="home-page">
-        <div className="square-img-text">
-          <div className="square-img">
-            <svg
-              width="123"
-              height="100"
-              viewBox="0 0 80 115"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clipPath="url(#clip0_75_390)">
-                <path
-                  d="M69.7246 41.2729L80.4548 26.3729L85.1739 6.39683L90.329 8.91285L86.483 22.6679L83.2437 29.6039L78.5509 38.4647L92.215 23.1877L97.6754 8.77524L104.143 13.391L93.3674 30.6438L89.9652 34.8026L84.3246 41.6822L100.284 27.9069L105.873 18.8509L111.028 21.3669L105.548 30.565L90.5392 46.0043L80.4445 53.6924L69.7246 41.2729Z"
-                  fill="#006834"
-                />
-                <path
-                  d="M79.3195 71.6046L80.9442 45.8357L62.5535 38.3549L53.9922 42.2618L15.225 90.6408L17.0834 99.7218L25.7678 98.9418L79.3195 71.6046Z"
-                  fill="#F08229"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_75_390">
-                  <rect
-                    width="45.5371"
-                    height="122.304"
-                    fill="white"
-                    transform="translate(92.585) rotate(49.2008)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div className="square-text">
-            <h4>Become a Chief</h4>
-            <div
-              className="Line"
-              style={{ width: 92, height: 0, border: "0.5px #2E2E2E solid" }}
-            />
-            <p>Embark on a one-of-a-kind culinary adventure</p>
-          </div>
-        </div>
-        <div className="square-img-text">
-          <div className="square-img">
-            <svg
-              width="80"
-              height="100"
-              viewBox="0 0 95 98"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clipPath="url(#clip0_238_2)">
-                <path
-                  d="M42.2777 36.7523L21.5252 40.4595L13.4213 49.2959L9.81642 66.4861L15.7168 82.9202L30.6056 91.2913L48.2894 91.8267L66.5867 88.5582L78.1669 83.5277L88.2732 73.601L91.3333 64.1899L89.21 52.3035L83.5543 40.0642L74.7274 33.9069L60.8807 33.4291L42.2777 36.7523Z"
-                  fill="#E34B37"
-                />
-                <path
-                  d="M32.5417 10.8517L39.4109 32.3561L16.4318 38.6064L7.87423 55.6139L26.8718 43.8477L30.5405 64.3853L35.713 54.9108L38.2541 42.8295L49.0604 45.0017L53.2303 51.1013L60.0778 56.7122L60.4169 47.0755L57.6808 41.4105L58.5834 36.8118L68.7041 37.7354L80.0488 43.5686L67.5337 31.1837L59.1598 28.5038L66.377 22.7666L68.0116 14.6149L62.5086 18.4132L54.2186 23.9129L45.7845 30.5477L40.2574 7.61053L32.5417 10.8517Z"
-                  fill="#008F53"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_238_2">
-                  <rect
-                    width="80.6504"
-                    height="84.3163"
-                    fill="white"
-                    transform="translate(0.565674 14.7009) rotate(-10.1283)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div className="square-text">
-            <h4>Become an inspiration</h4>
-            <div
-              className="Line"
-              style={{ width: 92, height: 0, border: "0.5px #2E2E2E solid" }}
-            />
-            <p>Introduce the world to new flavors</p>
-          </div>
-        </div>
-        <div className="square-img-text">
-          <div className="square-img">
-            <svg
-              width="60"
-              height="80"
-              viewBox="0 0 60 56"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M40.8316 16.7917L31.9031 22.5507L30.1328 29.7511L35.4865 36.9516L44.7998 38.9283L54.0618 36.9516L59.4668 29.273L56.9439 21.1092L49.6061 16.7917H40.8316Z"
-                fill="#C11C43"
-              />
-              <path
-                d="M11.66 33.4902L2.72294 39.2492L0.952637 46.4496L6.30631 53.6501L15.6196 55.6268L24.8902 53.6501L30.2952 45.9715L27.7637 37.8148L20.426 33.4902H11.66Z"
-                fill="#C11C43"
-              />
-              <path
-                d="M11.6595 33.4903L8.99121 16.7915L10.3254 4.08192L13.1476 0L15.6192 3.01148L18.5526 10.1834L21.828 11.6249L25.5397 13.2591L41.3527 20.01V22.7717L19.2367 11.6249L13.9515 7.0934L11.0865 12.3742L13.9515 36.6802L11.6595 33.4903Z"
-                fill="#006B35"
-              />
-            </svg>
-          </div>
-          <div className="square-text">
-            <h4>Join our network of Chefs!</h4>
-            <div
-              className="Line"
-              style={{ width: 92, height: 0, border: "0.5px #2E2E2E solid" }}
-            />
-            <p>Join our network of Chefs!</p>
-          </div>
-        </div>
+        <FrameSvgText
+          svgPath="carot"
+          title="Discover new recipes"
+          description="Embark on a one-of-a-kind culinary adventure"
+        />
+        <FrameSvgText
+          svgPath="tomat"
+          title="Give inpiration"
+          description="Introduce the world to new flavors"
+        />
+        <FrameSvgText
+          svgPath="cherry"
+          title="Become a Chief"
+          description="Join our network of Chefs!"
+        />
         <div className="square-img-text">
           <div className="square-img">
             <svg
@@ -192,7 +96,7 @@ function Home() {
             </svg>
           </div>
           <div className="square-text">
-            <p>Start you culinary adventure now!</p>
+            <h4>Start you culinary adventure now!</h4>
             <div
               className="Line"
               style={{ width: 92, height: 0, border: "0.5px #2E2E2E solid" }}

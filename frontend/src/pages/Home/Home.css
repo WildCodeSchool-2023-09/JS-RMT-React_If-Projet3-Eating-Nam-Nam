@@ -16,7 +16,7 @@
 }
 
 .h1-home {
-  margin-top: 310px;
+  margin-top: 350px;
 }
 
 .home-link-square {
@@ -68,7 +68,7 @@
 
 @media (min-width: 1301px) {
   .home-page {
-    margin-top: 200px;
+    margin-top: 250px;
     width: 100%;
     display: grid;
     grid-template-columns: 300px 300px;
