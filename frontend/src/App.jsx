@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import NavbarMobile from "./components/NavbarMobile/NavbarMobile";
 
 import "../index.css";
+import FormIngredients from "./components/formingredients/FormIngredients";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <NavbarMobile />
       <Outlet />
+      <FormIngredients />
     </>
   );
 }
