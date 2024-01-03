@@ -1,18 +1,19 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import PropTypes from "prop-types";
 import connexion from "../../services/connexion";
 import SignUpInput from "../../components/singupInput/SignUpInput";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
 
-function SignUp() {
-  const [userAuth, setUserAuth] = useState({
-    mail: "",
-    password: "",
+function SignUpUser() {
+  const [newUser, setNewUser] = useState({
+    username: "",
+    birthday: "",
+    picture: "",
+    regime_id: 0,
+    auth_id: 0,
   });
-
-  const navigate = useNavigate();
 
   const showToastMessage = () => {
     toast.success("Les données ont bien été enregistrée !", {
@@ -30,7 +31,7 @@ function SignUp() {
   };
 
   const handleChange = (event) => {
-    setUserAuth((previousState) => ({
+    setNewUser((previousState) => ({
       ...previousState,
       [event.target.name]: event.target.value,
     }));
@@ -39,13 +40,10 @@ function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await connexion.post(`/auth`, userAuth);
+      const response = await connexion.post(`/user`, newUser);
 
       if (response.status === 201) {
         showToastMessage();
-        setTimeout(() => {
-          navigate("/SignUpUser");
-        }, "3000");
       }
     } catch (error) {
       showToastErrorMessage(error);
@@ -57,25 +55,36 @@ function SignUp() {
       <h2>SignUp</h2>
       <div className="contain-form">
         <form onSubmit={handleSubmit} className="form-signUp">
-          <h3>Choose an email and a password</h3>
+          <h3>Welcome, please enter your informations!</h3>
           <div className="containInput">
             <SignUpInput
-              label="Email"
-              type="email"
-              name="mail"
-              value={userAuth.mail}
+              label="Username"
+              type="text"
+              name="username"
+              value={newUser.username}
               onChange={handleChange}
-              placeholder="Enter an email"
+              placeholder="Enter a username"
             />
           </div>
           <div className="containInput">
             <SignUpInput
-              label="Password"
-              type="password"
-              name="password"
-              value={userAuth.password}
+              label="Birthday"
+              type="date"
+              name="birthday"
+              value={newUser.birthday}
               onChange={handleChange}
-              placeholder="Enter a password"
+              placeholder="Enter your birthday"
+              required
+            />
+          </div>
+          <div className="containInput">
+            <SignUpInput
+              label="Picture"
+              type="text"
+              name="picture"
+              value={newUser.picture}
+              onChange={handleChange}
+              placeholder="Enter a picture"
               required
             />
           </div>
@@ -91,4 +100,12 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+SignUpUser.propTypes = {
+  newUser: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    birthday: PropTypes.instanceOf(Date).isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default SignUpUser;
