@@ -11,6 +11,7 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 */
 const userControllers = require("./controllers/userControllers");
+const ingredientControllers = require("./controllers/ingredientControllers");
 const authControllers = require("./controllers/authControllers");
 
 // Route to get a list of users
@@ -30,6 +31,8 @@ router.get("/items/:id", itemControllers.read);
 // Route to add a new item
 router.post("/items", itemControllers.add);
 */
+router.get("/ingredient", ingredientControllers.browse);
+router.post("/ingredient", ingredientControllers.add);
 
 /* ************************************************************************* */
 

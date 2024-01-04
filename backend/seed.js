@@ -2,7 +2,7 @@
 
 // Load environment variables from .env file
 require("dotenv").config();
-const { faker } = require("@faker-js/faker");
+// const { faker } = require("@faker-js/faker");
 
 // Import database client
 const database = require("./database/client");
@@ -104,28 +104,28 @@ const seed = async () => {
     // Wait for all the insertion queries to complete
     await Promise.all(queriesIngredients);
 
-    const queriesRecipes = [];
-    const section = ["Starter", "Dish", "Dessert"];
-    const difficulty = ["Easy", "Medium", "Difficult"];
-    for (let i = 0; i < 20; i += 1) {
-      const time = Math.floor(Math.random()) * 60;
-      queriesRecipes.push(
-        database.query(
-          `INSERT INTO recipes(picture, section, name, preparation_time, cooking_time, difficulty, allergen)
-           VALUES (?, ?, ?, ?, ?, ?, ?)`,
-          [
-            faker.image.urlLoremFlickr({ category: "food" }),
-            section[Math.floor(Math.random()) * 3],
-            faker.lorem.words(),
-            Math.floor(Math.random()) * 30 + time,
-            time,
-            difficulty[Math.floor(Math.random()) * 3],
-            Math.floor(Math.random()) * 2,
-          ]
-        )
-      );
-    }
-    await Promise.all(queriesRecipes);
+    // const queriesRecipes = [];
+    // const section = ["Starter", "Dish", "Dessert"];
+    // const difficulty = ["Easy", "Medium", "Difficult"];
+    // for (let i = 0; i < 20; i += 1) {
+    //   const time = Math.floor(Math.random()) * 60;
+    //   queriesRecipes.push(
+    //     database.query(
+    //       `INSERT INTO recipes(picture, section, name, preparation_time, cooking_time, difficulty, allergen)
+    //        VALUES (?, ?, ?, ?, ?, ?, ?)`,
+    //       [
+    //         faker.image.urlLoremFlickr({ category: "food" }),
+    //         section[Math.floor(Math.random()) * 3],
+    //         faker.lorem.words(),
+    //         Math.floor(Math.random()) * 30 + time,
+    //         time,
+    //         difficulty[Math.floor(Math.random()) * 3],
+    //         Math.floor(Math.random()) * 2,
+    //       ]
+    //     )
+    //   );
+    // }
+    // await Promise.all(queriesRecipes);
     // Close the database connection
     database.end();
 

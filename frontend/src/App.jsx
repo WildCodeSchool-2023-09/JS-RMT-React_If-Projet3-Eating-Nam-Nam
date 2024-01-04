@@ -5,6 +5,7 @@ import NavbarMobile from "./components/NavbarMobile/NavbarMobile";
 import Footer from "./components/footer/Footer";
 
 import "../index.css";
+import FormIngredients from "./components/formingredients/FormIngredients";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Navbar />
       <NavbarMobile />
       <Outlet />
+
+      <FormIngredients />
+
       <Footer />
     </>
   );
