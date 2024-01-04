@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import NavbarMobile from "./components/NavbarMobile/NavbarMobile";
+import Footer from "./components/footer/Footer";
 
 import "../index.css";
 import FormIngredients from "./components/formingredients/FormIngredients";
@@ -12,7 +13,10 @@ function App() {
       <Navbar />
       <NavbarMobile />
       <Outlet />
+
       <FormIngredients />
+
+      <Footer />
     </>
   );
 }

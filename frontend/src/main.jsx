@@ -9,8 +9,10 @@ import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";
-import SignUp from "./pages/SignUp";
+import SignUp from "./pages/signUp/SignUp";
+import SignUpUser from "./pages/signUp/SignUpUser";
 import LogIn from "./pages/LogIn";
+import Terms from "./pages/terms/Terms";
 
 const router = createBrowserRouter([
   {
@@ -38,8 +40,16 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
+        path: "/signupuser",
+        element: <SignUpUser />,
+      },
+      {
         path: "/login",
         element: <LogIn />,
+      },
+      {
+        path: "/terms",
+        element: <Terms />,
       },
     ],
   },
