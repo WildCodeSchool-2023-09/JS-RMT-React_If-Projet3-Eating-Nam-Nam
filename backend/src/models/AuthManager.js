@@ -22,18 +22,17 @@ class AuthManager extends AbstractManager {
 
   // The Rs of CRUD - Read operations
 
-  /*
-  async read(id) {
+  async read() {
     // Execute the SQL SELECT query to retrieve a specific user by its ID
     const [rows] = await this.database.query(
-      `select * from ${this.table} where id = ?`,
-      [id]
+      `SELECT  id FROM ${this.table} WHERE id = ( 
+        SELECT MAX( id )  AS idMax FROM ${this.table} )`
     );
 
     // Return the first row of the result, which represents the user
     return rows[0];
   }
-  */
+
   /*
   async readAll() {
     // Execute the SQL SELECT query to retrieve all users from the "user" table

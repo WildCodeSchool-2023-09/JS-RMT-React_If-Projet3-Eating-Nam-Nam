@@ -16,12 +16,11 @@ const browse = async (req, res, next) => {
 };
 */
 
-/*
 // The R of BREAD - Read operation
 const read = async (req, res, next) => {
   try {
     // Fetch a specific auth from the database based on the provided ID
-    const auth = await tables.auth.read(req.params.id);
+    const auth = await tables.auth.read();
 
     // If the auth is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the auth in JSON format
@@ -35,7 +34,6 @@ const read = async (req, res, next) => {
     next(err);
   }
 };
-*/
 
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
@@ -96,9 +94,7 @@ module.exports = {
   /*
   browse,
   */
-  /*
   read,
-  */
   /*
   update,
   */
