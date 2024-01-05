@@ -34,9 +34,7 @@ const read = async (req, res, next) => {
 // Log In
 const log = async (req, res, next) => {
   try {
-
     const login = await tables.auth.readByEmail(req.body.mail);
-    console.info(login);
 
     if (login[0]) {
       if (login[0].password === req.body.password) {
