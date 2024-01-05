@@ -7,7 +7,7 @@ function AuthProvider({ children }) {
   const [connected, setConnected] = useState("Not Connected");
 
   return (
-    <AuthContext.Provider value={{·connected,·setConnected·}}>
+    <AuthContext.Provider value={(connected, setConnected)}>
       {children}
     </AuthContext.Provider>
   );
