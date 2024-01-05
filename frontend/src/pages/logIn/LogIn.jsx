@@ -13,7 +13,7 @@ const user = {
 
 const showToastMessage = () => {
   toast.success(
-    "Vos informations de connexion sont correctes vous allez être redirigé !",
+    "Your connection information is correct, you will be redirected !",
     {
       position: toast.POSITION.TOP_RIGHT,
     }
@@ -21,7 +21,7 @@ const showToastMessage = () => {
 };
 
 const showToastErrorMessage = () => {
-  toast.error("Vos informations de connexion ne sont pas bonnes !", {
+  toast.error("Your login information is not correct !", {
     position: toast.POSITION.TOP_RIGHT,
   });
 };

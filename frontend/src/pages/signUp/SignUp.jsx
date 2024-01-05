@@ -15,18 +15,15 @@ function SignUp() {
   const navigate = useNavigate();
 
   const showToastMessage = () => {
-    toast.success("Les données ont bien été enregistrée !", {
+    toast.success("The data has been recorded successfully !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
 
   const showToastErrorMessage = () => {
-    toast.error(
-      "Il y a eu une erreur les données n'ont pas été enregistrée !",
-      {
-        position: toast.POSITION.TOP_RIGHT,
-      }
-    );
+    toast.error("There was an error the data was not saved !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   const handleChange = (event) => {
