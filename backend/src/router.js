@@ -21,7 +21,6 @@ router.get("/recipes", recipeControllers.getRecipe);
 router.put("/users/:id", userControllers.update);
 // Route to delete a user
 router.delete("/users/:id", userControllers.destroy);
-
 // Route to post a new auth
 router.post("/auth", authControllers.add);
 // Route to get a specific item by ID
