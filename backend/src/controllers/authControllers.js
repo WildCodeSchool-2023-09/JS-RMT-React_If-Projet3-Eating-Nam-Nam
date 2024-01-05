@@ -19,18 +19,14 @@ const browse = async (req, res, next) => {
 // The R of BREAD - Read operation
 const read = async (req, res, next) => {
   try {
-    // Fetch a specific auth from the database based on the provided ID
     const auth = await tables.auth.read();
 
-    // If the auth is not found, respond with HTTP 404 (Not Found)
-    // Otherwise, respond with the auth in JSON format
     if (auth) {
       res.status(200).json(auth);
     } else {
       res.sendStatus(404);
     }
   } catch (err) {
-    // Pass any errors to the error-handling middleware
     next(err);
   }
 };
@@ -38,11 +34,8 @@ const read = async (req, res, next) => {
 // Log In
 const log = async (req, res, next) => {
   try {
-    // Fetch a specific auth from the database based on the provided email
     const login = await tables.auth.readByEmail(req.body.mail);
-    console.info(login);
-    // If the auth is not found, respond with HTTP 404 (Not Found)
-    // Otherwise, respond with the auth in JSON format
+
     if (login[0]) {
       if (login[0].password === req.body.password) {
         res.status(200).json({ id: login[0].id });
@@ -53,7 +46,6 @@ const log = async (req, res, next) => {
       res.sendStatus(403);
     }
   } catch (err) {
-    // Pass any errors to the error-handling middleware
     next(err);
   }
 };
