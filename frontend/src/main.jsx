@@ -5,7 +5,7 @@ import Admin from "./pages/admin/Admin";
 import Management from "./components/management/Management";
 import App from "./App";
 
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";
