@@ -10,7 +10,7 @@ function FrameSvgText({ svgPath, title, description }) {
       <div className="square-text">
         <h4>{title}</h4>
         <div
-          className="Line"
+          className="line"
           style={{ width: 92, height: 0, border: "0.5px #2E2E2E solid" }}
         />
         <p>{description}</p>

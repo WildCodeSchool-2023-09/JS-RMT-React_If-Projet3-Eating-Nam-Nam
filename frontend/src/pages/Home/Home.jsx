@@ -98,7 +98,7 @@ function Home() {
           <div className="square-text">
             <h4>Start you culinary adventure now!</h4>
             <div
-              className="Line"
+              className="line"
               style={{ width: 92, height: 0, border: "0.5px #2E2E2E solid" }}
             />
             <Link to="/signup" className="home-link-square">
