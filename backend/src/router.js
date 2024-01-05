@@ -11,11 +11,8 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 */
 const userControllers = require("./controllers/userControllers");
-
 const recipeControllers = require("./controllers/recipeControllers");
-
 const authControllers = require("./controllers/authControllers");
-
 
 // Route to get a list of users
 router.get("/users", userControllers.browse);
