@@ -11,6 +11,8 @@ const ingredients = require("./database/data/eatingNamNam.json");
 const auth = require("./database/data/auths.json");
 const regime = require("./database/data/regimes.json");
 const user = require("./database/data/users.json");
+// eslint-disable-next-line no-unused-vars
+const recipe = require("./database/data/recipe.json");
 
 const seed = async () => {
   try {

@@ -45,7 +45,7 @@ create table recipe (
   id int primary key auto_increment not null,
   picture VARCHAR(255) not null,
 	section ENUM('Starter', 'Dish', 'Dessert') not null,
-  name VARCHAR(255) not null,
+  recipe VARCHAR(255) not null,
  	preparation_time INTEGER not null,
   cooking_time INTEGER not null,
   difficulty ENUM('Easy', 'Medium', 'Difficult') not null,

@@ -5,6 +5,9 @@ import Admin from "./pages/admin/Admin";
 import Management from "./components/management/Management";
 import App from "./App";
 
+// eslint-disable-next-line import/order
+import axios from "axios";
+
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
@@ -25,6 +28,22 @@ const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <Recipes />,
+        loader: () => {
+          return axios
+            .get(`${import.meta.env.VITE_BACKEND_URL}/api/recipes`)
+            .then((response) => response.data)
+            .catch((err) => console.error(err));
+        },
+      },
+      {
+        path: "/recipes/:id",
+        element: <Recipes />,
+        loader: ({ params }) => {
+          return axios
+            .get(`${import.meta.env.VITE_BACKEND_URL}/api/recipes/${params.id}`)
+            .then((response) => response.data)
+            .catch((err) => console.error(err));
+        },
       },
       {
         path: "/ingredients",
