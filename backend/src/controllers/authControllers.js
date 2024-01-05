@@ -35,6 +35,29 @@ const read = async (req, res, next) => {
   }
 };
 
+// Log In
+const log = async (req, res, next) => {
+  try {
+    // Fetch a specific auth from the database based on the provided email
+    const login = await tables.auth.readByEmail(req.body.mail);
+    console.info(login);
+    // If the auth is not found, respond with HTTP 404 (Not Found)
+    // Otherwise, respond with the auth in JSON format
+    if (login[0]) {
+      if (login[0].password === req.body.password) {
+        res.status(200).json({ id: login[0].id });
+      } else {
+        res.sendStatus(403);
+      }
+    } else {
+      res.sendStatus(403);
+    }
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
 /*
@@ -95,6 +118,7 @@ module.exports = {
   browse,
   */
   read,
+  log,
   /*
   update,
   */

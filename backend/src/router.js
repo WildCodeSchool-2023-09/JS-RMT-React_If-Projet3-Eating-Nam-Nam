@@ -27,6 +27,8 @@ router.delete("/users/:id", userControllers.destroy);
 router.get("/auth", authControllers.read);
 // Route to post a new auth
 router.post("/auth", authControllers.add);
+// Route to post a new auth
+router.post("/auth", authControllers.log);
 
 // Route to get a list of regimes
 router.get("/regime", regimeControllers.browse);

@@ -33,6 +33,17 @@ class AuthManager extends AbstractManager {
     return rows[0];
   }
 
+  async readByEmail(mail) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [rows] = await this.database.query(
+      `SELECT  * FROM ${this.table} WHERE mail = ?`,
+      [mail]
+    );
+
+    // Return the first row of the result, which represents the user
+    return rows[0];
+  }
+
   /*
   async readAll() {
     // Execute the SQL SELECT query to retrieve all users from the "user" table

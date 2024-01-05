@@ -88,7 +88,7 @@ function SignUpUser() {
 
   return (
     <div className="contain-form-signAuth">
-      <h2>SignUp</h2>
+      <h2>More Informations</h2>
       <div className="contain-form">
         <form onSubmit={handleSubmit} className="form-signUp">
           <h3>Welcome, please enter your informations!</h3>

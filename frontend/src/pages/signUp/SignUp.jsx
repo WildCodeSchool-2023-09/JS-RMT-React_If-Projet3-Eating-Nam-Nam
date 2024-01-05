@@ -44,7 +44,7 @@ function SignUp() {
       if (response.status === 201) {
         showToastMessage();
         setTimeout(() => {
-          navigate("/SignUpUser");
+          navigate("/LogIn");
         }, "3000");
       }
     } catch (error) {
