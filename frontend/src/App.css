@@ -51,6 +51,13 @@ code {
   }
 }
 
+.flex-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 button {
   font-size: calc(10px + 2vmin);
 }
