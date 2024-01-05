@@ -4,9 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Admin from "./pages/admin/Admin";
 import Management from "./components/management/Management";
 import App from "./App";
-
+import connexion from "./services/connexion";
 // eslint-disable-next-line import/order
-import axios from "axios";
 
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
@@ -29,8 +28,8 @@ const router = createBrowserRouter([
         path: "/recipes",
         element: <Recipes />,
         loader: () => {
-          return axios
-            .get(`${import.meta.env.VITE_BACKEND_URL}/api/recipes`)
+          return connexion
+            .get(`/recipes`)
             .then((response) => response.data)
             .catch((err) => console.error(err));
         },
@@ -39,8 +38,8 @@ const router = createBrowserRouter([
         path: "/recipes/:id",
         element: <Recipes />,
         loader: ({ params }) => {
-          return axios
-            .get(`${import.meta.env.VITE_BACKEND_URL}/api/recipes/${params.id}`)
+          return connexion
+            .get(`/recipes/${params.id}`)
             .then((response) => response.data)
             .catch((err) => console.error(err));
         },
