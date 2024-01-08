@@ -11,22 +11,20 @@ function SignUp() {
     mail: "",
     password: "",
   });
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
 
   const showToastMessage = () => {
-    toast.success("Les données ont bien été enregistrée !", {
+    toast.success("The data has been recorded successfully !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
 
   const showToastErrorMessage = () => {
-    toast.error(
-      "Il y a eu une erreur les données n'ont pas été enregistrée !",
-      {
-        position: toast.POSITION.TOP_RIGHT,
-      }
-    );
+    toast.error("There was an error the data was not saved !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   const handleChange = (event) => {
@@ -39,13 +37,16 @@ function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await connexion.post(`/auth`, userAuth);
-
-      if (response.status === 201) {
-        showToastMessage();
-        setTimeout(() => {
-          navigate("/SignUpUser");
-        }, "3000");
+      if (confirmPassword === userAuth.password) {
+        const response = await connexion.post(`/signup`, userAuth);
+        if (response.status === 201) {
+          showToastMessage();
+          setTimeout(() => {
+            navigate("/login");
+          }, 3000);
+        }
+      } else {
+        throw new Error("Password don't match!");
       }
     } catch (error) {
       showToastErrorMessage(error);
@@ -54,7 +55,7 @@ function SignUp() {
 
   return (
     <div className="contain-form-signAuth">
-      <h2>SignUp</h2>
+      <h2>Sign Up</h2>
       <div className="contain-form">
         <form onSubmit={handleSubmit} className="form-signUp">
           <h3>Choose an email and a password</h3>
@@ -75,6 +76,17 @@ function SignUp() {
               name="password"
               value={userAuth.password}
               onChange={handleChange}
+              placeholder="Enter a password"
+              required
+            />
+          </div>
+          <div className="containInput">
+            <SignUpInput
+              label="Confirm Password"
+              type="password"
+              name="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Enter a password"
               required
             />

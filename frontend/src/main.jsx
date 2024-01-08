@@ -4,14 +4,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Admin from "./pages/admin/Admin";
 import Management from "./components/management/Management";
 import App from "./App";
-
+import AuthProvider from "./contexts/Auth";
 import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";
 import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUp/SignUpUser";
-import LogIn from "./pages/LogIn";
+import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 
 const router = createBrowserRouter([
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "/signupuser",
-        element: <SignUpUser />,
-      },
-      {
         path: "/login",
         element: <LogIn />,
+      },
+      {
+        path: "/signupuser",
+        element: <SignUpUser />,
       },
       {
         path: "/terms",
@@ -69,6 +69,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

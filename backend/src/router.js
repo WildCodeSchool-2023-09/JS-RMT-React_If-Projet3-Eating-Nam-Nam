@@ -12,25 +12,28 @@ const itemControllers = require("./controllers/itemControllers");
 */
 const userControllers = require("./controllers/userControllers");
 const authControllers = require("./controllers/authControllers");
+const regimeControllers = require("./controllers/regimeControllers");
+
+const validateAuth = require("./middlewareValidation/middlewareAuth");
+const hashPassword = require("./middleware/hashPasswordSignUp");
 
 // Route to get a list of users
 router.get("/users", userControllers.browse);
+// Route to post a user
+router.post("/users", userControllers.add);
 // Route to put a user
 router.put("/users/:id", userControllers.update);
 // Route to delete a user
 router.delete("/users/:id", userControllers.destroy);
 
+// Route to get an id auth
+router.get("/auth", authControllers.read);
 // Route to post a new auth
-router.post("/auth", authControllers.add);
+router.post("/signup", validateAuth, hashPassword, authControllers.add);
+// Route to post a new auth
+router.post("/login", validateAuth, authControllers.log);
 
-/*
-// Route to get a specific item by ID
-router.get("/items/:id", itemControllers.read);
-
-// Route to add a new item
-router.post("/items", itemControllers.add);
-*/
-
-/* ************************************************************************* */
+// Route to get a list of regimes
+router.get("/regime", regimeControllers.browse);
 
 module.exports = router;
