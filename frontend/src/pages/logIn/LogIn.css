@@ -62,7 +62,7 @@
   color: #5e9732;
 }
 
-.button-sumbit-login {
+.button-submit-login {
   background-color: #e88628;
   width: 151px;
   height: 36px;
@@ -72,7 +72,7 @@
   padding-top: 2px;
 }
 
-.button-sumbit-login:hover {
+.button-submit-login:hover {
   color: #e88628;
   background-color: white;
   border: 1px solid #e88628;

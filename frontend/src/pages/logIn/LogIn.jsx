@@ -84,7 +84,7 @@ function LogIn() {
             </label>
           </div>
           <div>
-            <button type="submit" className="button-sumbit-login">
+            <button type="submit" className="button-submit-login">
               LOGIN
             </button>
           </div>

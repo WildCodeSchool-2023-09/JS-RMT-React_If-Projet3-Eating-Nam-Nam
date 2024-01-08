@@ -17,21 +17,6 @@ const browse = async (req, res, next) => {
 };
 */
 
-// The R of BREAD - Read operation
-const read = async (req, res, next) => {
-  try {
-    const auth = await tables.auth.read();
-
-    if (auth) {
-      res.status(200).json(auth);
-    } else {
-      res.sendStatus(404);
-    }
-  } catch (err) {
-    next(err);
-  }
-};
-
 // Log In
 const log = async (req, res, next) => {
   try {
@@ -115,7 +100,6 @@ module.exports = {
   /*
   browse,
   */
-  read,
   log,
   /*
   update,
