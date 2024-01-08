@@ -1,8 +1,8 @@
-const argon = require("argon2");
+const argon2 = require("argon2");
 
 const hashPassword = async (req, res, next) => {
   try {
-    const hash = await argon.hash(req.body.password);
+    const hash = await argon2.hash(req.body.password);
 
     req.body.hash = hash;
 

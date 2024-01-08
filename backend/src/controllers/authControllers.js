@@ -1,5 +1,5 @@
 // Import access to database tables
-const argon = require("argon2");
+const argon2 = require("argon2");
 const tables = require("../tables");
 
 // The B of BREAD - Browse (Read All) operation
@@ -38,7 +38,7 @@ const log = async (req, res, next) => {
     const login = await tables.auth.readByEmail(req.body.mail);
 
     if (login) {
-      const passwordMatch = await argon.verify(
+      const passwordMatch = await argon2.verify(
         login.password,
         req.body.password
       );
