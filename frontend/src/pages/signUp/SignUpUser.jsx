@@ -1,18 +1,21 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../contexts/Auth";
 import connexion from "../../services/connexion";
 import SignUpInputUser from "../../components/singupInput/SignUpInputUser";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
 
 function SignUpUser() {
+  const { connected } = useContext(AuthContext);
+
   const [newUser, setNewUser] = useState({
     username: "",
     birthday: "",
     picture: "",
     regime_id: 0,
-    auth_id: 0,
+    auth_id: connected.data.id,
   });
 
   const [regimes, setRegimes] = useState();
@@ -122,14 +125,14 @@ function SignUpUser() {
             />
           </div>
           <label className="list-regime">
-            Votre regime alimentaire
+            Your diet
             <select
               name="regime_id"
               value={newUser.regime_id}
               onChange={handleChange}
               required
             >
-              <option value={0}>Choisir une option</option>
+              <option value={0}>Choose a regime</option>
               {regimes &&
                 regimes.map((regime) => (
                   <option key={regime.id} value={regime.id}>

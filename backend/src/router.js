@@ -15,6 +15,7 @@ const authControllers = require("./controllers/authControllers");
 const regimeControllers = require("./controllers/regimeControllers");
 
 const validateAuth = require("./middlewareValidation/middlewareSignUp");
+const validateLogin = require("./middlewareValidation/middlewareLogin");
 const hashPassword = require("./middleware/hashPasswordSignUp");
 
 // Route to get a list of users
@@ -31,7 +32,7 @@ router.get("/auth", authControllers.read);
 // Route to post a new auth
 router.post("/signup", validateAuth, hashPassword, authControllers.add);
 // Route to post a new auth
-router.post("/login", authControllers.log);
+router.post("/login", validateLogin, authControllers.log);
 
 // Route to get a list of regimes
 router.get("/regime", regimeControllers.browse);

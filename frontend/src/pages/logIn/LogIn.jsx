@@ -41,8 +41,8 @@ function LogIn() {
   const handleRequest = async (e) => {
     e.preventDefault();
     try {
-      const valid = await connexion.post("/auth", credentials);
-      setConnected(valid.data.msg);
+      const valid = await connexion.post("/login", credentials);
+      setConnected(valid);
       showToastMessage();
       setTimeout(() => {
         navigate("/SignUpUser");

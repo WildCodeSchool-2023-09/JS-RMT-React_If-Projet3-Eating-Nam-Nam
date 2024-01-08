@@ -1,15 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 
 export const AuthContext = createContext();
 
 function AuthProvider({ children }) {
   const [connected, setConnected] = useState("Not Connected");
+  const contextValue = useMemo(
+    () => ({ connected, setConnected }),
+    [connected, setConnected]
+  );
 
   return (
-    <AuthContext.Provider value={(connected, setConnected)}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>
   );
 }
 
