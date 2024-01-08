@@ -72,18 +72,8 @@ function SignUpUser() {
     }
   };
 
-  const getAuth = async () => {
-    try {
-      const theIdAuth = await connexion.get(`/auth`).then((res) => res.data);
-      setNewUser({ ...newUser, auth_id: theIdAuth.id });
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
     getRegimes();
-    getAuth();
   }, []);
 
   return (
