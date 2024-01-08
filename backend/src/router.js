@@ -37,6 +37,4 @@ router.post("/login", validateLogin, authControllers.log);
 // Route to get a list of regimes
 router.get("/regime", regimeControllers.browse);
 
-// This is a test comment
-
 module.exports = router;
