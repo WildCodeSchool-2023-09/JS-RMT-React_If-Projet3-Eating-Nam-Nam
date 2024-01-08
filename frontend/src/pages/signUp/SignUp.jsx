@@ -11,6 +11,7 @@ function SignUp() {
     mail: "",
     password: "",
   });
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
 
@@ -36,13 +37,16 @@ function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await connexion.post(`/auth`, userAuth);
-
-      if (response.status === 201) {
-        showToastMessage();
-        setTimeout(() => {
-          navigate("/LogIn");
-        }, "3000");
+      if (confirmPassword === userAuth.password) {
+        const response = await connexion.post(`/signup`, userAuth);
+        if (response.status === 201) {
+          showToastMessage();
+          setTimeout(() => {
+            navigate("/login");
+          }, 3000);
+        }
+      } else {
+        throw new Error("Password don't match!");
       }
     } catch (error) {
       showToastErrorMessage(error);
@@ -51,7 +55,7 @@ function SignUp() {
 
   return (
     <div className="contain-form-signAuth">
-      <h2>SignUp</h2>
+      <h2>Sign Up</h2>
       <div className="contain-form">
         <form onSubmit={handleSubmit} className="form-signUp">
           <h3>Choose an email and a password</h3>
@@ -72,6 +76,17 @@ function SignUp() {
               name="password"
               value={userAuth.password}
               onChange={handleChange}
+              placeholder="Enter a password"
+              required
+            />
+          </div>
+          <div className="containInput">
+            <SignUpInput
+              label="Confirm Password"
+              type="password"
+              name="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Enter a password"
               required
             />

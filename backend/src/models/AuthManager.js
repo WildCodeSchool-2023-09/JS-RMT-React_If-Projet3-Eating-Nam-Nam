@@ -14,7 +14,7 @@ class AuthManager extends AbstractManager {
     // Execute the SQL INSERT query to add a new auth to the "auth" table
     const [result] = await client.query(
       `insert into ${this.table} (mail, password) values (?, ?)`,
-      [auth.mail, auth.password]
+      [auth.mail, auth.hash]
     );
     // Return the ID of the newly inserted user
     return result.insertId;

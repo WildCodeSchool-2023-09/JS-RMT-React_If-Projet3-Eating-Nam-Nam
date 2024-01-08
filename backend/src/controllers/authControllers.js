@@ -35,10 +35,9 @@ const read = async (req, res, next) => {
 const log = async (req, res, next) => {
   try {
     const login = await tables.auth.readByEmail(req.body.mail);
-
-    if (login[0]) {
-      if (login[0].password === req.body.password) {
-        res.status(200).json({ id: login[0].id });
+    if (login) {
+      if (login.password === req.body.password) {
+        res.status(200).json({ id: login.id, msg: "Connected" });
       } else {
         res.sendStatus(403);
       }
