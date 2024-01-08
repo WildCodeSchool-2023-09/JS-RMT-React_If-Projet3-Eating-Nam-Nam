@@ -26,8 +26,6 @@ router.put("/users/:id", userControllers.update);
 // Route to delete a user
 router.delete("/users/:id", userControllers.destroy);
 
-// Route to get an id auth
-router.get("/auth", authControllers.read);
 // Route to post a new auth
 router.post("/signup", validateAuth, hashPassword, authControllers.add);
 // Route to post a new auth
