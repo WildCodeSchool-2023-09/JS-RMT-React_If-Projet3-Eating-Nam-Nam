@@ -11,42 +11,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
 }
 
 .form-login {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: center;
   background-color: white;
-  width: 300px;
-  height: 440px;
+  width: 25rem;
+  height: 25rem;
   border-radius: 10px;
   filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.288));
-  padding-right: 10px;
-  padding-left: 10px;
+  transition: 0.3s ease-in-out;
 }
 
 .form-login h3 {
-  padding-top: 30px;
-  margin-bottom: -10px;
+  margin-bottom: 20px;
   color: #e88628;
   font-weight: bold;
 }
 
 .containInput {
-  margin-bottom: -20px;
-  text-align: right;
-  margin-right: 25px;
-  width: 300px;
+  text-align: center;
 }
 
 .form-login input {
+  text-align: center;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #e88628;
+  border: 2px solid #e88628;
   color: #2e2e2e;
-  margin-left: 10px;
-  width: 140px;
+  width: 250px;
+}
+
+.form-login input:active {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #9228e8;
+  color: #2e2e2e;
 }
 
 .form-login label {
@@ -62,22 +65,6 @@
   color: #5e9732;
 }
 
-.button-submit-login {
-  background-color: #e88628;
-  width: 151px;
-  height: 36px;
-  border-radius: 20px;
-  border: none;
-  color: white;
-  padding-top: 2px;
-}
-
-.button-submit-login:hover {
-  color: #e88628;
-  background-color: white;
-  border: 1px solid #e88628;
-}
-
 @media screen and (min-width: 768px) {
   .form-login {
     width: 500px;
@@ -85,8 +72,6 @@
 
   .containInput {
     margin: 0 auto;
-    margin-right: 80px;
-    width: 400px;
   }
 
   .form-login input {
