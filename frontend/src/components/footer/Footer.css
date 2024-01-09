@@ -1,12 +1,12 @@
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   .footer {
     display: none;
   }
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 1201px) {
   .footer {
-    margin-top: auto;
+    margin-top: 200px;
     display: grid;
     grid-template-columns: 200px 200px;
     gap: 30em;

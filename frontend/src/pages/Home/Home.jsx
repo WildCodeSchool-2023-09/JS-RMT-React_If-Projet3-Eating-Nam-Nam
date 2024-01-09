@@ -7,10 +7,7 @@ import "./Home.css";
 function Home() {
   return (
     <>
-      <h1 className="h1-home">
-        Discover, create, share <br />
-        new recipes & flavors!
-      </h1>
+      <h1 className="h1-home">TASTE THE WORLD!</h1>
       <div className="home-elements">
         <svg
           width="100"
@@ -40,6 +37,10 @@ function Home() {
             </clipPath>
           </defs>
         </svg>
+        <h2>
+          Discover, create, share <br />
+          new recipes & flavors!
+        </h2>
 
         <Link to="/signup" className="home-link-square">
           Sign Up Now

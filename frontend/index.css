@@ -13,6 +13,13 @@
 
 body {
   background: #fffcf4;
+  background-image: url("../frontend/src/assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:
+    bottom center,
+    50%,
+    50%;
   width: 100%;
   margin: 0 auto;
   text-align: center;
