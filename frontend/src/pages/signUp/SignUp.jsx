@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import connexion from "../../services/connexion";
-import SignUpInput from "../../components/singupInput/SignUpInput";
+import SignUpInput from "../../components/signupInput/SignUpInput";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
 

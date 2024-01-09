@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../../contexts/Auth";
 import connexion from "../../services/connexion";
-import SignUpInputUser from "../../components/singupInput/SignUpInputUser";
+import SignUpInputUser from "../../components/signupInput/SignUpInputUser";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUpUser.css";
 
