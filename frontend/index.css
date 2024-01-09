@@ -21,3 +21,29 @@ body {
 li {
   list-style: none;
 }
+
+.button-submit {
+  background-color: #e88628;
+  width: 151px;
+  height: 36px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+}
+
+.button-submit:hover {
+  color: #e88628;
+  background-color: white;
+  border: 1px solid #e88628;
+  transition: 0.3s ease-in-out;
+}
+
+.p-login {
+  margin: 50px 0 50px 0;
+  color: #e88628;
+  font-weight: bold;
+}
+
+.p-link {
+  text-decoration: none;
+}

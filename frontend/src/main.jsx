@@ -10,7 +10,7 @@ import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";
 import SignUp from "./pages/signUp/SignUp";
-import SignUpUser from "./pages/signUp/SignUpUser";
+import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 

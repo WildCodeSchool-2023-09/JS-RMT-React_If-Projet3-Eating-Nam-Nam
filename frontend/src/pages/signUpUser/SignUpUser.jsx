@@ -5,7 +5,7 @@ import { AuthContext } from "../../contexts/Auth";
 import connexion from "../../services/connexion";
 import SignUpInputUser from "../../components/singupInput/SignUpInputUser";
 import "react-toastify/dist/ReactToastify.css";
-import "./SignUp.css";
+import "./SignUpUser.css";
 
 function SignUpUser() {
   const { connected } = useContext(AuthContext);
@@ -77,14 +77,13 @@ function SignUpUser() {
   }, []);
 
   return (
-    <div className="contain-form-signAuth">
+    <div className="contain-form-signUpUser">
       <h2>More Informations</h2>
       <div className="contain-form">
-        <form onSubmit={handleSubmit} className="form-signUp">
+        <form onSubmit={handleSubmit} className="form-signUpUser">
           <h3>Welcome, please enter your informations!</h3>
           <div className="containInput">
             <SignUpInputUser
-              label="Username"
               type="text"
               name="username"
               value={newUser.username}
@@ -94,7 +93,6 @@ function SignUpUser() {
           </div>
           <div className="containInput">
             <SignUpInputUser
-              label="Birthday"
               type="date"
               name="birthday"
               value={newUser.birthday}
@@ -105,7 +103,6 @@ function SignUpUser() {
           </div>
           <div className="containInput">
             <SignUpInputUser
-              label="Picture"
               type="text"
               name="picture"
               value={newUser.picture}
@@ -115,7 +112,6 @@ function SignUpUser() {
             />
           </div>
           <label className="list-regime">
-            Your diet
             <select
               name="regime_id"
               value={newUser.regime_id}
@@ -131,9 +127,9 @@ function SignUpUser() {
                 ))}
             </select>
           </label>
-          <div className="contain-submit-auth">
-            <button type="submit" className="button-submit-signUp">
-              SUBMIT
+          <div className="contain-submit-user">
+            <button type="submit" className="button-submit">
+              Submit
             </button>
           </div>
         </form>

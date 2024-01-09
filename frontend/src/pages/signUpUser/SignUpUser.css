@@ -1,19 +1,19 @@
-.contain-form-login {
+.contain-form-signUpUser {
   margin-top: 100px;
 }
 
-.contain-form-login h2 {
+.contain-form-signUpUser h2 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.form-container {
+.contain-form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form-login {
+.form-signUpUser {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -25,17 +25,19 @@
   transition: 0.3s ease-in-out;
 }
 
-.form-login h3 {
+.form-signUpUser h3 {
   margin-bottom: 20px;
   color: #e88628;
   font-weight: bold;
 }
 
 .containInput {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-login input {
+.form-signUpUser input {
   text-align: center;
   padding: 10px;
   border-radius: 10px;
@@ -44,20 +46,23 @@
   width: 250px;
 }
 
-.form-login input:active {
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #9228e8;
-  color: #2e2e2e;
-}
-
-.form-login input:valid {
+.form-signUpUser input:valid {
   color: #5e9732;
 }
 
+.list-regime select {
+  margin-left: 10px;
+  padding: 10px;
+  border: 2px solid #e88628;
+  border-radius: 10px;
+}
+
+.contain-submit-user {
+  margin-top: 20px;
+}
+
 @media screen and (min-width: 768px) {
-  .form-login {
+  .form-signUpUser {
     width: 500px;
   }
 
@@ -65,7 +70,7 @@
     margin: 0 auto;
   }
 
-  .form-login input {
+  .form-signUpUser input {
     width: 250px;
   }
 }
