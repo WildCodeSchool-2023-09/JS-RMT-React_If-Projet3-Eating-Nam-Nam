@@ -1,5 +1,6 @@
 .nav {
   z-index: 100;
+  background-color: #fffcf4;
   display: grid;
   width: 100%;
   top: 0;
@@ -48,9 +49,11 @@
 
   .nav {
     display: flex;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
     align-items: center;
+    height: 80px;
   }
 
   .nav-logo2 {
