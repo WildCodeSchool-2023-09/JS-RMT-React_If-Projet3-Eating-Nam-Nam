@@ -2,9 +2,7 @@
 
 // Load environment variables from .env file
 require("dotenv").config();
-/*
 const { faker } = require("@faker-js/faker");
-*/
 
 // Import database client
 const database = require("./database/client");
@@ -14,18 +12,6 @@ const regime = require("./database/data/regimes.json");
 
 const seed = async () => {
   try {
-    // Declare an array to store the query promises
-    // See why here: https://eslint.org/docs/latest/rules/no-await-in-loop
-
-    /* ************************************************************************* */
-
-    // Generating Seed Data
-
-    // Optional: Truncate tables (remove existing data)
-
-    /*
-    await database.query("truncate auth");
-    */
     const queriesRegime = [];
     for (let i = 0; i < regime.length; i += 1) {
       queriesRegime.push(
@@ -74,7 +60,6 @@ const seed = async () => {
     // Wait for all the insertion queries to complete
     await Promise.all(queriesIngredients);
 
-    /*
     const queriesRecipes = [];
     const section = ["Starter", "Dish", "Dessert"];
     const difficulty = ["Easy", "Medium", "Difficult"];
@@ -82,7 +67,7 @@ const seed = async () => {
       const time = Math.floor(Math.random()) * 60;
       queriesRecipes.push(
         database.query(
-          `INSERT INTO recipes(picture, section, name, preparation_time, cooking_time, difficulty, allergen)
+          `INSERT INTO recipe(picture, section, title, preparation_time, cooking_time, difficulty, allergen)
            VALUES (?, ?, ?, ?, ?, ?, ?)`,
           [
             faker.image.urlLoremFlickr({ category: "food" }),
@@ -97,7 +82,6 @@ const seed = async () => {
       );
     }
     await Promise.all(queriesRecipes);
-   */
     // Close the database connection
     database.end();
 
