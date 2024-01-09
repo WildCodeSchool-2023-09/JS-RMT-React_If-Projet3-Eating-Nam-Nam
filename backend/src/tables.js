@@ -6,6 +6,7 @@
 const ItemManager = require("./models/ItemManager");
 const UserManager = require("./models/UserManager");
 const AuthManager = require("./models/AuthManager");
+
 const RecipeManager = require("./models/RecipeManager");
 
 const managers = [ItemManager, UserManager, AuthManager, RecipeManager];

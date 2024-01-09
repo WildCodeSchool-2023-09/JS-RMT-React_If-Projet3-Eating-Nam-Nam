@@ -6,25 +6,12 @@ const { faker } = require("@faker-js/faker");
 
 // Import database client
 const database = require("./database/client");
+// eslint-disable-next-line import/extensions
 const ingredients = require("./database/data/eatingNamNam.json");
-const auth = require("./database/data/auths.json");
 const regime = require("./database/data/regimes.json");
-const user = require("./database/data/users.json");
 
 const seed = async () => {
   try {
-    // Declare an array to store the query promises
-    // See why here: https://eslint.org/docs/latest/rules/no-await-in-loop
-
-    /* ************************************************************************* */
-
-    // Generating Seed Data
-
-    // Optional: Truncate tables (remove existing data)
-
-    /*
-    await database.query("truncate auth");
-    */
     const queriesRegime = [];
     for (let i = 0; i < regime.length; i += 1) {
       queriesRegime.push(
@@ -36,36 +23,6 @@ const seed = async () => {
       );
     }
     await Promise.all(queriesRegime);
-
-    const queriesAuth = [];
-    for (let i = 0; i < auth.length; i += 1) {
-      queriesAuth.push(
-        database.query(
-          `INSERT INTO auth(mail, password, is_admin)
-           VALUES (?, ?, ?)`,
-          [auth[i].mail, auth[i].password, auth[i].is_admin]
-        )
-      );
-    }
-    await Promise.all(queriesAuth);
-
-    const queriesUser = [];
-    for (let i = 0; i < user.length; i += 1) {
-      queriesUser.push(
-        database.query(
-          `INSERT INTO user(username, birthday, picture, regime_id, auth_id)
-           VALUES (?, ?, ?, ?, ?)`,
-          [
-            user[i].username,
-            user[i].birthday,
-            user[i].picture,
-            user[i].regime_id,
-            user[i].auth_id,
-          ]
-        )
-      );
-    }
-    await Promise.all(queriesUser);
 
     const queriesIngredients = [];
     for (let i = 0; i < ingredients.length; i += 1) {
