@@ -34,6 +34,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install package dependencies
+        if: steps.cache-nextjob.outputs.cache-hit != 'true'
         run: npm install
 
       - name: Run linters
