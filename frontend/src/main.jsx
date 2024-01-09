@@ -7,7 +7,7 @@ import App from "./App";
 import connexion from "./services/connexion";
 // eslint-disable-next-line import/order
 
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import About from "./pages/About";

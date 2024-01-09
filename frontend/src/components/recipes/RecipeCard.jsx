@@ -1,13 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-// import { useLoaderData } from "react-router-dom";
+import RecipeList from "./RecipeList";
 
-function RecipeCard() {
+function RecipeCard({ recipes }) {
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <div>
       <div>
-        {RecipeCard.map((recip) => (
-          <RecipeCard key={recip.id} recip={recip} />
+        {recipes.map((recip) => (
+          <RecipeList key={recip.id} recip={recip} />
         ))}
       </div>
     </div>
