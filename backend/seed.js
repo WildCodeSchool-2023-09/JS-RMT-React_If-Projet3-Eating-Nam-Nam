@@ -113,7 +113,7 @@ const seed = async () => {
       const time = Math.floor(Math.random()) * 60;
       queriesRecipes.push(
         database.query(
-          `INSERT INTO recipes(picture, section, name, preparation_time, cooking_time, difficulty, allergen)
+          `INSERT INTO recipe(picture, section, title, preparation_time, cooking_time, difficulty, allergen)
            VALUES (?, ?, ?, ?, ?, ?, ?)`,
           [
             faker.image.urlLoremFlickr({ category: "food" }),

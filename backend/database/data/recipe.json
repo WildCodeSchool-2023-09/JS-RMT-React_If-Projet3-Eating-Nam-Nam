@@ -2,7 +2,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "starter, dish",
-    "recipe": "Butternut cream soup with cinnamon",
+    "title": "Butternut cream soup with cinnamon",
     "ingredients": [
       "pepper",
       "butter",
@@ -21,7 +21,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "dessert",
-    "recipe": "Chocolate Rochers",
+    "title": "Chocolate Rochers",
     "ingredients": [
       "dark chocolate",
       "milk chocolate",
@@ -38,7 +38,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "stater, dish",
-    "recipe": "Mushrooms with scrambled eggs",
+    "title": "Mushrooms with scrambled eggs",
     "ingredients": [
       "giant button mushrooms",
       "salt",
@@ -58,7 +58,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "starter, dish",
-    "recipe": "Corn salad",
+    "title": "Corn salad",
     "ingredients": [
       "lime",
       "rapeseed oil",
@@ -78,7 +78,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "starter, dish",
-    "recipe": "Pumpkin slices",
+    "title": "Pumpkin slices",
     "ingredients": [
       "pumpkin",
       "olive oil",
@@ -98,7 +98,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "dessert",
-    "recipe": "Strawberry yogurt",
+    "title": "Strawberry yogurt",
     "ingredients": [
       "strawberry",
       "natural yogurt",
@@ -115,7 +115,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dessert",
-    "recipe": "Apple pie",
+    "title": "Apple pie",
     "ingredients": [
       "semi-white flour",
       "salt",
@@ -134,7 +134,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dessert",
-    "recipe": "Cherry mousse",
+    "title": "Cherry mousse",
     "ingredients": [
       "cherries",
       "maraschino",
@@ -152,7 +152,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dessert",
-    "recipe": "Pears with saffron",
+    "title": "Pears with saffron",
     "ingredients": [
       "white wine",
       "sugar",
@@ -169,7 +169,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Starter, dish",
-    "recipe": "Baked eggplant",
+    "title": "Baked eggplant",
     "ingredients": [
       "oil, salt",
       "pepper",
@@ -190,7 +190,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dessert",
-    "recipe": "Carrot muffins",
+    "title": "Carrot muffins",
     "ingredients": [
       "butter",
       "sugar",
@@ -216,7 +216,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dish",
-    "recipe": "Stuffed tomatoes",
+    "title": "Stuffed tomatoes",
     "ingredients": [
       "lean quark",
       "grated sbrinz",
@@ -238,7 +238,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": " ",
-    "recipe": "Japanese rice (Gohan)",
+    "title": "Japanese rice (Gohan)",
     "ingredients": [
       "sesame seeds",
       "sushi rice",
@@ -255,7 +255,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Starter, Dish",
-    "recipe": "Focaccia with olives and arugula",
+    "title": "Focaccia with olives and arugula",
     "ingredients": [
       "salt",
       "flour",
@@ -277,7 +277,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dish",
-    "recipe": "Beef and sage spaghetti carbonara",
+    "title": "Beef and sage spaghetti carbonara",
     "ingredients": [
       "spaghetti",
       "olive oil",
@@ -301,7 +301,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dish",
-    "recipe": "Diavolo Chickens",
+    "title": "Diavolo Chickens",
     "ingredients": [
       "free-range chicken",
       "olive oil",
@@ -323,7 +323,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Starter,Dish",
-    "recipe": "Lemon marinade",
+    "title": "Lemon marinade",
     "ingredients": [
       "lemon",
       "lime",
@@ -341,7 +341,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Dish",
-    "recipe": "Leek lasagna",
+    "title": "Leek lasagna",
     "ingredients": [
       "leek",
       "fresh cream",
@@ -360,7 +360,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Starters, Dish",
-    "recipe": "Salmon rolls",
+    "title": "Salmon rolls",
     "ingredients": [
       "noodle dough",
       "salt water",
@@ -379,7 +379,7 @@
   {
     "picture": "fakepicture.jpg",
     "section": "Desert",
-    "recipe": "Kiwi-lime salad and coconut sauce",
+    "title": "Kiwi-lime salad and coconut sauce",
     "ingredients": [
       "coconut milk",
       "white almond puree",

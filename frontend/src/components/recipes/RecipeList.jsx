@@ -1,17 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-// import RecipeCard from "./RecipeCard";
 
 function RecipeList({ recip }) {
   return (
     <div>
-      {/* <RecipeCard recip={recip} />; */}
       <div>
         <div>
-          <img className="picture" src={recip.picture} alt={recip.name} />
+          <img className="picture" src={recip.picture} alt={recip.title} />
         </div>
         <div>
-          <h3 className="name">{recip.name}</h3>
+          <h3 className="name">{recip.title}</h3>
           <p className="section">{recip.section}</p>
         </div>
         <p className="preparation_time">"{recip.preparation_time}"</p>
@@ -26,5 +24,3 @@ function RecipeList({ recip }) {
 }
 
 export default RecipeList;
-
-// picture, section, name, preparation_time, cooking_time, difficulty, allergen

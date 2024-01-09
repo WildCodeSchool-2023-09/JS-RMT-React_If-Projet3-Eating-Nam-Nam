@@ -16,7 +16,7 @@ const authControllers = require("./controllers/authControllers");
 
 // Route to get a list of users
 router.get("/users", userControllers.browse);
-router.get("/recipes", recipeControllers.getRecipe);
+router.get("/recipes", recipeControllers.browse);
 // Route to put a user
 router.put("/users/:id", userControllers.update);
 // Route to delete a user
@@ -25,7 +25,7 @@ router.delete("/users/:id", userControllers.destroy);
 router.post("/auth", authControllers.add);
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
-router.get("/recipes/:id", recipeControllers.getRecipeByID);
+router.get("/recipes/:id", recipeControllers.read);
 // Route to add a new item
 // router.post("/items", itemControllers.add);
 /* ************************************************************************* */
