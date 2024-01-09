@@ -1,8 +1,8 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import connexion from "../../services/connexion";
-import SignUpInput from "../../components/singupInput/SignUpInput";
+import SignUpInput from "../../components/signupInput/SignUpInput";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
 
@@ -58,10 +58,9 @@ function SignUp() {
       <h2>Sign Up</h2>
       <div className="contain-form">
         <form onSubmit={handleSubmit} className="form-signUp">
-          <h3>Choose an email and a password</h3>
+          <h3>Create your account</h3>
           <div className="containInput">
             <SignUpInput
-              label="Email"
               type="email"
               name="mail"
               value={userAuth.mail}
@@ -71,7 +70,6 @@ function SignUp() {
           </div>
           <div className="containInput">
             <SignUpInput
-              label="Password"
               type="password"
               name="password"
               value={userAuth.password}
@@ -82,23 +80,25 @@ function SignUp() {
           </div>
           <div className="containInput">
             <SignUpInput
-              label="Confirm Password"
               type="password"
               name="confirmPassword"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="Enter a password"
+              placeholder="Confirm your password"
               required
             />
           </div>
           <div className="contain-submit-auth">
-            <button type="submit" className="button-submit-signUp">
-              SUBMIT
+            <button type="submit" className="button-submit">
+              Submit
             </button>
           </div>
         </form>
       </div>
       <ToastContainer />
+      <Link to="/login" className="p-link">
+        <p className="p-login">Already registered? Log in to your account</p>
+      </Link>
     </div>
   );
 }

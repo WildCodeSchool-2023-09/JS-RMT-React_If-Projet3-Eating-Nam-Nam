@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../../contexts/Auth";
 import connexion from "../../services/connexion";
+import LoginInput from "../../components/signupInput/LoginInput";
 import "react-toastify/dist/ReactToastify.css";
 import "./LogIn.css";
 
@@ -58,39 +59,38 @@ function LogIn() {
       <h2>Log In</h2>
       <div className="form-container">
         <form onSubmit={handleRequest} className="form-login">
-          <h3>Please enter your credentials</h3>
+          <h3>Please enter your informations</h3>
           <div className="contain-input">
-            <label className="label-email">
-              Your email
-              <input
-                type="email"
-                name="mail"
-                required
-                onChange={handleCredentials}
-                value={credentials.mail}
-              />
-            </label>
+            <LoginInput
+              type="email"
+              name="mail"
+              required
+              onChange={handleCredentials}
+              value={credentials.mail}
+              placeholder="Your mail"
+            />
           </div>
           <div className="contain-input">
-            <label>
-              Your password
-              <input
-                type="password"
-                name="password"
-                required
-                onChange={handleCredentials}
-                value={credentials.password}
-              />
-            </label>
+            <LoginInput
+              type="password"
+              name="password"
+              required
+              onChange={handleCredentials}
+              value={credentials.password}
+              placeholder="Your password"
+            />
           </div>
           <div>
-            <button type="submit" className="button-submit-login">
-              LOGIN
+            <button type="submit" className="button-submit">
+              Login
             </button>
           </div>
         </form>
       </div>
       <ToastContainer />
+      <Link to="/signup" className="p-link">
+        <p className="p-login">Not registered yet? Create your account</p>
+      </Link>
     </div>
   );
 }
