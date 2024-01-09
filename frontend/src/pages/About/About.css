@@ -1,0 +1,103 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-frame {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 29rem;
+  margin-top: 200px;
+  width: 80%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 3px 8px 8px -4px rgba(0, 0, 0, 0.1);
+}
+.about-logo {
+  margin-top: 20px;
+}
+
+.about-h2 {
+  margin-top: -1px;
+}
+
+.about-title {
+  grid-area: 1 / 1 / 2 / 5;
+  height: 100px;
+}
+.about-fish-val {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.about-fish-leslie {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.about-fish-thib {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.about-fish-greg {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+@media (max-width: 1060px) {
+  .about-logo {
+    margin-top: 20px;
+  }
+
+  .about-h2 {
+    margin-top: -1px;
+  }
+
+  .about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-frame {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 36rem;
+    margin-top: 150px;
+    width: 80%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 3px 8px 8px -4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .about-title {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .img-fish {
+    width: 100px;
+  }
+
+  .about-fish-val {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 150px;
+  }
+  .about-fish-leslie {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 150px;
+  }
+  .about-fish-thib {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 150px;
+  }
+  .about-fish-greg {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 150px;
+  }
+}
