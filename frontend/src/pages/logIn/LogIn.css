@@ -1,19 +1,19 @@
-.contain-form-signAuth {
+.contain-form-login {
   margin-top: 100px;
 }
 
-.contain-form-signAuth h2 {
+.contain-form-login h2 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.contain-form {
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form-signUp {
+.form-login {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -25,19 +25,17 @@
   transition: 0.3s ease-in-out;
 }
 
-.form-signUp h3 {
+.form-login h3 {
   margin-bottom: 20px;
   color: #e88628;
   font-weight: bold;
 }
 
 .containInput {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
-.form-signUp input {
+.form-login input {
   text-align: center;
   padding: 10px;
   border-radius: 10px;
@@ -46,16 +44,20 @@
   width: 250px;
 }
 
-.form-signUp input:valid {
+.form-login input:active {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #9228e8;
+  color: #2e2e2e;
+}
+
+.form-login input:valid {
   color: #5e9732;
 }
 
-.contain-submit-auth {
-  margin-top: 20px;
-}
-
 @media screen and (min-width: 768px) {
-  .form-signUp {
+  .form-login {
     width: 500px;
   }
 
@@ -63,7 +65,7 @@
     margin: 0 auto;
   }
 
-  .form-signUp input {
+  .form-login input {
     width: 250px;
   }
 }

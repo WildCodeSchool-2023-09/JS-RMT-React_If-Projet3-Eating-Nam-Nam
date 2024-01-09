@@ -24,7 +24,7 @@ create table user (
   date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   date_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   Foreign Key (regime_id) REFERENCES regime(id),
-  Foreign Key (auth_id) REFERENCES auth(id)
+  Foreign Key (auth_id) REFERENCES auth(id) ON DELETE CASCADE
 );
 
 create table ingredient (

@@ -1,8 +1,8 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import connexion from "../../services/connexion";
-import SignUpInput from "../../components/singupInput/SignUpInput";
+import SignUpInput from "../../components/signupInput/SignUpInput";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
 
@@ -11,22 +11,20 @@ function SignUp() {
     mail: "",
     password: "",
   });
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
 
   const showToastMessage = () => {
-    toast.success("Les données ont bien été enregistrée !", {
+    toast.success("The data has been recorded successfully !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
 
   const showToastErrorMessage = () => {
-    toast.error(
-      "Il y a eu une erreur les données n'ont pas été enregistrée !",
-      {
-        position: toast.POSITION.TOP_RIGHT,
-      }
-    );
+    toast.error("There was an error the data was not saved !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   const handleChange = (event) => {
@@ -39,13 +37,16 @@ function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await connexion.post(`/auth`, userAuth);
-
-      if (response.status === 201) {
-        showToastMessage();
-        setTimeout(() => {
-          navigate("/SignUpUser");
-        }, "3000");
+      if (confirmPassword === userAuth.password) {
+        const response = await connexion.post(`/signup`, userAuth);
+        if (response.status === 201) {
+          showToastMessage();
+          setTimeout(() => {
+            navigate("/login");
+          }, 3000);
+        }
+      } else {
+        throw new Error("Password don't match!");
       }
     } catch (error) {
       showToastErrorMessage(error);
@@ -54,13 +55,12 @@ function SignUp() {
 
   return (
     <div className="contain-form-signAuth">
-      <h2>SignUp</h2>
+      <h2>Sign Up</h2>
       <div className="contain-form">
         <form onSubmit={handleSubmit} className="form-signUp">
-          <h3>Choose an email and a password</h3>
+          <h3>Create your account</h3>
           <div className="containInput">
             <SignUpInput
-              label="Email"
               type="email"
               name="mail"
               value={userAuth.mail}
@@ -70,7 +70,6 @@ function SignUp() {
           </div>
           <div className="containInput">
             <SignUpInput
-              label="Password"
               type="password"
               name="password"
               value={userAuth.password}
@@ -79,14 +78,27 @@ function SignUp() {
               required
             />
           </div>
+          <div className="containInput">
+            <SignUpInput
+              type="password"
+              name="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
           <div className="contain-submit-auth">
-            <button type="submit" className="button-submit-signUp">
-              SUBMIT
+            <button type="submit" className="button-submit">
+              Submit
             </button>
           </div>
         </form>
       </div>
       <ToastContainer />
+      <Link to="/login" className="p-link">
+        <p className="p-login">Already registered? Log in to your account</p>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 // Import access to database tables
+const argon2 = require("argon2");
 const tables = require("../tables");
 
 // The B of BREAD - Browse (Read All) operation
@@ -16,26 +17,29 @@ const browse = async (req, res, next) => {
 };
 */
 
-/*
-// The R of BREAD - Read operation
-const read = async (req, res, next) => {
+// Log In
+const log = async (req, res, next) => {
   try {
-    // Fetch a specific auth from the database based on the provided ID
-    const auth = await tables.auth.read(req.params.id);
+    const login = await tables.auth.readByEmail(req.body.mail);
 
-    // If the auth is not found, respond with HTTP 404 (Not Found)
-    // Otherwise, respond with the auth in JSON format
-    if (auth) {
-      res.status(200).json(auth);
+    if (login) {
+      const passwordMatch = await argon2.verify(
+        login.password,
+        req.body.password
+      );
+
+      if (passwordMatch) {
+        res.status(200).json({ id: login.id, msg: "Connected" });
+      } else {
+        res.sendStatus(403);
+      }
     } else {
-      res.sendStatus(404);
+      res.sendStatus(403);
     }
   } catch (err) {
-    // Pass any errors to the error-handling middleware
     next(err);
   }
 };
-*/
 
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
@@ -96,9 +100,7 @@ module.exports = {
   /*
   browse,
   */
-  /*
-  read,
-  */
+  log,
   /*
   update,
   */

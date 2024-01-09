@@ -5,9 +5,9 @@ const tables = require("../tables");
 const browse = async (req, res, next) => {
   try {
     // Fetch all users from the database
-    const users = await tables.user.readAll();
+    const regimes = await tables.regime.readAll();
     // Respond with the users in JSON format
-    res.status(200).json(users);
+    res.status(200).json(regimes);
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -37,6 +37,7 @@ const read = async (req, res, next) => {
 
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
+/*
 const update = async (req, res, next) => {
   // Extract the user data from the request body
   const user = req.body;
@@ -56,7 +57,9 @@ const update = async (req, res, next) => {
     next(err);
   }
 };
+*/
 
+/*
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
   // Extract the user data from the request body
@@ -73,9 +76,11 @@ const add = async (req, res, next) => {
     next(err);
   }
 };
+*/
 
 // The D of BREAD - Destroy (Delete) operation
 // This operation is not yet implemented
+/*
 const destroy = async (req, res, next) => {
   try {
     await tables.user.delete(req.params.id);
@@ -84,6 +89,7 @@ const destroy = async (req, res, next) => {
     next(err);
   }
 };
+*/
 
 // Ready to export the controller functions
 module.exports = {
@@ -91,7 +97,13 @@ module.exports = {
   /*
   read,
   */
+  /*
   update,
+  */
+  /*
   add,
+  */
+  /*
   destroy,
+  */
 };

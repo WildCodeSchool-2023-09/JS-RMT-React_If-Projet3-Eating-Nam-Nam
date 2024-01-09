@@ -2,17 +2,20 @@
 
 // Load environment variables from .env file
 require("dotenv").config();
+/*
 const { faker } = require("@faker-js/faker");
+*/
 
 // Import database client
 const database = require("./database/client");
 // eslint-disable-next-line import/extensions
 const ingredients = require("./database/data/eatingNamNam.json");
-const auth = require("./database/data/auths.json");
 const regime = require("./database/data/regimes.json");
+
 const user = require("./database/data/users.json");
 // eslint-disable-next-line no-unused-vars
 const recipe = require("./database/data/recipe.json");
+
 
 const seed = async () => {
   try {
@@ -39,36 +42,6 @@ const seed = async () => {
       );
     }
     await Promise.all(queriesRegime);
-
-    const queriesAuth = [];
-    for (let i = 0; i < auth.length; i += 1) {
-      queriesAuth.push(
-        database.query(
-          `INSERT INTO auth(mail, password, is_admin)
-           VALUES (?, ?, ?)`,
-          [auth[i].mail, auth[i].password, auth[i].is_admin]
-        )
-      );
-    }
-    await Promise.all(queriesAuth);
-
-    const queriesUser = [];
-    for (let i = 0; i < user.length; i += 1) {
-      queriesUser.push(
-        database.query(
-          `INSERT INTO user(username, birthday, picture, regime_id, auth_id)
-           VALUES (?, ?, ?, ?, ?)`,
-          [
-            user[i].username,
-            user[i].birthday,
-            user[i].picture,
-            user[i].regime_id,
-            user[i].auth_id,
-          ]
-        )
-      );
-    }
-    await Promise.all(queriesUser);
 
     const queriesIngredients = [];
     for (let i = 0; i < ingredients.length; i += 1) {
@@ -106,6 +79,7 @@ const seed = async () => {
     // Wait for all the insertion queries to complete
     await Promise.all(queriesIngredients);
 
+    /*
     const queriesRecipes = [];
     const section = ["Starter", "Dish", "Dessert"];
     const difficulty = ["Easy", "Medium", "Difficult"];
@@ -128,6 +102,7 @@ const seed = async () => {
       );
     }
     await Promise.all(queriesRecipes);
+   */
     // Close the database connection
     database.end();
 
