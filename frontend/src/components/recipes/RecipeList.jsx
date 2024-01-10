@@ -1,10 +1,12 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import React from "react";
+import Fav from "../favorite/Fav";
 import "./Recipes.css";
 
 function RecipeList({ recip }) {
   return (
     <div className="recipe">
+      <Fav />
       <div>
         <img className="picture" src={recip.picture} alt={recip.title} />
       </div>
@@ -21,5 +23,7 @@ function RecipeList({ recip }) {
     </div>
   );
 }
-
+RecipeList.propTypes = {
+  recip: PropTypes.string.isRequired,
+};
 export default RecipeList;
