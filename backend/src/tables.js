@@ -16,7 +16,7 @@ const managers = [
   AuthManager,
   RecipeManager,
   RegimeManager,
-  IngredientManager
+  IngredientManager,
 ];
 
 // Create an empty object to hold data managers for different tables
