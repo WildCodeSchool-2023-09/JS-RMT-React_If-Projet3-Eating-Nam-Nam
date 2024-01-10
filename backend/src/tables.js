@@ -6,10 +6,18 @@
 const ItemManager = require("./models/ItemManager");
 const UserManager = require("./models/UserManager");
 const IngredientManager = require("./models/IngredientManager");
-
 const AuthManager = require("./models/AuthManager");
+const RegimeManager = require("./models/RegimeManager");
+const RecipeManager = require("./models/RecipeManager");
 
-const managers = [ItemManager, UserManager, AuthManager, IngredientManager];
+const managers = [
+  ItemManager,
+  UserManager,
+  AuthManager,
+  RecipeManager,
+  RegimeManager,
+  IngredientManager,
+];
 
 // Create an empty object to hold data managers for different tables
 const tables = {};

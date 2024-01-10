@@ -5,10 +5,11 @@
 }
 @media (max-width: 1200px) {
   .nav-menu-mobile {
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #fffcf4;
     position: fixed;
     width: 100%;
     left: 50%;

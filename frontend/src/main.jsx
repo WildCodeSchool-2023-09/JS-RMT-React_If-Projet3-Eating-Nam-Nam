@@ -5,14 +5,19 @@ import Admin from "./pages/admin/Admin";
 import Management from "./components/management/Management";
 import App from "./App";
 
-import Home from "./pages/Home";
+import connexion from "./services/connexion";
+// eslint-disable-next-line import/order
+
+import AuthProvider from "./contexts/Auth";
+
+import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
-import About from "./pages/About";
+import About from "./pages/About/About";
 import SignUp from "./pages/signUp/SignUp";
-import SignUpUser from "./pages/signUp/SignUpUser";
-import LogIn from "./pages/LogIn";
+import SignUpUser from "./pages/signUpUser/SignUpUser";
+import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 
 const router = createBrowserRouter([
@@ -27,6 +32,22 @@ const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <Recipes />,
+        loader: () => {
+          return connexion
+            .get(`/recipes`)
+            .then((response) => response.data)
+            .catch((err) => console.error(err));
+        },
+      },
+      {
+        path: "/recipes/:id",
+        element: <Recipes />,
+        loader: ({ params }) => {
+          return connexion
+            .get(`/recipes/${params.id}`)
+            .then((response) => response.data)
+            .catch((err) => console.error(err));
+        },
       },
       {
         path: "/ingredients",
@@ -45,12 +66,12 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "/signupuser",
-        element: <SignUpUser />,
-      },
-      {
         path: "/login",
         element: <LogIn />,
+      },
+      {
+        path: "/signupuser",
+        element: <SignUpUser />,
       },
       {
         path: "/terms",
@@ -74,6 +95,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

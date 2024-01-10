@@ -8,7 +8,7 @@ create table regime (
 
 create table auth (
   id int primary key auto_increment not null,
-  mail VARCHAR(255) not null,
+  mail VARCHAR(255) not null UNIQUE,
   password VARCHAR(255) not null,
   is_admin BOOLEAN DEFAULT false
 );
@@ -24,7 +24,7 @@ create table user (
   date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   date_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   Foreign Key (regime_id) REFERENCES regime(id),
-  Foreign Key (auth_id) REFERENCES auth(id)
+  Foreign Key (auth_id) REFERENCES auth(id) ON DELETE CASCADE
 );
 
 create table ingredient (
@@ -45,7 +45,7 @@ create table recipe (
   id int primary key auto_increment not null,
   picture VARCHAR(255) not null,
 	section ENUM('Starter', 'Dish', 'Dessert') not null,
-  name VARCHAR(255) not null,
+  title VARCHAR(255) not null,
  	preparation_time INTEGER not null,
   cooking_time INTEGER not null,
   difficulty ENUM('Easy', 'Medium', 'Difficult') not null,

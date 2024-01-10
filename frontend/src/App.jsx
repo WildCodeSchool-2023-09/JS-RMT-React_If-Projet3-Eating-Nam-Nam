@@ -11,8 +11,10 @@ function App() {
     <>
       <Navbar />
       <NavbarMobile />
-      <Outlet />
-      <Footer />
+      <div className="App">
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 }
