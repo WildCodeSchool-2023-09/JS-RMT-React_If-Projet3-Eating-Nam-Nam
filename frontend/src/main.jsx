@@ -6,7 +6,6 @@ import Management from "./components/management/Management";
 import App from "./App";
 
 import connexion from "./services/connexion";
-// eslint-disable-next-line import/order
 
 import AuthProvider from "./contexts/Auth";
 
@@ -18,6 +17,7 @@ import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
+import Favorite from "./pages/favorite/Favorite";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <Terms />,
+      },
+      {
+        path: "/favorite",
+        element: <Favorite />,
       },
     ],
   },

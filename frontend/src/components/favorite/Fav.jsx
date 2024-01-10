@@ -1,21 +1,22 @@
-// import { MdFavorite, MdOutFavorite } from "react-icons/md";
+import PropTypes from "prop-types";
+import { useRecipeContext } from "react";
 
-// import { useRecipeContext } from "../contexts/contexts";
+import "./Fav.css";
 
-// function Fav({ recipId }) {
-//   const { favorites, manageFavorites } = useRecipeContext();
+function Fav({ recipId }) {
+  const { favorites, manageFavorites } = useRecipeContext();
 
-//   return (
-//     <button
-//       type="button"
-//       className="fav"
-//       onClick={() => manageFavorites(recipId)}
-//     >
-//       {favorites.includes(recipId) ? <MdFavorite /> : <MdOutFavorite />};
-//     </button>
-//   );
-// }
-
-// export default Fav;
-
-// // https://react-icons.github.io/react-icons/search/#q=favorite //
+  return (
+    <button
+      type="button"
+      className="fav"
+      onClick={() => manageFavorites(recipId)}
+    >
+      {favorites.includes(recipId)}
+    </button>
+  );
+}
+Fav.propTypes = {
+  recipId: PropTypes.string.isRequired,
+};
+export default Fav;

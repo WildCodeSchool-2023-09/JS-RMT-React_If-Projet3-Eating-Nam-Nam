@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const RecipeContext = createContext();
 
-export const useBeerContext = () => useContext(RecipeContext);
+export const useRecipeContext = () => useContext(RecipeContext);
 
 export function RecipeProvider() {
   const recipeFavorites = localStorage.getItem("favorites")
