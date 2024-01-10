@@ -47,9 +47,7 @@ router.get("/recipes/:id", recipeControllers.read);
 router.get("/ingredients", ingredientControllers.browse);
 router.post("/ingredients", ingredientControllers.add);
 
-
 // router.post("/items", itemControllers.add);
-
 
 router.post("/signup", validateAuth, hashPassword, authControllers.add);
 // Route to post a new auth
