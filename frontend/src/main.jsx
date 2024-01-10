@@ -42,11 +42,19 @@ const router = createBrowserRouter([
       {
         path: "/recipes/:id",
         element: <Recipes />,
-        loader: ({ params }) => {
-          return connexion
-            .get(`/recipes/${params.id}`)
-            .then((response) => response.data)
-            .catch((err) => console.error(err));
+        errorElement: <Page404 />,
+        loader: async ({ params }) => {
+          try {
+            const response = await connexion.get(`/recipes/${params.id}`);
+            return response.data;
+          } catch (error) {
+            if (error.response && error.response.status === 404) {
+              throw new Response("Not Found", { status: 404 });
+            } else {
+              console.error(error);
+              throw new Error("Failed to fetch data");
+            }
+          }
         },
       },
       {
@@ -74,7 +82,7 @@ const router = createBrowserRouter([
         element: <Terms />,
       },
       {
-        path: "/*",
+        path: "*",
         element: <Page404 />,
       },
     ],
