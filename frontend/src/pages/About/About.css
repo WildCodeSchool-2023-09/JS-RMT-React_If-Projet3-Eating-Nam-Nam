@@ -18,6 +18,21 @@
   border-radius: 1rem;
   box-shadow: 3px 8px 8px -4px rgba(0, 0, 0, 0.1);
 }
+
+.about-page a {
+  color: #1d1d1d;
+  text-decoration: none;
+}
+
+.img-fish,
+.about-logo {
+  transition: transform 0.7s ease-in-out;
+}
+.img-fish:hover,
+.about-logo:hover {
+  transform: rotate(360deg);
+}
+
 .about-logo {
   margin-top: 20px;
 }
