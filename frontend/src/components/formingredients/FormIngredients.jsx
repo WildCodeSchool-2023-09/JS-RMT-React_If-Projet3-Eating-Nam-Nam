@@ -20,18 +20,15 @@ function FormIngredients() {
   const [formData, setFormData] = useState(initialFormState);
 
   const showToastMessage = () => {
-    toast.success("Les données ont bien été enregistrée !", {
+    toast.success("The data has been saved successfully", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
 
   const showToastErrorMessage = () => {
-    toast.error(
-      "Il y a eu une erreur les données n'ont pas été enregistrée !",
-      {
-        position: toast.POSITION.TOP_RIGHT,
-      }
-    );
+    toast.error("Data was not saved !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   const handleInputChange = (e) => {
@@ -43,9 +40,11 @@ function FormIngredients() {
     e.preventDefault();
 
     try {
-      const response = await connexion.post(`/ingredient`, formData);
+      const response = await connexion.post(`/ingredients`, formData);
       if (response.status === 201) {
         showToastMessage();
+      } else {
+        throw new Error("Data was not saved !");
       }
     } catch (error) {
       showToastErrorMessage(error);
@@ -60,14 +59,14 @@ function FormIngredients() {
           <div key={key}>
             <label htmlFor={key}>
               {key.charAt(0).toUpperCase() + key.slice(1)}:
+              <input
+                type="text"
+                id={key}
+                name={key}
+                value={value}
+                onChange={handleInputChange}
+              />
             </label>
-            <input
-              type={key === "text"}
-              id={key}
-              name={key}
-              value={value}
-              onChange={handleInputChange}
-            />
           </div>
         ))}
 

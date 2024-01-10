@@ -13,9 +13,7 @@ function App() {
       <Navbar />
       <NavbarMobile />
       <Outlet />
-
       <FormIngredients />
-
       <Footer />
     </>
   );
