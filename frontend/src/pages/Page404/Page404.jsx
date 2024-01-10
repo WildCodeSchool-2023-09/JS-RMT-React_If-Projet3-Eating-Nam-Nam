@@ -14,7 +14,7 @@ function Page404() {
       <Link to="/" className="p-link">
         <p className="p-login">Go back to Home</p>
       </Link>
-      <img src={saumon} alt="saumon" />
+      <img className="img-saumon" src={saumon} alt="saumon" />
     </div>
   );
 }

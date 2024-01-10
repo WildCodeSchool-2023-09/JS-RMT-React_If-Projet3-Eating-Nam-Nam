@@ -1,3 +1,10 @@
 .p404-h2 {
   margin-top: 250px;
 }
+
+.img-saumon {
+  transition: transform 0.7s ease-in-out;
+}
+.img-saumon:hover {
+  transform: rotate(360deg);
+}
