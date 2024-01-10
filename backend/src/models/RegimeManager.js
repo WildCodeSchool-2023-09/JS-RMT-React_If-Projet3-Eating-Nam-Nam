@@ -1,5 +1,4 @@
 const AbstractManager = require("./AbstractManager");
-const client = require("../../database/client");
 
 class RegimeManager extends AbstractManager {
   constructor() {
@@ -39,7 +38,7 @@ class RegimeManager extends AbstractManager {
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all users from the "regime" table
-    const [rows] = await client.query(`select * from ${this.table}`);
+    const [rows] = await this.database.query(`select * from ${this.table}`);
 
     // Return the array of users
     return rows;
