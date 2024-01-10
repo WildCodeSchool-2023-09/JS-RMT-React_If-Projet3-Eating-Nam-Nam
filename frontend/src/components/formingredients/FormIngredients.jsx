@@ -40,12 +40,8 @@ function FormIngredients() {
     e.preventDefault();
 
     try {
-      const response = await connexion.post(`/ingredients`, formData);
-      if (response.status === 201) {
-        showToastMessage();
-      } else {
-        throw new Error("Data was not saved !");
-      }
+      await connexion.post(`/ingredients`, formData);
+      showToastMessage();
     } catch (error) {
       showToastErrorMessage(error);
     }
@@ -57,7 +53,7 @@ function FormIngredients() {
       <form className="form-ingredients" onSubmit={handleSubmit}>
         {Object.entries(formData).map(([key, value]) => (
           <div key={key}>
-            <label htmlFor={key}>
+            <label>
               {key.charAt(0).toUpperCase() + key.slice(1)}:
               <input
                 type="text"

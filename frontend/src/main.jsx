@@ -8,6 +8,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
+import AddIngredients from "./pages/AddIngredients";
 import About from "./pages/About";
 import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUp/SignUpUser";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/ingredients",
         element: <Ingredients />,
+      },
+      {
+        path: "/addingredients",
+        element: <AddIngredients />,
       },
       {
         path: "/about",
