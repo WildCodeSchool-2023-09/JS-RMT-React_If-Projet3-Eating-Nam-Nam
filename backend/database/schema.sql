@@ -8,7 +8,7 @@ create table regime (
 
 create table auth (
   id int primary key auto_increment not null,
-  mail VARCHAR(255) not null,
+  mail VARCHAR(255) not null UNIQUE,
   password VARCHAR(255) not null,
   is_admin BOOLEAN DEFAULT false
 );
