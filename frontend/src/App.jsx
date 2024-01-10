@@ -12,10 +12,12 @@ function App() {
     <>
       <Navbar />
       <NavbarMobile />
-      <Outlet />
       <FormIngredients />
-      <Footer />
-    </>
+      <div className="App">
+        <Outlet />
+        <Footer />
+      </div>
+   </>
   );
 }
 
