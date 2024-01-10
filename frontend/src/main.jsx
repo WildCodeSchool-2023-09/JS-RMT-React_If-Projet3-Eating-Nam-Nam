@@ -18,6 +18,7 @@ import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
+import Page404 from "./pages/Page404/Page404";
 
 const router = createBrowserRouter([
   {
@@ -41,11 +42,19 @@ const router = createBrowserRouter([
       {
         path: "/recipes/:id",
         element: <Recipes />,
-        loader: ({ params }) => {
-          return connexion
-            .get(`/recipes/${params.id}`)
-            .then((response) => response.data)
-            .catch((err) => console.error(err));
+        errorElement: <Page404 />,
+        loader: async ({ params }) => {
+          try {
+            const response = await connexion.get(`/recipes/${params.id}`);
+            return response.data;
+          } catch (error) {
+            if (error.response && error.response.status === 404) {
+              throw new Response("Not Found", { status: 404 });
+            } else {
+              console.error(error);
+              throw new Error("Failed to fetch data");
+            }
+          }
         },
       },
       {
@@ -71,6 +80,10 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <Terms />,
+      },
+      {
+        path: "*",
+        element: <Page404 />,
       },
     ],
   },
