@@ -59,7 +59,6 @@ const seed = async () => {
 
     // Wait for all the insertion queries to complete
     await Promise.all(queriesIngredients);
-
     const queriesRecipes = [];
     const section = ["Starter", "Dish", "Dessert"];
     const difficulty = ["Easy", "Medium", "Difficult"];
@@ -82,6 +81,7 @@ const seed = async () => {
       );
     }
     await Promise.all(queriesRecipes);
+
     // Close the database connection
     database.end();
 

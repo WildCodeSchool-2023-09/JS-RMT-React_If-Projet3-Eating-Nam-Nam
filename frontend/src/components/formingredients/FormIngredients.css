@@ -1,0 +1,39 @@
+body {
+  background-color: #ece8da;
+  font-family: "Now", sans-serif;
+}
+.contain-form-ingredient {
+  margin-top: 70px;
+}
+.form-ingredients {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px;
+  background-color: #5e9732;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #fe8a1b;
+}

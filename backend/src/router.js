@@ -11,7 +11,11 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 */
 const userControllers = require("./controllers/userControllers");
+
+const ingredientControllers = require("./controllers/ingredientControllers");
+
 const recipeControllers = require("./controllers/recipeControllers");
+
 const authControllers = require("./controllers/authControllers");
 const regimeControllers = require("./controllers/regimeControllers");
 
@@ -37,8 +41,13 @@ router.post("/auth", authControllers.add);
 // router.get("/items/:id", itemControllers.read);
 router.get("/recipes/:id", recipeControllers.read);
 // Route to add a new item
+
 // router.post("/items", itemControllers.add);
-/* ************************************************************************* */
+
+router.get("/ingredients", ingredientControllers.browse);
+router.post("/ingredients", ingredientControllers.add);
+
+// router.post("/items", itemControllers.add);
 
 router.post("/signup", validateAuth, hashPassword, authControllers.add);
 // Route to post a new auth
