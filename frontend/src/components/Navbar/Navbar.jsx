@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-
+import { AuthContext } from "../../contexts/Auth";
 import mainLogoName from "../../assets/logo-ENN-name-hor.svg";
 import mainLogoName2 from "../../assets/logo-ENN-name-ver.svg";
 import profile from "../../assets/logo-profile.svg";
@@ -8,6 +8,7 @@ import profile from "../../assets/logo-profile.svg";
 import "./Navbar.css";
 
 function NavBar() {
+  const { infosUser } = useContext(AuthContext);
   return (
     <div className="nav">
       <NavLink to="/">
@@ -22,7 +23,12 @@ function NavBar() {
       <nav className="nav-log">
         <NavLink to="/login">Log In</NavLink>
         <NavLink to="/signup">Sign Up</NavLink>
-        <img src={profile} className="profile-logo" alt="profile_logo" />
+        <img
+          src={infosUser.picture ? infosUser.picture : profile}
+          className="profile-logo logouser"
+          alt="profile_logo"
+        />
+        <p>{infosUser.username}</p>
       </nav>
     </div>
   );

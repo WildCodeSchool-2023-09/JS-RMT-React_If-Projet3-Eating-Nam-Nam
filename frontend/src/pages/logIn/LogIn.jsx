@@ -30,7 +30,17 @@ const showToastErrorMessage = () => {
 function LogIn() {
   const [credentials, setCredentials] = useState(user);
   const { setConnected } = useContext(AuthContext);
+  const { infosUser, setInfosUser } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const infoUser = async (authUser) => {
+    try {
+      const recupInfoUser = await connexion.post("/infouser", authUser);
+      setInfosUser(recupInfoUser.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const handleCredentials = (event) => {
     setCredentials((prev) => ({
@@ -43,11 +53,19 @@ function LogIn() {
     e.preventDefault();
     try {
       const valid = await connexion.post("/login", credentials);
-      setConnected(valid);
+      setConnected(valid.data);
       showToastMessage();
-      setTimeout(() => {
-        navigate("/SignUpUser");
-      }, 3000);
+      infoUser(valid.data);
+      document.cookie = infosUser;
+      if (infosUser) {
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      } else {
+        setTimeout(() => {
+          navigate("/SignUpUser");
+        }, 3000);
+      }
     } catch (error) {
       showToastErrorMessage(error);
       setCredentials(user);
