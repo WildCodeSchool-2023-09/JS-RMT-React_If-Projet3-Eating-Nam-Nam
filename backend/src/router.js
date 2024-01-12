@@ -14,15 +14,15 @@ const userControllers = require("./controllers/userControllers");
 const recipeControllers = require("./controllers/recipeControllers");
 const authControllers = require("./controllers/authControllers");
 const regimeControllers = require("./controllers/regimeControllers");
+const favoriteControllers = require("./controllers/favoriteControllers");
 
 const validateAuth = require("./middlewareValidation/middlewareAuth");
 const hashPassword = require("./middleware/hashPasswordSignUp");
 
 // Route to get a list of users
 router.get("/users", userControllers.browse);
-
 router.get("/recipes", recipeControllers.browse);
-
+router.get("/favorites", favoriteControllers.browse);
 // Route to post a user
 router.post("/users", userControllers.add);
 
@@ -36,6 +36,7 @@ router.post("/auth", authControllers.add);
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
 router.get("/recipes/:id", recipeControllers.read);
+router.get("/favorites/:id", favoriteControllers.read);
 // Route to add a new item
 // router.post("/items", itemControllers.add);
 /* ************************************************************************* */

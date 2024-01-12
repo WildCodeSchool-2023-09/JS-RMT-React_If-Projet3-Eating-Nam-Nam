@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
-import Fav from "../favorite/Fav";
+import Hearth from "../favorite/Hearth";
 import "./Recipes.css";
 
 function RecipeList({ recip }) {
   return (
     <div className="recipe">
-      <Fav />
+      <Hearth />
       <div>
         <img className="picture" src={recip.picture} alt={recip.title} />
       </div>

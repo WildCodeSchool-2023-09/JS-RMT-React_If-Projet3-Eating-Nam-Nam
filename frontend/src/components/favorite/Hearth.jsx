@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import "./Fav.css";
 
-function Fav({ recipId }) {
+function Hearth({ recipId }) {
   return (
-    <div className="container-fav">
+    <div className="container-Fav">
       <input checked="checked" type="checkbox" onClick={() => recipId} />
       <div className="checkmark">
         <svg className="svg" viewBox="0 0 256 256">
@@ -20,8 +20,8 @@ function Fav({ recipId }) {
   );
 }
 
-Fav.propTypes = {
+Hearth.propTypes = {
   recipId: PropTypes.string.isRequired,
 };
 
-export default Fav;
+export default Hearth;

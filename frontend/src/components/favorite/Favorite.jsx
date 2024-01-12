@@ -1,14 +1,21 @@
-import { Outlet } from "react-router-dom";
-import Fav from "./Fav";
+import PropTypes from "prop-types";
+import React from "react";
 
-function Favorite() {
+import RecipeCard from "../recipes/RecipeCard";
+
+function Favorite({ favorites }) {
   return (
     <div className="contain-favorite">
-      <h2>Favorite</h2>
-      <Outlet />
-      <Fav />
+      <h2>My Favorites</h2>
+      <div className="favorit">
+        {favorites.map((favorit) => (
+          <RecipeCard key={favorit.id} favorit={favorit} />
+        ))}
+      </div>
     </div>
   );
 }
-
+Favorite.propTypes = {
+  favorites: PropTypes.string.isRequired,
+};
 export default Favorite;

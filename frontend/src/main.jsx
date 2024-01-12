@@ -6,8 +6,6 @@ import Management from "./components/management/Management";
 import App from "./App";
 
 import connexion from "./services/connexion";
-// eslint-disable-next-line import/order
-
 import AuthProvider from "./contexts/Auth";
 
 import Home from "./pages/Home/Home";
@@ -19,7 +17,7 @@ import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 import Page404 from "./pages/Page404/Page404";
-import Favorite from "./components/favorite/Favorite";
+import Favorites from "./components/favorite/Favorite";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +57,34 @@ const router = createBrowserRouter([
         },
       },
       {
+        path: "/favorites",
+        element: <Favorites />,
+        loader: () => {
+          return connexion
+            .get(`/favorites`)
+            .then((response) => response.data)
+            .catch((err) => console.error(err));
+        },
+      },
+      {
+        path: "/favorites/:id",
+        element: <Favorites />,
+        errorElement: <Page404 />,
+        loader: async ({ params }) => {
+          try {
+            const response = await connexion.get(`/favorites/${params.id}`);
+            return response.data;
+          } catch (error) {
+            if (error.response && error.response.status === 404) {
+              throw new Response("Not Found", { status: 404 });
+            } else {
+              console.error(error);
+              throw new Error("Failed to fetch data");
+            }
+          }
+        },
+      },
+      {
         path: "/ingredients",
         element: <Ingredients />,
       },
@@ -81,10 +107,6 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <Terms />,
-      },
-      {
-        path: "/favorite",
-        element: <Favorite />,
       },
       {
         path: "*",
