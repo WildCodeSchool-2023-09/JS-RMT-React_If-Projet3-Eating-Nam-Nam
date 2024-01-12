@@ -1,14 +1,22 @@
 .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   z-index: 100;
   background-color: #fffcf4;
-  display: grid;
   width: 100%;
   top: 0;
   height: 80px;
-  grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   align-items: center;
   overflow: hidden;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav-menu a {
@@ -20,18 +28,25 @@
   text-decoration: none;
   font-size: 17px;
 }
-.nav-log {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-log a {
+
+.button-logout {
+  border: none;
+  background-color: #fe891b00;
   color: #2e2e2e;
   position: relative;
-  font-weight: 500;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  font-weight: 700;
+  padding: 20px 20px;
+  font-size: 17px;
+  transition: 0.3s ease-in-out;
+}
+
+.button-logout:hover {
+  border: none;
+  background-color: #fe891b00;
+  color: #fe8a1b;
+  position: relative;
+  font-weight: 700;
+  padding: 20px 20px;
   font-size: 17px;
 }
 
@@ -41,7 +56,6 @@
     grid-template-columns: 1fr 4fr 0.5fr 0.3fr;
   }
 
-  .nav-log,
   .nav-menu,
   .nav-logo {
     display: none;

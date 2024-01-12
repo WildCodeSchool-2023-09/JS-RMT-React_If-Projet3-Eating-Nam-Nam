@@ -66,7 +66,9 @@ function FormIngredients() {
           </div>
         ))}
 
-        <button type="submit">ADD INGREDIENT</button>
+        <button className="button-fi-submit" type="submit">
+          ADD INGREDIENT
+        </button>
       </form>
 
       <ToastContainer />
