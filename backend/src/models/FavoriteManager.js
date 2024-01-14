@@ -20,5 +20,14 @@ class FavoriteManager extends AbstractManager {
 
     return rows[0];
   }
+
+  async create(favorites) {
+    const [result] = await this.database.query(
+      `INSERT INTO ${this.table} (recipe_id, ingr_id) VALUES (?, ?)`,
+      [favorites.recipe_id, favorites.ingr_id]
+    );
+    return result.insertId;
+  }
 }
+
 module.exports = FavoriteManager;

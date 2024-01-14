@@ -8,6 +8,7 @@ const UserManager = require("./models/UserManager");
 const AuthManager = require("./models/AuthManager");
 const RegimeManager = require("./models/RegimeManager");
 const RecipeManager = require("./models/RecipeManager");
+const FavoriteManager = require("./models/FavoriteManager");
 
 const managers = [
   ItemManager,
@@ -15,6 +16,7 @@ const managers = [
   AuthManager,
   RecipeManager,
   RegimeManager,
+  FavoriteManager,
 ];
 
 // Create an empty object to hold data managers for different tables

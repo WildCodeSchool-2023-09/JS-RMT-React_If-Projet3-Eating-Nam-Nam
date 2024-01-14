@@ -1,10 +1,22 @@
 import PropTypes from "prop-types";
+import connexion from "../../services/connexion";
 import "./Fav.css";
 
 function Hearth({ recipId }) {
+  const postFavorites = async (id) => {
+    try {
+      await connexion.post("/favorites", id);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <div className="container-Fav">
-      <input checked="checked" type="checkbox" onClick={() => recipId} />
+      <input
+        checked="checked"
+        type="checkbox"
+        onClick={postFavorites(recipId)}
+      />
       <div className="checkmark">
         <svg className="svg" viewBox="0 0 256 256">
           <rect fill="none" height="256" width="256" />

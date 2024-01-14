@@ -6,7 +6,7 @@ import "./Recipes.css";
 function RecipeList({ recip }) {
   return (
     <div className="recipe">
-      <Hearth />
+      <Hearth recipId={recip.id} />
       <div>
         <img className="picture" src={recip.picture} alt={recip.title} />
       </div>
