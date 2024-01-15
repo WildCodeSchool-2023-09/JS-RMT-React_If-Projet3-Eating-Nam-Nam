@@ -43,32 +43,25 @@ function NavBar() {
               <li>
                 <NavLink to="/ingredients">Ingredients</NavLink>
               </li>
-              <li>
-                <button
-                  type="button"
-                  className="button-logout"
-                  onClick={() => setConnected({ role: null })}
-                >
-                  Log Out
-                </button>
-              </li>
             </>
           )}
           {connected.role === 1 && (
-            <>
-              <li>
-                <NavLink to="/administration/">Administration</NavLink>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => setConnected({ role: null })}
-                >
-                  Log Out
-                </button>
-              </li>
-            </>
+            <li>
+              <NavLink to="/administration/">Administration</NavLink>
+            </li>
           )}
+          {(connected.role === 0 || connected.role === 1) && (
+            <li>
+              <button
+                type="button"
+                className="button-logout"
+                onClick={() => setConnected({ role: null })}
+              >
+                Log Out
+              </button>
+            </li>
+          )}
+
           <li>
             <img src={profile} className="profile-logo" alt="profile_logo" />
           </li>
