@@ -43,10 +43,10 @@ function LogIn() {
     e.preventDefault();
     try {
       const valid = await connexion.post("/login", credentials);
-      setConnected(valid);
+      setConnected(valid.data);
       showToastMessage();
       setTimeout(() => {
-        navigate("/SignUpUser");
+        navigate("/");
       }, 3000);
     } catch (error) {
       showToastErrorMessage(error);

@@ -29,7 +29,9 @@ const log = async (req, res, next) => {
       );
 
       if (passwordMatch) {
-        res.status(200).json({ id: login.id, msg: "Connected" });
+        res
+          .status(200)
+          .json({ id: login.id, mail: login.mail, role: login.is_admin });
       } else {
         res.sendStatus(403);
       }
