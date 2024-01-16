@@ -26,7 +26,6 @@ function NavBar() {
           </li>
           {!connected.mail && (
             <>
-              {" "}
               <li>
                 <NavLink to="/login">Log In</NavLink>
               </li>
@@ -50,7 +49,7 @@ function NavBar() {
               <NavLink to="/administration/">Administration</NavLink>
             </li>
           )}
-          {(connected.role === 0 || connected.role === 1) && (
+          {connected.mail && (
             <li>
               <button
                 type="button"
