@@ -20,7 +20,6 @@ function NavBar() {
           </li>
           {!connected.mail && (
             <>
-              {" "}
               <li>
                 <NavLink to="/login">Log In</NavLink>
               </li>
@@ -58,8 +57,8 @@ function NavBar() {
 
           <li>
             <p>{infosUser.username}</p>
-            <img 
-              src={infosUser.picture || profile} 
+            <img
+              src={infosUser.picture || profile}
               className="profile-logo logouser"
               alt="profile_logo"
             />
