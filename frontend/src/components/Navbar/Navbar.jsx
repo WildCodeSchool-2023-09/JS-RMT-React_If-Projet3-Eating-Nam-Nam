@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../contexts/Auth";
 import profile from "../../assets/logo-profile.svg";
+import mainLogoName from "../../assets/logo-ENN-name-hor.svg";
+import mainLogoName2 from "../../assets/logo-ENN-name-ver.svg";
 
 import "./Navbar.css";
 
 function NavBar() {
   const { connected } = useContext(AuthContext);
   const { infosUser } = useContext(AuthContext);
- 
   return (
     <div>
       <nav className="nav">
