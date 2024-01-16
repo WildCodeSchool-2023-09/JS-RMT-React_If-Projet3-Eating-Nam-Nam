@@ -59,7 +59,7 @@ function NavBar() {
           <li>
             <p>{infosUser.username}</p>
             <img 
-              src={infosUser.picture ?·infosUser.picture :·profile} 
+              src={infosUser.picture ? infosUser.picture : profile} 
               className="profile-logo logouser"
               alt="profile_logo"
             />
