@@ -6,7 +6,6 @@ import Management from "./components/management/Management";
 import App from "./App";
 
 import connexion from "./services/connexion";
-// eslint-disable-next-line import/order
 
 import AuthProvider from "./contexts/Auth";
 
@@ -59,7 +58,7 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/ingredients",
+        path: "ingredients",
         element: <Ingredients />,
       },
       {
