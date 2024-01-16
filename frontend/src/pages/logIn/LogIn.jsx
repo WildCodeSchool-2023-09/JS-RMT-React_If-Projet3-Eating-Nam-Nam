@@ -33,15 +33,6 @@ function LogIn() {
   const { infosUser, setInfosUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const infoUser = async (authUser) => {
-    try {
-      const recupInfoUser = await connexion.post("/infouser", authUser);
-      setInfosUser(recupInfoUser.data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   const handleCredentials = (event) => {
     setCredentials((prev) => ({
       ...prev,
@@ -53,10 +44,9 @@ function LogIn() {
     e.preventDefault();
     try {
       const valid = await connexion.post("/login", credentials);
-      setConnected(valid.data);
+      setConnected(valid.data.connected);
+      setInfosUser(valid.data.user);
       showToastMessage();
-      infoUser(valid.data);
-      document.cookie = infosUser;
       if (infosUser) {
         setTimeout(() => {
           navigate("/");

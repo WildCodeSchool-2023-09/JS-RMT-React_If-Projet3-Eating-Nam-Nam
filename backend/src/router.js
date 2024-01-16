@@ -28,7 +28,6 @@ router.get("/recipes", recipeControllers.browse);
 
 // Route to post a user
 router.post("/users", userControllers.add);
-router.post("/infouser", userControllers.recup);
 
 // Route to put a user
 router.put("/users/:id", userControllers.update);
