@@ -4,11 +4,10 @@ import { AuthContext } from "../../contexts/Auth";
 import profile from "../../assets/logo-profile.svg";
 import mainLogoName from "../../assets/logo-ENN-name-hor.svg";
 import mainLogoName2 from "../../assets/logo-ENN-name-ver.svg";
-
 import "./Navbar.css";
 
 function NavBar() {
-  const { connected } = useContext(AuthContext);
+  const { connected, setConnected } = useContext(AuthContext);
   const { infosUser } = useContext(AuthContext);
   return (
     <div>
@@ -60,7 +59,10 @@ function NavBar() {
 
           <li>
             <p>{infosUser.username}</p>
-            <img src={infosUser.picture ? infosUser.picture : profile} className="profile-logo logouser" alt="profile_logo"/>
+            <img 
+              src={infosUser.picture ? infosUser.picture : profile} 
+              className="profile-logo logouser"
+              alt="profile_logo"/>
           </li>
         </ul>
       </nav>
