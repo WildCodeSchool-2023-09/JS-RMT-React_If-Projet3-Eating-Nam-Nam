@@ -1,8 +1,7 @@
 .nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   z-index: 100;
   background-color: #fffcf4;
   width: 100%;
@@ -13,7 +12,9 @@
   overflow: hidden;
 }
 
-.nav-menu {
+.nav-menu,
+.nav-login,
+.nav-pages {
   display: flex;
   flex-direction: row;
   align-items: center;
