@@ -11,6 +11,7 @@ import AuthProvider from "./contexts/Auth";
 
 import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
+import Recipe from "./pages/recipe/Recipe";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
 import About from "./pages/About/About";
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipes/:id",
-        element: <Recipes />,
+        element: <Recipe />,
         errorElement: <Page404 />,
         loader: async ({ params }) => {
           try {
