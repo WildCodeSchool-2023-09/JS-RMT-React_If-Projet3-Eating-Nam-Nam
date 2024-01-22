@@ -14,17 +14,17 @@ const browse = async (req, res, next) => {
   }
 };
 
-/*
 // The R of BREAD - Read operation
-const read = async (req, res, next) => {
+/*
+const recup = async (req, res, next) => {
   try {
-    // Fetch a specific item from the database based on the provided ID
-    const item = await tables.item.read(req.params.id);
+    // Fetch a specific user from the database based on the provided ID
+    const user = await tables.user.readByAuthId(req.body.id);
 
-    // If the item is not found, respond with HTTP 404 (Not Found)
-    // Otherwise, respond with the item in JSON format
-    if (item) {
-      res.status(200).json(item);
+    // If the user is not found, respond with HTTP 404 (Not Found)
+    // Otherwise, respond with the user in JSON format
+    if (user) {
+      res.status(200).json(user);
     } else {
       res.sendStatus(404);
     }
@@ -34,7 +34,6 @@ const read = async (req, res, next) => {
   }
 };
 */
-
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
 const update = async (req, res, next) => {
@@ -88,9 +87,6 @@ const destroy = async (req, res, next) => {
 // Ready to export the controller functions
 module.exports = {
   browse,
-  /*
-  read,
-  */
   update,
   add,
   destroy,

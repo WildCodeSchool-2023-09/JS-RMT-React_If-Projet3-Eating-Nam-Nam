@@ -29,9 +29,23 @@ const log = async (req, res, next) => {
       );
 
       if (passwordMatch) {
-        res
-          .status(200)
-          .json({ id: login.id, mail: login.mail, role: login.is_admin });
+        const infosUser = await tables.auth.readUser(login.id);
+
+        res.status(200).json({
+          connected: {
+            id: login.id,
+            mail: login.mail,
+            role: login.is_admin,
+          },
+          user: {
+            id: infosUser.id,
+            username: infosUser.username,
+            birthday: infosUser.birthday,
+            picture: infosUser.picture,
+            regime_id: infosUser.regime_id,
+            auth_id: infosUser.auth_id,
+          },
+        });
       } else {
         res.sendStatus(403);
       }

@@ -30,6 +30,7 @@ const showToastErrorMessage = () => {
 function LogIn() {
   const [credentials, setCredentials] = useState(user);
   const { setConnected } = useContext(AuthContext);
+  const { infosUser, setInfosUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleCredentials = (event) => {
@@ -43,11 +44,18 @@ function LogIn() {
     e.preventDefault();
     try {
       const valid = await connexion.post("/login", credentials);
-      setConnected(valid.data);
+      setConnected(valid.data.connected);
+      setInfosUser(valid.data.user);
       showToastMessage();
-      setTimeout(() => {
-        navigate("/");
-      }, 3000);
+      if (infosUser) {
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      } else {
+        setTimeout(() => {
+          navigate("/signup");
+        }, 3000);
+      }
     } catch (error) {
       showToastErrorMessage(error);
       setCredentials(user);

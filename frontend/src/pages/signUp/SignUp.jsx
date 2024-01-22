@@ -1,6 +1,7 @@
-import { React, useState } from "react";
+import { React, useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../contexts/Auth";
 import connexion from "../../services/connexion";
 import SignUpInput from "../../components/signupInput/SignUpInput";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,6 +13,7 @@ function SignUp() {
     password: "",
   });
   const [confirmPassword, setConfirmPassword] = useState("");
+  const { setIdNewUser } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -39,10 +41,11 @@ function SignUp() {
     try {
       if (confirmPassword === userAuth.password) {
         const response = await connexion.post(`/signup`, userAuth);
+        setIdNewUser(response.data.insertId);
         if (response.status === 201) {
           showToastMessage();
           setTimeout(() => {
-            navigate("/login");
+            navigate("/signupuser");
           }, 3000);
         }
       } else {
