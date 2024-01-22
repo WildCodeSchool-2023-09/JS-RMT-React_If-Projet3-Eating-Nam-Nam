@@ -55,8 +55,8 @@ function NavBar() {
             </li>
           )}
 
-          <li>
-            <p>{infosUser.username}</p>
+          <li className="name-picture">
+            <p className="name-user">{infosUser.username}</p>
             <img
               src={infosUser.picture || profile}
               className="profile-logo logouser"

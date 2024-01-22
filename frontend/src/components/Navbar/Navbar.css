@@ -50,6 +50,19 @@
   font-size: 17px;
 }
 
+.name-picture {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.name-user {
+  font-weight: bold;
+  color: #fe8a1b;
+  text-transform: uppercase;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .nav .logouser {
   width: 50px;
   border-radius: 50%;

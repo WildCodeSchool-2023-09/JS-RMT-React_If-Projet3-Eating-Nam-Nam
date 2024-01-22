@@ -15,6 +15,7 @@ const browse = async (req, res, next) => {
 };
 
 // The R of BREAD - Read operation
+/*
 const recup = async (req, res, next) => {
   try {
     // Fetch a specific user from the database based on the provided ID
@@ -32,7 +33,7 @@ const recup = async (req, res, next) => {
     next(err);
   }
 };
-
+*/
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
 const update = async (req, res, next) => {
@@ -86,7 +87,6 @@ const destroy = async (req, res, next) => {
 // Ready to export the controller functions
 module.exports = {
   browse,
-  recup,
   update,
   add,
   destroy,

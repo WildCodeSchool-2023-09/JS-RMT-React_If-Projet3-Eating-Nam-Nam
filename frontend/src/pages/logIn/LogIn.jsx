@@ -53,7 +53,7 @@ function LogIn() {
         }, 3000);
       } else {
         setTimeout(() => {
-          navigate("/SignUpUser");
+          navigate("/signup");
         }, 3000);
       }
     } catch (error) {

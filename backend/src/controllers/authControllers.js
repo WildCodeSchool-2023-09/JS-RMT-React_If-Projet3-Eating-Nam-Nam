@@ -34,7 +34,7 @@ const log = async (req, res, next) => {
         res.status(200).json({
           connected: {
             id: login.id,
-            email: login.mail,
+            mail: login.mail,
             role: login.is_admin,
           },
           user: {
