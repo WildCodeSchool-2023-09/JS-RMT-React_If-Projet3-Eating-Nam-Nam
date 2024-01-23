@@ -14,7 +14,7 @@ class FavoriteManager extends AbstractManager {
 
   async readById(id) {
     const [rows] = await client.query(
-      `select * from ${this.table} WHERE id  = ? `,
+      `select * from ${this.table} WHERE auth_id  = ? `,
       [id]
     );
 
@@ -23,8 +23,8 @@ class FavoriteManager extends AbstractManager {
 
   async create(favorites) {
     const [result] = await this.database.query(
-      `INSERT INTO ${this.table} (recipe_id, ingr_id) VALUES (?, ?)`,
-      [favorites.recipe_id, favorites.ingr_id]
+      `INSERT INTO ${this.table} (recipe_id, auth_id) VALUES (?, ?)`,
+      [favorites.recipeId, favorites.user]
     );
     return result.insertId;
   }

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Hearth from "../favorite/Hearth";
+
 import "./Recipes.css";
 
 function RecipeList({ recip }) {

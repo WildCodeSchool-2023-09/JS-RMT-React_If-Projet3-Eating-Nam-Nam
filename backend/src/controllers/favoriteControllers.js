@@ -2,7 +2,7 @@ const tables = require("../tables");
 
 const browse = async (req, res, next) => {
   try {
-    const favorites = await tables.favorite.readAll();
+    const favorites = await tables.favorites.readAll();
 
     res.status(200).json(favorites);
   } catch (err) {
@@ -11,7 +11,7 @@ const browse = async (req, res, next) => {
 };
 const read = async (req, res, next) => {
   try {
-    const favorite = await tables.favorite.readById(req.params.id);
+    const favorite = await tables.favorites.readByUserId(req.params.id);
 
     res.status(200).json(favorite);
   } catch (err) {
@@ -20,7 +20,6 @@ const read = async (req, res, next) => {
 };
 const add = async (req, res, next) => {
   const favorites = req.body;
-
   try {
     const insertId = await tables.favorites.create(favorites);
     res.status(201).json({ insertId });

@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 
-import axios from "axios";
+import connexion from "../../services/connexion";
 
 import RecipeCard from "../recipes/RecipeCard";
 
@@ -8,9 +8,7 @@ function Favorite() {
   const [favories, setFavories] = useState([]);
   const getFavorises = async () => {
     try {
-      const myFavories = await axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/favories`)
-        .then((res) => res.data);
+      const myFavories = await connexion.get(`/api/favorites/`);
       setFavories(myFavories);
     } catch (error) {
       console.error(error);
