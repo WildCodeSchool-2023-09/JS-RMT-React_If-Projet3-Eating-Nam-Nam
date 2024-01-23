@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import FrameSvgText from "../../components/FrameSvgText/FrameSvgText";
 import "./Home.css";
 

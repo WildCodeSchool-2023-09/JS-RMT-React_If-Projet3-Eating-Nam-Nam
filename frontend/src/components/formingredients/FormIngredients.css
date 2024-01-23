@@ -29,7 +29,7 @@ input {
   border-radius: 5px;
 }
 
-button {
+.button-fi-submit {
   padding: 8px;
   background-color: #5e9732;
   color: white;
