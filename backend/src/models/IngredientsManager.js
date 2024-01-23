@@ -1,5 +1,4 @@
 const AbstractManager = require("./AbstractManager");
-const client = require("../../database/client");
 
 class IngredientManager extends AbstractManager {
   constructor() {
@@ -7,13 +6,13 @@ class IngredientManager extends AbstractManager {
   }
 
   async readAll() {
-    const [rows] = await client.query(`select * from ${this.table}`);
+    const [rows] = await this.database(`select * from ${this.table}`);
 
     return rows;
   }
 
   async readById(id) {
-    const [rows] = await client.query(
+    const [rows] = await this.database(
       `select * from ${this.table} WHERE id  = ? `,
       [id]
     );

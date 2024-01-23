@@ -7,9 +7,8 @@ function Ingredients() {
   return (
     <div>
       <h1>Ingredients</h1>
-      <div>
-        <IngredientCard ingredients={ingredients} />
-      </div>
+
+      <IngredientCard ingredients={ingredients} />
     </div>
   );
 }

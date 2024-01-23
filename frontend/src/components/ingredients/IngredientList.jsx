@@ -9,14 +9,13 @@ function IngredientList({ ingr }) {
         <img className="image" src={ingr.image} alt={ingr.image} />
       </div>
       <h3 className="ingr-name">{ingr.name}</h3>
+      <h4>Category: {ingr.category}</h4>
 
-      <div className="calorie">Energetic values: {ingr.calorie}</div>
-      <div className="carbonhydrate">Carbonhydrate: {ingr.carbonhydrate}</div>
-      <div className="protein">Protein: {ingr.protein}</div>
-      <div className="lipid">Lipid: {ingr.lipid}</div>
-      <div className="fiber">Fiber: {ingr.fiber}</div>
-
-      <h5>Category: {ingr.category}</h5>
+      <h5 className="calorie">Energetic values: {ingr.calorie}</h5>
+      <h5 className="carbonhydrate">Carbonhydrate: {ingr.carbonhydrate}</h5>
+      <h5 className="protein">Protein: {ingr.protein}</h5>
+      <h5 className="lipid">Lipid: {ingr.lipid}</h5>
+      <h5 className="fiber">Fiber: {ingr.fiber}</h5>
     </div>
   );
 }
