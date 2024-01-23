@@ -6,7 +6,6 @@ import Management from "./components/management/Management";
 import App from "./App";
 
 import connexion from "./services/connexion";
-
 import AuthProvider from "./contexts/Auth";
 
 import Home from "./pages/Home/Home";
@@ -19,6 +18,7 @@ import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 import Page404 from "./pages/Page404/Page404";
+import Favorites from "./components/favorite/Favorite";
 
 const router = createBrowserRouter([
   {
@@ -58,7 +58,11 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "ingredients",
+        path: "/favorites",
+        element: <Favorites />,
+      },
+      {
+        path: "/ingredients",
         element: <Ingredients />,
       },
       {
