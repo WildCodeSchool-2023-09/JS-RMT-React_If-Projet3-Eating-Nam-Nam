@@ -1,26 +1,50 @@
-import React from "react";
-
+import React, { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../../contexts/Auth";
+import connexion from "../../services/connexion";
 import "./Profile.css";
 
 function Profile() {
+  const { infosUser } = useContext(AuthContext);
+  const [regime, setRegime] = useState(null);
+
+  useEffect(() => {
+    const getRegimes = async () => {
+      try {
+        const { data } = await connexion.get(`/regime`);
+        const userRegime = data.find((reg) => reg.id === infosUser.regime_id);
+        setRegime(userRegime);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getRegimes();
+  }, [infosUser.regime_id]);
+
+  const formattedBirthday = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date(infosUser.birthday));
+
   return (
     <div className="profile-page">
       <div className="profile-frame-name">
         <div className="profile-title">
           <img
             className="profile-pic"
-            src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/656_v9_bb.jpg"
-            alt=""
+            src={infosUser.picture}
+            alt="profilePicture"
           />
-          <h2 className="profile-h2">Name</h2>
+          <h2 className="profile-h2">{infosUser.username}</h2>
         </div>
         <div className="profile-birthday">
           <h3>Birthday</h3>
-          <p>birth date</p>
+          <p>{formattedBirthday}</p>
         </div>
         <div className="profile-regime">
           <h3>Regime</h3>
-          <p>Regime name</p>
+          <p>{regime?.name || "No regime selected"}</p>
         </div>
       </div>
       <div className="profile-page-sub">
