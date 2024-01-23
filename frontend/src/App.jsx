@@ -11,7 +11,6 @@ function App() {
     <>
       <Navbar />
       <NavbarMobile />
-
       <div className="App">
         <Outlet />
         <Footer />

@@ -1,19 +1,12 @@
 [
   {
-    "mail": "valeriane.chevalier@gmail.com",
-    "password": "valériane",
-    "is_admin": 1
-  },
-  { "mail": "g.duffort@gmail.com", "password": "grégory", "is_admin": 1 },
-  { "mail": "thd.dps@gmail.com", "password": "thibaud", "is_admin": 1 },
-  {
-    "mail": "leslie.moraud@gmail.com",
-    "password": "leslie",
+    "mail": "admin1@gmail.com",
+    "password": "$argon2id$v=19$m=65536,t=3,p=4$sIrJDpzLmmZ/A2wfLd4G8Q$PylOQ7gmi18LBnAbv1c0SNXuSsJU9dITZuLCFTtvGe0",
     "is_admin": 1
   },
   {
-    "mail": "tonton.roger@gmail.com",
-    "password": "tontonRoger",
-    "is_admin": 0
+    "mail": "admin2@gmail.com",
+    "password": "$argon2id$v=19$m=65536,t=3,p=4$FfOUemLm+eazU1hu3HXMfw$UWcz+FFC1n/b+WCSHED2Qk/RJdQd5cyxzNCnFLXYJOs",
+    "is_admin": 1
   }
 ]

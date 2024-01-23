@@ -33,6 +33,17 @@ class AuthManager extends AbstractManager {
     return rows[0];
   }
 
+  async readUser(authId) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [rows] = await this.database.query(
+      `SELECT user.id, user.username, user.birthday, user.picture, user.regime_id, user.auth_id FROM ${this.table} INNER JOIN user WHERE user.auth_id = ?`,
+      [authId]
+    );
+
+    // Return the first row of the result, which represents the user
+    return rows[0];
+  }
+
   /*
   async readAll() {
     // Execute the SQL SELECT query to retrieve all users from the "user" table

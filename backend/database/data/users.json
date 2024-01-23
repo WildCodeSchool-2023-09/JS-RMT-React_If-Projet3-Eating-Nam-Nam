@@ -1,30 +1,16 @@
 [
   {
-    "username": "Valihna",
+    "username": "User1",
     "birthday": "1993-11-03",
     "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Chat_mi-long.jpg",
-    "regime_id": 1,
+    "regime_id": 3,
     "auth_id": 1
   },
   {
-    "username": "Grèg",
+    "username": "User2",
     "birthday": "1984-12-31",
     "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Cat_playing_with_a_lizard.jpg/1920px-Cat_playing_with_a_lizard.jpg",
-    "regime_id": 1,
+    "regime_id": 2,
     "auth_id": 2
-  },
-  {
-    "username": "Tibo",
-    "birthday": "1991-08-03",
-    "picture": "https://upload.wikimedia.org/wikipedia/commons/5/55/Chat_tigr%C3%A9_%C3%A0_poils_mi-longs.jpg",
-    "regime_id": 1,
-    "auth_id": 3
-  },
-  {
-    "username": "Leslie",
-    "birthday": "1986-10-21",
-    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Photo_Chat_Noir_et_blanc.jpg/1280px-Photo_Chat_Noir_et_blanc.jpg",
-    "regime_id": 1,
-    "auth_id": 4
   }
 ]

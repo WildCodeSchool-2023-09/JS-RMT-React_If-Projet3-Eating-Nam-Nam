@@ -11,7 +11,11 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 */
 const userControllers = require("./controllers/userControllers");
+
+const ingredientControllers = require("./controllers/ingredientControllers");
+
 const recipeControllers = require("./controllers/recipeControllers");
+
 const authControllers = require("./controllers/authControllers");
 const regimeControllers = require("./controllers/regimeControllers");
 const favoriteControllers = require("./controllers/favoriteControllers");
@@ -44,8 +48,13 @@ router.post("/login", validateAuth, authControllers.log);
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
 // Route to add a new item
+
 // router.post("/items", itemControllers.add);
-/* ************************************************************************* */
+
+router.get("/ingredients", ingredientControllers.browse);
+router.post("/ingredients", ingredientControllers.add);
+
+// router.post("/items", itemControllers.add);
 
 // Route to get a list of regimes
 

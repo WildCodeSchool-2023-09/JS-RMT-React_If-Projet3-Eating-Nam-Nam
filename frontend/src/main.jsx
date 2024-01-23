@@ -11,6 +11,7 @@ import AuthProvider from "./contexts/Auth";
 import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
 import Ingredients from "./pages/Ingredients";
+import AddIngredients from "./pages/AddIngredients";
 import About from "./pages/About/About";
 import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUpUser/SignUpUser";
@@ -57,12 +58,17 @@ const router = createBrowserRouter([
         },
       },
       {
+
         path: "/favorites",
         element: <Favorites />,
       },
       {
         path: "/ingredients",
         element: <Ingredients />,
+      },
+      {
+        path: "/addingredients",
+        element: <AddIngredients />,
       },
       {
         path: "/about",
