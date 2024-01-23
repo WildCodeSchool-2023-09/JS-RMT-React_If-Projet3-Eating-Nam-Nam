@@ -1,22 +1,16 @@
-import { React, useContext } from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-
 import { AuthContext } from "../../contexts/Auth";
-
-import mainLogoName from "../../assets/logo-ENN-name-hor.svg";
-import mainLogoName2 from "../../assets/logo-ENN-name-ver.svg";
 import profile from "../../assets/logo-profile.svg";
-
+import mainLogoName from "../../assets/logo-ENN-name-hor.svg";
 import "./Navbar.css";
 
 function NavBar() {
   const { connected, setConnected } = useContext(AuthContext);
-
+  const { infosUser } = useContext(AuthContext);
   return (
     <div>
       <nav className="nav">
-        <img src={mainLogoName2} className="nav-logo2" alt="ENN_logo2" />
-
         <NavLink to="/">
           <img src={mainLogoName} className="nav-logo" alt="ENN_logo" />
         </NavLink>
@@ -26,7 +20,6 @@ function NavBar() {
           </li>
           {!connected.mail && (
             <>
-              {" "}
               <li>
                 <NavLink to="/login">Log In</NavLink>
               </li>
@@ -62,8 +55,13 @@ function NavBar() {
             </li>
           )}
 
-          <li>
-            <img src={profile} className="profile-logo" alt="profile_logo" />
+          <li className="name-picture">
+            <p className="name-user">{infosUser.username}</p>
+            <img
+              src={infosUser.picture || profile}
+              className="profile-logo logouser"
+              alt="profile_logo"
+            />
           </li>
         </ul>
       </nav>

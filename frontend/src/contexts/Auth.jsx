@@ -5,9 +5,18 @@ export const AuthContext = createContext();
 
 function AuthProvider({ children }) {
   const [connected, setConnected] = useState({ role: null });
+  const [idNewUser, setIdNewUser] = useState({ id: 0 });
+  const [infosUser, setInfosUser] = useState({ username: "" });
   const contextValue = useMemo(
-    () => ({ connected, setConnected }),
-    [connected, setConnected]
+    () => ({
+      connected,
+      setConnected,
+      infosUser,
+      setInfosUser,
+      idNewUser,
+      setIdNewUser,
+    }),
+    [connected, setConnected, infosUser, setInfosUser, idNewUser, setIdNewUser]
   );
 
   return (
