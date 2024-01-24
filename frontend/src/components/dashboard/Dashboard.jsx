@@ -13,14 +13,14 @@ import connexion from "../../services/connexion";
 import "./Dashboard.css";
 
 function Dashboard() {
-  const [infoData, setInfoData] = useState();
+  const [numberUserByRegime, setNumberUserByRegime] = useState();
 
   const getNumberUsers = async () => {
     try {
       const usersRegime = await connexion
-        .get(`/usersByRegimes`)
+        .get(`/users/regimes`)
         .then((res) => res.data);
-      setInfoData(usersRegime);
+      setNumberUserByRegime(usersRegime);
     } catch (error) {
       console.error(error);
     }
@@ -37,7 +37,7 @@ function Dashboard() {
         <BarChart
           width={800}
           height={500}
-          data={infoData}
+          data={numberUserByRegime}
           margin={{
             top: 5,
             right: 30,
