@@ -32,7 +32,6 @@ const log = async (req, res, next) => {
       if (passwordMatch) {
         const user = await tables.user.readByAuthId(login.id);
         delete login.password;
-
         res
           .cookie("auth", createToken(login), { httpOnly: true }) // envoye un cookie pour voir ce qui fonctionne. Je passe des option pour securiser //
           .status(200)
@@ -40,6 +39,22 @@ const log = async (req, res, next) => {
             connected: login,
             user,
           });
+        res.status(200).json({
+          connected: {
+            id: login.id,
+            mail: login.mail,
+            role: login.is_admin,
+          },
+          user: {
+            id: infosUser.id,
+            username: infosUser.username,
+            birthday: infosUser.birthday,
+            picture: infosUser.picture,
+            regime_id: infosUser.regime_id,
+            auth_id: infosUser.auth_id,
+            regime_name: infosUser.name,
+          },
+        });
       } else {
         res.sendStatus(403);
       }

@@ -3,6 +3,7 @@
     display: none;
   }
 }
+
 @media (max-width: 1200px) {
   .nav-menu-mobile {
     z-index: 1;
@@ -24,6 +25,12 @@
     padding: 14px 50px;
     text-decoration: none;
     font-size: 17px;
+  }
+
+  .logouser {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
   }
 }
 
