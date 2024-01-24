@@ -20,6 +20,17 @@ class UserManager extends AbstractManager {
     return result.insertId;
   }
 
+  async readByAuthId(id) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where auth_id = ?`,
+      [id]
+    );
+
+    // Return the first row of the result, which represents the user
+    return rows[0];
+  }
+
   // The Rs of CRUD - Read operations
 
   /*
