@@ -45,6 +45,15 @@ class UserManager extends AbstractManager {
     return rows;
   }
 
+  async readAllUsersRegimes() {
+    // Execute the SQL SELECT query to retrieve all users from the "user" table
+    const [rows] = await client.query(
+      `select COUNT(*) AS value, regime.name from ${this.table} INNER JOIN regime ON regime.id = ${this.table}.regime_id GROUP BY ${this.table}.regime_id`
+    );
+    // Return the array of users
+    return rows;
+  }
+
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing item
 

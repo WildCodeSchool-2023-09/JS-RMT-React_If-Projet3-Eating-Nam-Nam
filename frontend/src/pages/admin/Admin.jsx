@@ -12,7 +12,6 @@ function Admin() {
     return (
       <div className="contain-dashboard">
         <Navbar />
-        <h2>Dashboard</h2>
         <Outlet />
         <NavbarAdmin />
       </div>

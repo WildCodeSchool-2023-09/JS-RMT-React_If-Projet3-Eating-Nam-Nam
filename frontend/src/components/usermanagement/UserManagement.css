@@ -42,3 +42,9 @@
   height: auto;
   border-radius: 10px;
 }
+
+.tab-users .button-delete:hover,
+.tab-users .button-put:hover {
+  color: #feba1c;
+  background-color: transparent;
+}

@@ -20,6 +20,8 @@ const validateAuth = require("./middlewareValidation/middlewareAuth");
 const hashPassword = require("./middleware/hashPasswordSignUp");
 const checkCredentials = require("./middleware/checkCredentials");
 // Route to get a list of users
+
+router.get("/users/regimes", userControllers.usersRegimes);
 router.get("/users", checkCredentials, userControllers.browse);
 router.get("/recipes", checkCredentials, recipeControllers.browse);
 router.get("/ingredients", checkCredentials, ingredientControllers.browse);
