@@ -1,0 +1,16 @@
+[
+  {
+    "username": "User1",
+    "birthday": "1993-11-03",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Chat_mi-long.jpg",
+    "regime_id": 3,
+    "auth_id": 1
+  },
+  {
+    "username": "User2",
+    "birthday": "1984-12-31",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Cat_playing_with_a_lizard.jpg/1920px-Cat_playing_with_a_lizard.jpg",
+    "regime_id": 2,
+    "auth_id": 2
+  }
+]

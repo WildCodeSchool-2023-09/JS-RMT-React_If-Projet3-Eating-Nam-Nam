@@ -1,0 +1,39 @@
+@media (min-width: 1200px) {
+  .nav-menu-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-menu-mobile {
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fffcf4;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .nav-menu-mobile a {
+    color: #2e2e2e;
+    overflow: hidden;
+    font-weight: 500;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .logouser {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
+
+path:active {
+  fill: #f18a3d;
+}

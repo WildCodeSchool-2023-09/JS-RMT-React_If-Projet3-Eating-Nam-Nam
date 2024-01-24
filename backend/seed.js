@@ -2,39 +2,117 @@
 
 // Load environment variables from .env file
 require("dotenv").config();
-
-// Import Faker library for generating fake data
 const { faker } = require("@faker-js/faker");
 
 // Import database client
 const database = require("./database/client");
+// eslint-disable-next-line import/extensions
+const ingredients = require("./database/data/eatingNamNam.json");
+const regime = require("./database/data/regimes.json");
+const auths = require("./database/data/auths.json");
+const users = require("./database/data/users.json");
 
 const seed = async () => {
   try {
-    // Declare an array to store the query promises
-    // See why here: https://eslint.org/docs/latest/rules/no-await-in-loop
-    const queries = [];
+    const queriesRegime = [];
+    for (let i = 0; i < regime.length; i += 1) {
+      queriesRegime.push(
+        database.query(
+          `INSERT INTO regime(name, description)
+           VALUES (?, ?)`,
+          [regime[i].name, regime[i].description]
+        )
+      );
+    }
+    await Promise.all(queriesRegime);
 
-    /* ************************************************************************* */
+    const queriesAuth = [];
+    for (let i = 0; i < auths.length; i += 1) {
+      queriesAuth.push(
+        database.query(
+          `INSERT INTO auth(mail, password, is_admin)
+            VALUES (?, ?, ?)`,
+          [auths[i].mail, auths[i].password, auths[i].is_admin]
+        )
+      );
+    }
+    await Promise.all(queriesAuth);
 
-    // Generating Seed Data
+    const queriesUser = [];
+    for (let i = 0; i < users.length; i += 1) {
+      queriesUser.push(
+        database.query(
+          `INSERT INTO user(username, birthday, picture, regime_id, auth_id)
+            VALUES (?, ?, ?, ?, ?)`,
+          [
+            users[i].username,
+            users[i].birthday,
+            users[i].picture,
+            users[i].regime_id,
+            users[i].auth_id,
+          ]
+        )
+      );
+    }
+    await Promise.all(queriesAuth);
 
-    // Optional: Truncate tables (remove existing data)
-    await database.query("truncate item");
-
-    // Insert fake data into the 'item' table
-    for (let i = 0; i < 10; i += 1) {
-      queries.push(
-        database.query("insert into item(title) values (?)", [
-          faker.lorem.word(),
-        ])
+    const queriesIngredients = [];
+    for (let i = 0; i < ingredients.length; i += 1) {
+      const {
+        name,
+        quantity,
+        image,
+        calorie,
+        carbonhydrate,
+        protein,
+        lipid,
+        fiber,
+        category,
+      } = ingredients[i];
+      queriesIngredients.push(
+        database.query(
+          `INSERT INTO ingredient(name, quantity,image, calorie, carbonhydrate, protein, lipid, fiber, is_validated, category)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          [
+            name,
+            quantity,
+            image,
+            calorie,
+            carbonhydrate,
+            protein,
+            lipid,
+            fiber,
+            ingredients[i].is_validated,
+            category,
+          ]
+        )
       );
     }
 
-    /* ************************************************************************* */
-
     // Wait for all the insertion queries to complete
-    await Promise.all(queries);
+    await Promise.all(queriesIngredients);
+    const queriesRecipes = [];
+    const section = ["Starter", "Dish", "Dessert"];
+    const difficulty = ["Easy", "Medium", "Difficult"];
+    for (let i = 0; i < 20; i += 1) {
+      const time = Math.floor(Math.random()) * 60;
+      queriesRecipes.push(
+        database.query(
+          `INSERT INTO recipe(picture, section, title, preparation_time, cooking_time, difficulty, allergen)
+           VALUES (?, ?, ?, ?, ?, ?, ?)`,
+          [
+            faker.image.urlLoremFlickr({ category: "food" }),
+            section[Math.floor(Math.random()) * 3],
+            faker.lorem.words(),
+            Math.floor(Math.random()) * 30 + time,
+            time,
+            difficulty[Math.floor(Math.random()) * 3],
+            Math.floor(Math.random()) * 2,
+          ]
+        )
+      );
+    }
+    await Promise.all(queriesRecipes);
 
     // Close the database connection
     database.end();
