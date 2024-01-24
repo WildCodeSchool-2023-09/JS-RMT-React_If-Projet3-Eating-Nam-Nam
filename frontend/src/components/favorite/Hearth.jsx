@@ -8,7 +8,7 @@ function Hearth({ recipId }) {
   const [fav, setFav] = useState(false);
   const postFavorites = async (id) => {
     try {
-      await connexion.post("/favorites", { recipeId: id, user: 1 });
+      await connexion.post("/favorites", { recipeId: id });
       setFav(true);
     } catch (err) {
       console.error(err);
