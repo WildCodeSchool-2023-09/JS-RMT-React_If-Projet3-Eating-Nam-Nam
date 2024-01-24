@@ -1,10 +1,13 @@
-import React from "react";
-
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../contexts/Auth";
+
 import profile from "../../assets/logo-profile.svg";
+
 import "./NavbarMobile.css";
 
 function NavbarMobile() {
+  const { connected, infosUser } = useContext(AuthContext);
   return (
     <div>
       <nav className="nav-menu-mobile">
@@ -40,9 +43,15 @@ function NavbarMobile() {
             />
           </svg>
         </NavLink>
-        <NavLink to="/login">
-          <img src={profile} className="profile-logo" alt="profile_logo" />
-        </NavLink>
+        {connected.mail && (
+          <NavLink to="/login">
+            <img
+              src={infosUser.picture || profile}
+              className="profile-logo logouser"
+              alt="profile_logo"
+            />
+          </NavLink>
+        )}
       </nav>
     </div>
   );

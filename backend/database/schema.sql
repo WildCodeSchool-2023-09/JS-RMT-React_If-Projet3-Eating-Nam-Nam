@@ -59,3 +59,11 @@ create table recipe_ingr (
   Foreign Key (recipe_id) REFERENCES recipe(id),
   Foreign Key (ingr_id) REFERENCES ingredient(id)
 );
+
+create table favorites (
+  recipe_id INT NOT NULL,
+  auth_id INT NOT NULL,
+  Foreign Key (recipe_id) REFERENCES recipe(id),
+  Foreign Key (auth_id) REFERENCES auth(id),
+  PRIMARY KEY (recipe_id, auth_id)
+);
