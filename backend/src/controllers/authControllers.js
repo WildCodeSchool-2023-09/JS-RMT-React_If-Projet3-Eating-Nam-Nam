@@ -1,6 +1,7 @@
 // Import access to database tables
 const argon2 = require("argon2");
 const tables = require("../tables");
+const { createToken } = require("../services/jwt");
 
 // The B of BREAD - Browse (Read All) operation
 /*
@@ -29,24 +30,15 @@ const log = async (req, res, next) => {
       );
 
       if (passwordMatch) {
-        const infosUser = await tables.auth.readUser(login.id);
-
-        res.status(200).json({
-          connected: {
-            id: login.id,
-            mail: login.mail,
-            role: login.is_admin,
-          },
-          user: {
-            id: infosUser.id,
-            username: infosUser.username,
-            birthday: infosUser.birthday,
-            picture: infosUser.picture,
-            regime_id: infosUser.regime_id,
-            auth_id: infosUser.auth_id,
-            regime_name: infosUser.name,
-          },
-        });
+        const user = await tables.user.readByAuthId(login.id);
+        delete login.password;
+        res
+          .cookie("auth", createToken(login), { httpOnly: true }) // envoye un cookie pour voir ce qui fonctionne. Je passe des option pour securiser //
+          .status(200)
+          .json({
+            connected: login,
+            user,
+          });
       } else {
         res.sendStatus(403);
       }
