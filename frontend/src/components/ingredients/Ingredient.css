@@ -40,3 +40,16 @@
   color: #555;
   font-style: italic;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .ingredient {
+    width: 80%;
+  }
+  .image {
+    width: 70%;
+    height: auto;
+  }
+}
