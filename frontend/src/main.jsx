@@ -14,6 +14,7 @@ import Recipe from "./pages/recipe/Recipe";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
 import About from "./pages/About/About";
+import Profile from "./pages/Profile/Profile";
 import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
       {
         path: "/signup",
