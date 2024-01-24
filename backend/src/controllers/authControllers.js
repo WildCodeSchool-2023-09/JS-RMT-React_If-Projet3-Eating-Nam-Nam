@@ -44,6 +44,7 @@ const log = async (req, res, next) => {
             picture: infosUser.picture,
             regime_id: infosUser.regime_id,
             auth_id: infosUser.auth_id,
+            regime_name: infosUser.name,
           },
         });
       } else {
