@@ -16,9 +16,9 @@ function NavBar() {
         <NavLink to="/">
           <img src={mainLogoName} className="nav-logo" alt="ENN_logo" />
         </NavLink>
-        <ul className="nav-menu">
-          {" "}
-          <div className="nav-pages">
+
+        <div className="nav-menu">
+          <ul className="nav-pages">
             <li>
               <NavLink to="/about">About ENN</NavLink>
             </li>
@@ -33,10 +33,11 @@ function NavBar() {
                 </li>
               </>
             )}
-          </div>
-        </ul>
-        <ul className="nav-menu">
-          <div className="nav-login">
+          </ul>
+        </div>
+
+        <div className="nav-menu">
+          <ul className="nav-login">
             {!connected.mail && (
               <>
                 <li>
@@ -49,7 +50,7 @@ function NavBar() {
             )}
             {connected.role === 1 && (
               <li>
-                <NavLink to="/administration/">Admin.</NavLink>
+                <NavLink to="/administration/">Admin</NavLink>
               </li>
             )}
             {connected.mail && (
@@ -71,8 +72,8 @@ function NavBar() {
                 alt="profile_logo"
               />
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </div>
   );

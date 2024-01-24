@@ -7,8 +7,7 @@ import profile from "../../assets/logo-profile.svg";
 import "./NavbarMobile.css";
 
 function NavbarMobile() {
-  const { connected } = useContext(AuthContext);
-  const { infosUser } = useContext(AuthContext);
+  const { connected, infosUser } = useContext(AuthContext);
   return (
     <div>
       <nav className="nav-menu-mobile">
