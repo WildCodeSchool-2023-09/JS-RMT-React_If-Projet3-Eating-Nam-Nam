@@ -54,13 +54,14 @@
 .name-picture {
   display: flex;
   justify-content: flex-start;
+  margin-right: 20px;
 }
 
 .name-user {
   font-weight: bold;
   color: #fe8a1b;
   text-transform: uppercase;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-left: 20px;
 }
 
