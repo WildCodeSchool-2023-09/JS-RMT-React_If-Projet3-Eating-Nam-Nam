@@ -26,6 +26,7 @@ const hashPassword = require("./middleware/hashPasswordSignUp");
 // Route to get a list of users
 router.get("/users", userControllers.browse);
 router.get("/recipes", recipeControllers.browse);
+router.get("/ingredients", ingredientControllers.browse);
 router.get("/favorites", favoriteControllers.browse);
 router.get("/regime", regimeControllers.browse);
 

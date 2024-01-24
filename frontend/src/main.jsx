@@ -66,6 +66,12 @@ const router = createBrowserRouter([
       {
         path: "/ingredients",
         element: <Ingredients />,
+        loader: () => {
+          return connexion
+            .get(`/ingredients`)
+            .then((response) => response.data)
+            .catch((err) => console.error(err));
+        },
       },
       {
         path: "/addingredients",
