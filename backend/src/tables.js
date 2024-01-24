@@ -1,7 +1,3 @@
-/* ************************************************************************* */
-// Register Data Managers for Tables
-/* ************************************************************************* */
-
 // Import the manager modules responsible for handling data operations on the tables
 const ItemManager = require("./models/ItemManager");
 const UserManager = require("./models/UserManager");
@@ -9,6 +5,7 @@ const IngredientManager = require("./models/IngredientManager");
 const AuthManager = require("./models/AuthManager");
 const RegimeManager = require("./models/RegimeManager");
 const RecipeManager = require("./models/RecipeManager");
+const FavoriteManager = require("./models/FavoriteManager");
 
 const managers = [
   ItemManager,
@@ -16,6 +13,7 @@ const managers = [
   AuthManager,
   RecipeManager,
   RegimeManager,
+  FavoriteManager,
   IngredientManager,
 ];
 

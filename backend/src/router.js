@@ -11,49 +11,47 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 */
 const userControllers = require("./controllers/userControllers");
-
 const ingredientControllers = require("./controllers/ingredientControllers");
-
 const recipeControllers = require("./controllers/recipeControllers");
-
 const authControllers = require("./controllers/authControllers");
 const regimeControllers = require("./controllers/regimeControllers");
-
+const favoriteControllers = require("./controllers/favoriteControllers");
 const validateAuth = require("./middlewareValidation/middlewareAuth");
 const hashPassword = require("./middleware/hashPasswordSignUp");
-
+const checkCredentials = require("./middleware/checkCredentials");
 // Route to get a list of users
-router.get("/users", userControllers.browse);
-router.get("/recipes", recipeControllers.browse);
-router.get("/users/regimes", userControllers.usersRegimes);
 
-// Route to post a user
-router.post("/users", userControllers.add);
+router.get("/usersByRegimes", userControllers.usersRegimes);
+router.get("/users", checkCredentials, userControllers.browse);
+router.get("/recipes", checkCredentials, recipeControllers.browse);
+router.get("/ingredients", checkCredentials, ingredientControllers.browse);
+router.get("/favorites", checkCredentials, favoriteControllers.browse);
+router.get("/regime", checkCredentials, regimeControllers.browse);
+router.get("/recipes/:id", checkCredentials, recipeControllers.read);
+router.get("/favorites/:id", checkCredentials, favoriteControllers.read);
+router.get("/ingredients", checkCredentials, ingredientControllers.browse);
+router.post("/ingredients", checkCredentials, ingredientControllers.add);
 
 // Route to put a user
-router.put("/users/:id", userControllers.update);
+router.put("/users/:id", checkCredentials, userControllers.update);
 // Route to delete a user
-router.delete("/users/:id", userControllers.destroy);
+router.delete("/users/:id", checkCredentials, userControllers.destroy);
 // Route to post a new auth
 
-router.post("/auth", authControllers.add);
+router.post("/auth", checkCredentials, authControllers.add);
+router.post("/users", checkCredentials, userControllers.add);
+router.post("/favorites", checkCredentials, favoriteControllers.add);
+router.post("/signup", validateAuth, hashPassword, authControllers.add);
+router.post("/login", validateAuth, authControllers.log);
+
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
-router.get("/recipes/:id", recipeControllers.read);
 // Route to add a new item
 
 // router.post("/items", itemControllers.add);
 
-router.get("/ingredients", ingredientControllers.browse);
-router.post("/ingredients", ingredientControllers.add);
-
 // router.post("/items", itemControllers.add);
 
-router.post("/signup", validateAuth, hashPassword, authControllers.add);
-// Route to post a new auth
-router.post("/login", validateAuth, authControllers.log);
-
 // Route to get a list of regimes
-router.get("/regime", regimeControllers.browse);
 
 module.exports = router;
