@@ -25,6 +25,7 @@ const hashPassword = require("./middleware/hashPasswordSignUp");
 // Route to get a list of users
 router.get("/users", userControllers.browse);
 router.get("/recipes", recipeControllers.browse);
+router.get("/usersByRegimes", userControllers.usersRegimes);
 
 // Route to post a user
 router.post("/users", userControllers.add);

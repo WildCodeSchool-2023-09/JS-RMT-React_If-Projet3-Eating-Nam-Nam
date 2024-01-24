@@ -19,6 +19,7 @@ import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 import Page404 from "./pages/Page404/Page404";
+import Dashboard from "./components/dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
     path: "/administration/",
     element: <Admin />,
     children: [
+      {
+        path: "/administration/",
+        element: <Dashboard />,
+      },
       {
         path: "management",
         element: <Management />,

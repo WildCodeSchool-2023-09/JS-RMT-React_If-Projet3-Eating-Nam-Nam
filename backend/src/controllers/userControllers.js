@@ -14,6 +14,18 @@ const browse = async (req, res, next) => {
   }
 };
 
+const usersRegimes = async (req, res, next) => {
+  try {
+    // Fetch all users from the database
+    const userRegime = await tables.user.readAllUsersRegimes();
+    // Respond with the users in JSON format
+    res.status(200).json(userRegime);
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 // The R of BREAD - Read operation
 /*
 const recup = async (req, res, next) => {
@@ -87,6 +99,7 @@ const destroy = async (req, res, next) => {
 // Ready to export the controller functions
 module.exports = {
   browse,
+  usersRegimes,
   update,
   add,
   destroy,

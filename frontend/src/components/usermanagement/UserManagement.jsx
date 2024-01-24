@@ -146,7 +146,7 @@ function UserManagement() {
         </form>
       </div>
       <ToastContainer />
-      <table>
+      <table className="tab-users">
         <thead>
           <th>Id</th>
           <th>Username</th>
