@@ -6,12 +6,11 @@ import Management from "./components/management/Management";
 import App from "./App";
 
 import connexion from "./services/connexion";
-// eslint-disable-next-line import/order
-
 import AuthProvider from "./contexts/Auth";
 
 import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes";
+import Recipe from "./pages/recipe/Recipe";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
 import About from "./pages/About/About";
@@ -19,6 +18,8 @@ import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
+import Page404 from "./pages/Page404/Page404";
+import Favorites from "./components/favorite/Favorite";
 
 const router = createBrowserRouter([
   {
@@ -41,13 +42,25 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipes/:id",
-        element: <Recipes />,
-        loader: ({ params }) => {
-          return connexion
-            .get(`/recipes/${params.id}`)
-            .then((response) => response.data)
-            .catch((err) => console.error(err));
+        element: <Recipe />,
+        errorElement: <Page404 />,
+        loader: async ({ params }) => {
+          try {
+            const response = await connexion.get(`/recipes/${params.id}`);
+            return response.data;
+          } catch (error) {
+            if (error.response && error.response.status === 404) {
+              throw new Response("Not Found", { status: 404 });
+            } else {
+              console.error(error);
+              throw new Error("Failed to fetch data");
+            }
+          }
         },
+      },
+      {
+        path: "/favorites",
+        element: <Favorites />,
       },
       {
         path: "/ingredients",
@@ -82,6 +95,10 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <Terms />,
+      },
+      {
+        path: "*",
+        element: <Page404 />,
       },
     ],
   },

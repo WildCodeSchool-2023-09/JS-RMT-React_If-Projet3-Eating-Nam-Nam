@@ -8,14 +8,14 @@ import "react-toastify/dist/ReactToastify.css";
 import "./SignUpUser.css";
 
 function SignUpUser() {
-  const { connected } = useContext(AuthContext);
+  const { idNewUser } = useContext(AuthContext);
 
   const [newUser, setNewUser] = useState({
     username: "",
     birthday: "",
     picture: "",
     regime_id: 0,
-    auth_id: connected.data.id,
+    auth_id: idNewUser,
   });
 
   const [regimes, setRegimes] = useState();
@@ -55,7 +55,7 @@ function SignUpUser() {
       if (response.status === 201) {
         showToastMessage();
         setTimeout(() => {
-          navigate("/");
+          navigate("/login");
         }, "3000");
       }
     } catch (error) {
