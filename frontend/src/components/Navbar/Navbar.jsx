@@ -48,7 +48,7 @@ function NavBar() {
                 </li>
               </>
             )}
-            {connected.role === 1 && (
+            {connected.is_admin === 1 && (
               <li>
                 <NavLink to="/administration/">Admin</NavLink>
               </li>
