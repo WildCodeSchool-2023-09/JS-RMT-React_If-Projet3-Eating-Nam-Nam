@@ -57,11 +57,13 @@ function NavBar() {
 
           <li className="name-picture">
             <p className="name-user">{infosUser.username}</p>
-            <img
-              src={infosUser.picture || profile}
-              className="profile-logo logouser"
-              alt="profile_logo"
-            />
+            <NavLink to="/profile">
+              <img
+                src={infosUser.picture || profile}
+                className="profile-logo logouser"
+                alt="profile_logo"
+              />
+            </NavLink>
           </li>
         </ul>
       </nav>

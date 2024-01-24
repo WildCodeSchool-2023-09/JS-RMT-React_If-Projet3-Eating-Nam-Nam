@@ -1,25 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
-import connexion from "../../services/connexion";
+
 import "./Profile.css";
 
 function Profile() {
   const { infosUser } = useContext(AuthContext);
-  const [regime, setRegime] = useState(null);
-
-  useEffect(() => {
-    const getRegimes = async () => {
-      try {
-        const { data } = await connexion.get(`/regime`);
-        const userRegime = data.find((reg) => reg.id === infosUser.regime_id);
-        setRegime(userRegime);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getRegimes();
-  }, [infosUser.regime_id]);
 
   const formattedBirthday = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
@@ -44,7 +29,7 @@ function Profile() {
         </div>
         <div className="profile-regime">
           <h3>Regime</h3>
-          <p>{regime?.name || "No regime selected"}</p>
+          <p>{infosUser.regime_name || "No regime selected"}</p>
         </div>
       </div>
       <div className="profile-page-sub">
