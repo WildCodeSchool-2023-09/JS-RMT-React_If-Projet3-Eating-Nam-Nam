@@ -5,17 +5,43 @@ import "./Ingredient.css";
 function IngredientList({ ingr }) {
   return (
     <div className="ingredient">
-      <div>
-        <img className="image" src={ingr.image} alt={ingr.image} />
+      <img className="frame-image" src={ingr.image} alt={ingr.image} />
+      <h1 className="frame-title">{ingr.name}</h1>
+      <p className="ingr-category">
+        <b>{ingr.category}</b>
+      </p>
+      <div className="ingr-desc">
+        <div>
+          <p>
+            <b>Nutrional Values:</b> <br />
+            <div className="line" />
+          </p>
+          <p>
+            Energetic values: <br />
+            <b>{ingr.calorie}</b>
+          </p>
+          <p>
+            Carbonhydrate: <br />
+            <b>{ingr.carbonhydrate}</b>
+          </p>
+        </div>
+        <div>
+          <p>
+            Protein: <br />
+            <b>{ingr.protein}</b>
+          </p>
+          <p>
+            Lipid:
+            <br />
+            <b>{ingr.lipid}</b>
+          </p>
+          <p>
+            Fiber:
+            <br />
+            <b>{ingr.fiber}</b>
+          </p>
+        </div>
       </div>
-      <h3 className="ingr-name">{ingr.name}</h3>
-      <h4>Category: {ingr.category}</h4>
-
-      <h5 className="calorie">Energetic values: {ingr.calorie}</h5>
-      <h5 className="carbonhydrate">Carbonhydrate: {ingr.carbonhydrate}</h5>
-      <h5 className="protein">Protein: {ingr.protein}</h5>
-      <h5 className="lipid">Lipid: {ingr.lipid}</h5>
-      <h5 className="fiber">Fiber: {ingr.fiber}</h5>
     </div>
   );
 }

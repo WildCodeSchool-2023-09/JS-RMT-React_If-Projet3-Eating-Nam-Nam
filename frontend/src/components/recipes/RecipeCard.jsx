@@ -5,7 +5,7 @@ import "./Recipes.css";
 
 function RecipeCard({ recipes }) {
   return (
-    <div className="container">
+    <div className="frame-container">
       {recipes.map((recip) => (
         <RecipeList key={recip.id} recip={recip} />
       ))}
