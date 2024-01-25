@@ -10,13 +10,11 @@ const browse = async (req, res, next) => {
   }
 };
 
-
 const update = async (req, res, next) => {
   const ingredient = req.body;
 
   try {
     const result = await tables.ingredient.update(req.params.id, ingredient);
-
     if (result.affectedRows === 1) {
       res.sendStatus(204);
     } else {
@@ -45,7 +43,6 @@ const destroy = async (req, res, next) => {
 //     next(err);
 //   }
 // };
-
 
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
