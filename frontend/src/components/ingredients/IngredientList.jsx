@@ -13,32 +13,32 @@ function IngredientList({ ingr }) {
       <div className="ingr-desc">
         <div>
           <p>
-            <b>Nutrional Values:</b> <br />
+            <span className="p-bold">Nutrional Values:</span> <br />
             <div className="line" />
           </p>
           <p>
             Energetic values: <br />
-            <b>{ingr.calorie}</b>
+            <span className="p-bold">{ingr.calorie}</span>
           </p>
           <p>
             Carbonhydrate: <br />
-            <b>{ingr.carbonhydrate}</b>
+            <span className="p-bold">{ingr.carbonhydrate}</span>
           </p>
         </div>
         <div>
           <p>
             Protein: <br />
-            <b>{ingr.protein}</b>
+            <span className="p-bold">{ingr.protein}</span>
           </p>
           <p>
             Lipid:
             <br />
-            <b>{ingr.lipid}</b>
+            <span className="p-bold">{ingr.lipid}</span>
           </p>
           <p>
             Fiber:
             <br />
-            <b>{ingr.fiber}</b>
+            <span className="p-bold">{ingr.fiber}</span>
           </p>
         </div>
       </div>

@@ -30,6 +30,10 @@
   margin-top: 9px;
 }
 
+.p-bold {
+  font-weight: bolder;
+}
+
 @media (max-width: 725px) {
   .ingr-desc {
     display: none;
