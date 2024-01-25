@@ -79,7 +79,6 @@ function RecipeManagement() {
   const deleteRecipe = async (id) => {
     try {
       connexion.delete(`/recipes/${id}`);
-      window.location.reload();
     } catch (error) {
       console.error(error);
     }

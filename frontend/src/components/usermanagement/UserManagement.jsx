@@ -15,13 +15,13 @@ function UserManagement() {
   });
 
   const showToastMessage = () => {
-    toast.success("Les données ont bien été modifiée !", {
+    toast.success("Les données ont bien été modifiées !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
 
   const showToastErrorMessage = () => {
-    toast.error("Il y a eu une erreur les données n'ont pas été modifiée !", {
+    toast.error("Il y a eu une erreur les données n'ont pas été modifiées !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
@@ -73,7 +73,6 @@ function UserManagement() {
   const deleteUser = async (id) => {
     try {
       connexion.delete(`/users/${id}`);
-      window.location.reload();
     } catch (error) {
       console.error(error);
     }
