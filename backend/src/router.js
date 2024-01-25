@@ -34,8 +34,14 @@ router.post("/ingredients", checkCredentials, ingredientControllers.add);
 
 // Route to put a user
 router.put("/users/:id", checkCredentials, userControllers.update);
+router.put("/ingredients/:id", checkCredentials, ingredientControllers.update);
 // Route to delete a user
 router.delete("/users/:id", checkCredentials, userControllers.destroy);
+router.delete(
+  "/ingredients/:id",
+  checkCredentials,
+  ingredientControllers.destroy
+);
 // Route to post a new auth
 
 router.post("/auth", checkCredentials, authControllers.add);

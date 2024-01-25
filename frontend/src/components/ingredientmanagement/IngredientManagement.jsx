@@ -73,7 +73,6 @@ function IngredientManagement() {
   const deleteIngredient = async (id) => {
     try {
       connexion.delete(`/ingredients/${id}`);
-      window.location.reload();
     } catch (error) {
       console.error(error);
     }
