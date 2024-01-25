@@ -29,8 +29,6 @@ router.get("/favorites", checkCredentials, favoriteControllers.browse);
 router.get("/regime", checkCredentials, regimeControllers.browse);
 router.get("/recipes/:id", checkCredentials, recipeControllers.read);
 router.get("/favorites/:id", checkCredentials, favoriteControllers.read);
-router.get("/ingredients", checkCredentials, ingredientControllers.browse);
-router.post("/ingredients", checkCredentials, ingredientControllers.add);
 
 // Route to put a user
 router.put("/users/:id", checkCredentials, userControllers.update);
@@ -38,6 +36,7 @@ router.put("/users/:id", checkCredentials, userControllers.update);
 router.delete("/users/:id", checkCredentials, userControllers.destroy);
 // Route to post a new auth
 
+router.post("/ingredients", checkCredentials, ingredientControllers.add);
 router.post("/auth", checkCredentials, authControllers.add);
 router.post("/users", checkCredentials, userControllers.add);
 router.post("/favorites", checkCredentials, favoriteControllers.add);
