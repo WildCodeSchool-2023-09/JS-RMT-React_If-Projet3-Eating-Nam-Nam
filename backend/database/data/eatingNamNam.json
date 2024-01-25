@@ -8,7 +8,7 @@
     "protein": "7.5 g",
     "lipid": "0.75 g",
     "fiber": "15 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "winter squash"
   },
   {
@@ -20,7 +20,7 @@
     "protein": "1.09 g",
     "lipid": "9.58 g",
     "fiber": "1.54 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "chocolate"
   },
   {
@@ -32,7 +32,7 @@
     "protein": "3.27 g",
     "lipid": "0.05 g",
     "fiber": "0 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "egg"
   },
   {
@@ -44,7 +44,7 @@
     "protein": "13.6 g",
     "lipid": "1.36 g",
     "fiber": "6.8 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "pumpkin"
   },
   {
@@ -56,7 +56,7 @@
     "protein": "0.08 g",
     "lipid": "0.04 g",
     "fiber": "0.24 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "berries"
   },
   {
@@ -68,7 +68,7 @@
     "protein": "0.47 g",
     "lipid": "0.31 g",
     "fiber": "4.37 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "fruit"
   },
   {
@@ -80,7 +80,7 @@
     "protein": "0.08 g",
     "lipid": "0.02 g",
     "fiber": "0.17 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "fruit"
   },
   {
@@ -92,7 +92,7 @@
     "protein": "0 g",
     "lipid": "0 g",
     "fiber": "0 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "liqueur"
   },
   {
@@ -104,7 +104,7 @@
     "protein": "4.49 g",
     "lipid": "0.82 g",
     "fiber": "13.74 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "vegetable"
   },
   {
@@ -116,7 +116,7 @@
     "protein": "0.57 g",
     "lipid": "0.15 g",
     "fiber": "1.71 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "root vegetable"
   },
   {
@@ -128,7 +128,7 @@
     "protein": "1.08 g",
     "lipid": "0.25 g",
     "fiber": "1.48 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "vegetable"
   },
   {
@@ -140,7 +140,7 @@
     "protein": "0.07 g",
     "lipid": "0.01 g",
     "fiber": "0.01 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "grains"
   },
   {
@@ -152,7 +152,7 @@
     "protein": "0 g",
     "lipid": "1 g",
     "fiber": "0 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "cooking oil"
   },
   {
@@ -164,7 +164,7 @@
     "protein": "2.09 g",
     "lipid": "0.24 g",
     "fiber": "0.51 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "side dish"
   },
   {
@@ -176,7 +176,7 @@
     "protein": "8.81 g",
     "lipid": "7.68 g",
     "fiber": "0 g",
-    "is_validated": false,
+    "isValidated": false,
     "category": "chicken"
   },
   {
@@ -188,7 +188,7 @@
     "protein": "1.19 g",
     "lipid": "0.32 g",
     "fiber": "3.02 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "citrus fruit"
   },
   {
@@ -200,7 +200,7 @@
     "protein": "1.34 g",
     "lipid": "0.27 g",
     "fiber": "1.6 g",
-    "is_validated": true,
+    "isValidated": true,
     "category": "vegetable"
   }
 ]
