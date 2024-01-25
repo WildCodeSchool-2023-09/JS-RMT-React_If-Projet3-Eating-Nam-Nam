@@ -10,7 +10,7 @@ import "./Recipes.css";
 
 function RecipeList({ recip }) {
   return (
-    <div className="recipe">
+    <article className="recipe">
       <img className="frame-image" src={recip.picture} alt={recip.title} />
       <div className="frame-title">
         <h5>{recip.title}</h5>
@@ -27,7 +27,7 @@ function RecipeList({ recip }) {
       </div>
 
       <Hearth className="favorite" recipId={recip.id} />
-    </div>
+    </article>
   );
 }
 RecipeList.propTypes = {

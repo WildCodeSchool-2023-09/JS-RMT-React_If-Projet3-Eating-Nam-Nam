@@ -4,7 +4,7 @@ import "./Ingredient.css";
 
 function IngredientList({ ingr }) {
   return (
-    <div className="ingredient">
+    <article className="ingredient">
       <img className="frame-image" src={ingr.image} alt={ingr.image} />
       <h1 className="frame-title">{ingr.name}</h1>
       <p className="ingr-category">
@@ -42,7 +42,7 @@ function IngredientList({ ingr }) {
           </p>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 IngredientList.propTypes = {
