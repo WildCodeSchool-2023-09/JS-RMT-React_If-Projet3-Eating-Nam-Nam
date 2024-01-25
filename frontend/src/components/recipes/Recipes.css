@@ -1,58 +1,23 @@
 .recipe {
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
   margin: 10px;
   padding: 15px;
-  width: 25rem;
+  width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: grid;
   background-color: #ffffff;
 }
 .recipe-desc {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-.container {
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  justify-items: center;
-}
-
-.picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.title {
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-
-.section {
-  color: #555;
-  font-style: italic;
+  font-size: 11px;
 }
 
 .preparation_time {
   font-weight: bold;
 }
 
-.cooking_time {
-  margin-right: 10 px;
-}
-
 .difficulty {
   color: #ff5733;
-}
-
-.allergen {
-  margin-top: 10 px;
-  color: #e74c3c;
 }
