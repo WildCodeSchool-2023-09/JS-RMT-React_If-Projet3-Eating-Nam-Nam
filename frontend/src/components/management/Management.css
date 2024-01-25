@@ -5,7 +5,8 @@
   text-align: center;
 }
 
-.user-management {
+.user-management,
+.ingredient-management {
   background-color: white;
   width: 300px;
   margin: 0 auto;
@@ -15,19 +16,22 @@
 }
 
 @media screen and (min-width: 480px) {
-  .user-management {
+  .user-management,
+  .ingredient-management {
     width: 400px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .user-management {
+  .user-management,
+  .ingredient-management {
     width: 700px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .user-management {
+  .user-management,
+  .ingredient-management {
     width: 1000px;
   }
 }
