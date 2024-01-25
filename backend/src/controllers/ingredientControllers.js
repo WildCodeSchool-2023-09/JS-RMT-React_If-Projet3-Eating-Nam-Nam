@@ -10,6 +10,7 @@ const browse = async (req, res, next) => {
   }
 };
 
+
 const update = async (req, res, next) => {
   const ingredient = req.body;
 
@@ -34,6 +35,17 @@ const destroy = async (req, res, next) => {
     next(err);
   }
 };
+
+// const read = async (req, res, next) => {
+//   try {
+//     const ingredient = await tables.ingredient.readById(req.params.id);
+
+//     res.status(200).json(ingredient);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
+
 
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
