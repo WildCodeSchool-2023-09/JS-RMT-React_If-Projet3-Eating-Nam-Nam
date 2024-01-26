@@ -2,16 +2,19 @@ import { React, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
-import "./UserManagement.css";
+import "./RecipeManagement.css";
 
-function UserManagement() {
+function RecipeManagement() {
   const [formVisible, setFormVisible] = useState("none");
-  const [users, setUsers] = useState([]);
-  const [userValue, setUserValue] = useState({
-    username: "",
-    birthday: "",
+  const [recipes, setRecipes] = useState([]);
+  const [recipeValue, setRecipeValue] = useState({
     picture: "",
-    regime_id: 0,
+    section: "",
+    title: "",
+    preparation_time: 0,
+    cooking_time: 0,
+    difficulty: "",
+    allergen: false,
   });
 
   const showToastMessage = () => {
@@ -26,35 +29,38 @@ function UserManagement() {
     });
   };
 
-  const getUsers = async () => {
+  const getRecipes = async () => {
     try {
-      const myUsers = await connexion.get(`/users`).then((res) => res.data);
-      setUsers(myUsers);
+      const myRecipes = await connexion.get(`/recipes`).then((res) => res.data);
+      setRecipes(myRecipes);
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleChange = (event) => {
-    if (event.target.name === "regime_id") {
-      setUserValue((previousState) => ({
+    if (
+      event.target.name === "preparation_time" ||
+      event.target.name === "cooking_time"
+    ) {
+      setRecipeValue((previousState) => ({
         ...previousState,
         [event.target.name]: +event.target.value,
       }));
     } else {
-      setUserValue((previousState) => ({
+      setRecipeValue((previousState) => ({
         ...previousState,
         [event.target.name]: event.target.value,
       }));
     }
   };
 
-  const putUser = async (event) => {
+  const putRecipe = async (event) => {
     event.preventDefault();
     try {
-      connexion.put(`/users/${userValue.id}`, userValue);
+      connexion.put(`/recipes/${recipeValue.id}`, recipeValue);
       showToastMessage();
-      getUsers();
+      getRecipes();
       setFormVisible("none");
     } catch (error) {
       showToastErrorMessage();
@@ -62,30 +68,30 @@ function UserManagement() {
   };
 
   useEffect(() => {
-    getUsers();
+    getRecipes();
   }, []);
 
-  const loadUser = (user) => {
+  const loadRecipe = (recipe) => {
     setFormVisible("grid");
-    setUserValue(user);
+    setRecipeValue(recipe);
   };
 
-  const deleteUser = async (id) => {
+  const deleteRecipe = async (id) => {
     try {
-      connexion.delete(`/users/${id}`);
+      connexion.delete(`/recipes/${id}`);
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleRequest = (event) => {
-    if (userValue.id) {
-      putUser(event);
+    if (recipeValue.id) {
+      putRecipe(event);
     }
   };
 
   return (
-    <div className="table-user-management">
+    <div className="table-recipe-management">
       <div className="contain-form">
         <form
           onSubmit={handleRequest}
@@ -93,41 +99,71 @@ function UserManagement() {
           style={{ display: formVisible }}
         >
           <label>
-            Username :
-            <input
-              type="text"
-              name="username"
-              value={userValue.username}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Birthday :
-            <input
-              type="date"
-              name="birthday"
-              value={userValue.birthday}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
             Picture :
             <input
               type="text"
               name="picture"
-              value={userValue.picture}
+              value={recipeValue.picture}
               onChange={handleChange}
               required
             />
           </label>
           <label>
-            Regime :
+            Section :
+            <input
+              type="text"
+              name="section"
+              value={recipeValue.section}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Title :
+            <input
+              type="text"
+              name="title"
+              value={recipeValue.title}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Preparation time :
             <input
               type="number"
-              name="regime_id"
-              value={userValue.regime_id}
+              name="preparation_time"
+              value={recipeValue.preparation_time}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Cooking time :
+            <input
+              type="number"
+              name="cooking_time"
+              value={recipeValue.cooking_time}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Difficulty :
+            <input
+              type="text"
+              name="difficulty"
+              value={recipeValue.difficulty}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Allergen :
+            <input
+              type="text"
+              name="allergen"
+              value={recipeValue.allergen}
               onChange={handleChange}
               required
             />
@@ -140,27 +176,25 @@ function UserManagement() {
         </form>
       </div>
       <ToastContainer />
-      <table className="tab-users">
+      <table className="tab-recipes">
         <thead>
           <th>Id</th>
-          <th>Username</th>
-          <th>Birthday</th>
           <th>Picture</th>
+          <th>Title</th>
         </thead>
         <tbody>
-          {users.map((user) => {
+          {recipes.map((recipe) => {
             return (
-              <tr key={user.id}>
-                <td>{user.id}</td>
-                <td>{user.username}</td>
-                <td>{user.birthday}</td>
+              <tr key={recipe.id}>
+                <td>{recipe.id}</td>
                 <td>
-                  <img src={user.picture} alt={user.username} />
+                  <img src={recipe.picture} alt={recipe.title} />
                 </td>
+                <td>{recipe.Title}</td>
                 <td>
                   <button
                     type="button"
-                    onClick={() => deleteUser(user.id)}
+                    onClick={() => deleteRecipe(recipe.id)}
                     className="button-delete"
                   >
                     Delete
@@ -169,7 +203,7 @@ function UserManagement() {
                 <td>
                   <button
                     type="button"
-                    onClick={() => loadUser(user)}
+                    onClick={() => loadRecipe(recipe)}
                     className="button-put"
                   >
                     Put
@@ -184,4 +218,4 @@ function UserManagement() {
   );
 }
 
-export default UserManagement;
+export default RecipeManagement;

@@ -15,7 +15,6 @@ const update = async (req, res, next) => {
 
   try {
     const result = await tables.ingredient.update(req.params.id, ingredient);
-
     if (result.affectedRows === 1) {
       res.sendStatus(204);
     } else {
@@ -34,6 +33,16 @@ const destroy = async (req, res, next) => {
     next(err);
   }
 };
+
+// const read = async (req, res, next) => {
+//   try {
+//     const ingredient = await tables.ingredient.readById(req.params.id);
+
+//     res.status(200).json(ingredient);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
 
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
