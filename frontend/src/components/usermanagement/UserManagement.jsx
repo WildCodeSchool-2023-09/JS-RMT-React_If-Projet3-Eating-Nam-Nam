@@ -15,13 +15,13 @@ function UserManagement() {
   });
 
   const showToastMessage = () => {
-    toast.success("Les données ont bien été modifiées !", {
+    toast.success("The data has been modified !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
 
   const showToastErrorMessage = () => {
-    toast.error("Il y a eu une erreur les données n'ont pas été modifiées !", {
+    toast.error("There was an error the data was not modified !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
@@ -134,7 +134,7 @@ function UserManagement() {
           </label>
           <div className="contain-submit">
             <button type="submit" className="button-submit">
-              Modify
+              Edit
             </button>
           </div>
         </form>
