@@ -54,3 +54,38 @@ li {
 .p-link {
   text-decoration: none;
 }
+
+/* CSS - Frame List */
+
+.frame-image {
+  margin-top: -30px;
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.frame-title {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.frame-container {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  width: 80%;
+  justify-content: center;
+  justify-items: center;
+}
+
+.button_fav {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+}

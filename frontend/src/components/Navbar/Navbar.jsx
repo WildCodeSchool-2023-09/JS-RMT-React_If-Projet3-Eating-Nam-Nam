@@ -48,7 +48,7 @@ function NavBar() {
                 </li>
               </>
             )}
-            {connected.role === 1 && (
+            {connected.is_admin === 1 && (
               <li>
                 <NavLink to="/administration/">Admin</NavLink>
               </li>
@@ -66,11 +66,13 @@ function NavBar() {
             )}
             <li className="name-picture">
               <p className="name-user">{infosUser.username}</p>
-              <img
-                src={infosUser.picture || profile}
-                className="profile-logo logouser"
-                alt="profile_logo"
-              />
+              <NavLink to="/profile">
+                <img
+                  src={infosUser.picture || profile}
+                  className="profile-logo logouser"
+                  alt="profile_logo"
+                />
+              </NavLink>
             </li>
           </ul>
         </div>

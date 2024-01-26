@@ -1,73 +1,73 @@
 [
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/K%C3%BCrbissuppe_mit_Kern%C3%B6l.JPG/1920px-K%C3%BCrbissuppe_mit_Kern%C3%B6l.JPG",
     "section": "starter, dish",
     "title": "Butternut cream soup with cinnamon",
-    "ingredients": [
-      "pepper",
-      "butter",
-      "fresh cream",
-      "cube broth",
-      "onion",
-      "butternut",
-      "cinnamon "
+    "ingredient": [
+      "1 teaspoon of pepper",
+      "1  butter",
+      "4 teaspoon fresh cream",
+      "1 cube broth",
+      "2 onion",
+      "1 butternut",
+      "2 cinnamon "
     ],
     "preparationTime": 15,
     "cookingTime": 30,
-    "regime": "Vegetarian, Flexitarian ",
+    "diet": "Vegetarian, Flexitarian ",
     "difficulty": "easy",
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://commons.wikimedia.org/wiki/File:Chocolate_Fondant.jpg?uselang=fr",
     "section": "dessert",
     "title": "Chocolate Rochers",
-    "ingredients": [
-      "dark chocolate",
-      "milk chocolate",
-      "butter",
-      "vanilla sugar",
-      "almond sticks"
+    "ingredient": [
+      "2 tablets dark chocolate",
+      "1 liter ofmilk chocolate",
+      "1 butter",
+      "5 teaspoon of vanilla sugar",
+      "10 teaspoon of almond sticks"
     ],
     "preparationTime": 20,
-    "cookingTime": "Chill: approx. 1 h",
-    "regime": "Vétarisme ",
+    "cookingTime": 60,
+    "diet": "Vétarisme ",
     "difficulty": "medium",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://en.wikipedia.org/wiki/File:Scrambed_eggs.jpg",
     "section": "stater, dish",
     "title": "Mushrooms with scrambled eggs",
-    "ingredients": [
-      "giant button mushrooms",
-      "salt",
-      "egg",
-      "milk",
-      "chives",
-      "nutmeg",
-      "pepper",
-      "country bacon"
+    "ingredient": [
+      "10 giant button mushrooms",
+      "1 salt",
+      "5 egg",
+      "1 liter of milk",
+      "2 chives",
+      "2 nutmeg",
+      "1 teaspoon of pepper",
+      "1 kg of country bacon"
     ],
-    "prepareTime": 18,
+    "preparationTime": 18,
     "cookingTime": 12,
     "diet": "Flexitarian, Lactose Free",
     "difficulty": "difficulty",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://commons.wikimedia.org/wiki/File:Caesar_salad_with_chicken_-_Cambridge,_MA.jpg?uselang=fr",
     "section": "starter, dish",
     "title": "Corn salad",
-    "ingredients": [
-      "lime",
-      "rapeseed oil",
-      "half sour cream",
-      "salt",
-      "pepper",
-      "corn kernels",
-      "red pepper",
-      "coriander"
+    "ingredient": [
+      "1 lime",
+      "2 rapeseed oil",
+      "1 half sour cream",
+      "3 teaspoon of salt",
+      "2 teaspoon of pepper",
+      "2 corn kernels",
+      "1 red pepper",
+      "6 bottle of coriander"
     ],
     "preparationTime": 15,
     "cookingTime": 0,
@@ -76,18 +76,18 @@
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/8/84/Pumpkin-Pie-Slice.jpg",
     "section": "starter, dish",
     "title": "Pumpkin slices",
-    "ingredients": [
-      "pumpkin",
-      "olive oil",
-      "rosemary",
-      "ground almonds",
-      "grated sbrinz",
-      "sugar",
-      "salt",
-      "pepper"
+    "ingredient": [
+      "4 pumpkin",
+      "4 teaspoon of olive oil",
+      "4 rosemary",
+      "8 teaspoon ofground almonds",
+      "3 grated sbrinz",
+      "9 teaspoon of sugar",
+      "1 teaspoon of salt",
+      "1 teaspoon of pepper"
     ],
     "preparationTime": 15,
     "cookingTime": 20,
@@ -96,34 +96,34 @@
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://commons.wikimedia.org/wiki/File:Eton_Mess.jpeg?uselang=fr",
     "section": "dessert",
     "title": "Strawberry yogurt",
-    "ingredients": [
-      "strawberry",
-      "natural yogurt",
-      "vanilla powder",
-      "liquid honey",
-      "natural pistachios"
+    "ingredient": [
+      "10 strawberry",
+      "1 natural yogurt",
+      "8 vanilla powder",
+      "1 liquid honey",
+      "300g of natural pistachios"
     ],
     "preparationTime": 10,
     "cookingTime": 0,
-    "diet": ["Veterinarianism", "lactose-free"],
+    "diet": "Veterinarianism, lactose-free",
     "difficulty": "easy",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Apple_pie.jpg/400px-Apple_pie.jpg",
     "section": "Dessert",
     "title": "Apple pie",
-    "ingredients": [
-      "semi-white flour",
-      "salt",
-      "sugar",
-      "butter",
-      "water",
-      "apples",
-      "icing sugar"
+    "ingredient": [
+      "2 semi-white flour",
+      "2 teaspoon of salt",
+      "3 sugar",
+      "200g of butter",
+      "1l of water",
+      "6 apples",
+      "1 icing sugar"
     ],
     "preparationTime": 30,
     "cookingTime": 20,
@@ -132,16 +132,16 @@
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Bing_Cherries_%28USDA_ARS%29.jpg/340px-Bing_Cherries_%28USDA_ARS%29.jpg",
     "section": "Dessert",
     "title": "Cherry mousse",
-    "ingredients": [
-      "cherries",
-      "maraschino",
-      "fresh egg yolks",
-      "cornstarch",
-      "white chocolate",
-      "half-cream"
+    "ingredient": [
+      "1kg of cherries",
+      "2 maraschino",
+      "4 fresh egg yolks",
+      "3 cornstarch",
+      "2 white chocolate",
+      "5 half-cream"
     ],
     "preparationTime": 45,
     "cookingTime": 0,
@@ -150,15 +150,15 @@
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Poire_au_vin.JPG/440px-Poire_au_vin.JPG",
     "section": "Dessert",
     "title": "Pears with saffron",
-    "ingredients": [
-      "white wine",
-      "sugar",
-      "saffron threads",
-      "pears",
-      "vanilla ice cream"
+    "ingredient": [
+      "1 liter white wine",
+      "1kg ofsugar",
+      "3 saffron threads",
+      "8 pears",
+      "10 vanilla ice cream"
     ],
     "preparationTime": 20,
     "cookingTime": 0,
@@ -167,19 +167,19 @@
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Baingan_Patiala.JPG/440px-Baingan_Patiala.JPG",
     "section": "Starter, dish",
     "title": "Baked eggplant",
-    "ingredients": [
-      "oil, salt",
-      "pepper",
-      "organic lemon",
-      "salt",
-      "cherry tomatoes",
-      "feta",
-      "thyme",
-      "blackberries",
-      "eggplant"
+    "ingredient": [
+      "4 oil, salt",
+      "1 teaspoon of pepper",
+      "3 organic lemon",
+      "1 teaspoon of salt",
+      "300 g of cherry tomatoes",
+      "6 feta",
+      "2 thyme",
+      "7 blackberries",
+      "4 eggplant"
     ],
     "preparationTime": "10",
     "cookingTime": "25",
@@ -188,24 +188,24 @@
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Rueblitorte.jpg/560px-Rueblitorte.jpg",
     "section": "Dessert",
     "title": "Carrot muffins",
-    "ingredients": [
-      "butter",
-      "sugar",
-      "salt",
-      "eggs",
-      "milk",
-      "carrots",
-      "ground almonds",
-      "flour",
-      "baking powder",
-      "cinnamon",
-      "mascarpone",
-      "icing sugar",
-      "lemon juice",
-      "marzipan carrots"
+    "ingredient": [
+      "10g of butter",
+      "200g of sugar",
+      "10 teaspoon of salt",
+      "6 eggs",
+      "50cl milk",
+      "8 carrots",
+      "4 ground almonds",
+      "1 flour",
+      "45g of baking powder",
+      "7 cinnamon",
+      "100g of mascarpone",
+      "40 icing sugar",
+      "50cl lemon juice",
+      "29 marzipan carrots"
     ],
     "preparationTime": 25,
     "cookingTime": "25",
@@ -214,37 +214,37 @@
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Pomidor_dolmas%C4%B1_Azerbaijani_cuisine.jpg/440px-Pomidor_dolmas%C4%B1_Azerbaijani_cuisine.jpg",
     "section": "Dish",
     "title": "Stuffed tomatoes",
-    "ingredients": [
-      "lean quark",
-      "grated sbrinz",
-      "grated gruyere",
-      "eggs",
-      "nutmeg",
-      "pepper",
-      "oregano",
-      "tomatoes",
-      "salt",
-      "bacon"
+    "ingredient": [
+      "8 lean quark",
+      "5 grated sbrinz",
+      "9 grated gruyere",
+      "6 eggs",
+      "3 nutmeg",
+      "2 teaspoon of pepper",
+      "6 oregano",
+      "3 tomatoes",
+      "8 salt",
+      "40 bacon"
     ],
     "preparationTime": 20,
     "cookingTime": 20,
-    "regime": "jfebkv",
+    "diet": "jfebkv",
     "difficulty": "Medium",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/%E4%BA%94%E7%9B%AE%E9%A3%AF.jpg",
     "section": " ",
     "title": "Japanese rice (Gohan)",
-    "ingredients": [
-      "sesame seeds",
-      "sushi rice",
-      "water",
-      "mirin",
-      "nori seaweed"
+    "ingredient": [
+      "3kg sesame seeds",
+      "1kg sushi rice",
+      "50 liter of water",
+      "6 mirin",
+      "5 nori seaweed"
     ],
     "preparationTime": 30,
     "cookingTime": 10,
@@ -253,66 +253,66 @@
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://commons.wikimedia.org/wiki/File:Focaccia-erbe-olive.jpg?uselang=fr",
     "section": "Starter, Dish",
     "title": "Focaccia with olives and arugula",
-    "ingredients": [
-      "salt",
-      "flour",
-      "yeast",
-      "olive oil",
-      "pitted black olives",
-      "anchovy fillets",
-      "garlic clove",
-      "mozzarella",
-      "arugula",
-      "flower of salt"
+    "ingredient": [
+      "4 teaspoon of salt",
+      "5 flour",
+      "3 yeast",
+      "10l olive oil",
+      "3 pitted black olives",
+      "30 anchovy fillets",
+      "1 garlic clove",
+      "3 mozzarella",
+      "38 arugula",
+      "26 flower of salt"
     ],
     "preparationTime": 55,
     "cookingTime": 15,
-    "regime": "fffff",
+    "diet": "fffff",
     "difficulty": "Easy",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/500px-Espaguetis_carbonara.jpg",
     "section": "Dish",
     "title": "Beef and sage spaghetti carbonara",
-    "ingredients": [
-      "spaghetti",
-      "olive oil",
-      "sage",
-      "minced beef",
-      "salt",
-      "pepper",
-      "onion",
-      "meat broth",
-      "demi-cream",
-      "eggs ",
-      "grated parmesan",
-      "sage"
+    "ingredient": [
+      "500g of spaghetti",
+      "50cl of olive oil",
+      "4 sage",
+      "1kg minced beef",
+      "1 teaspoon of salt",
+      "2 teaspoon of pepper",
+      "4  onion",
+      "25 meat broth",
+      "50 cldemi-cream",
+      "5 eggs ",
+      "3 grated parmesan",
+      "5 sage"
     ],
     "preparationTime": 30,
     "cookingTime": 20,
-    "regime": "dddd",
+    "diet": "dddd",
     "difficulty": "Medium",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Shrimp_Fra_Diavolo.jpg/440px-Shrimp_Fra_Diavolo.jpg",
     "section": "Dish",
     "title": "Diavolo Chickens",
-    "ingredients": [
-      "free-range chicken",
-      "olive oil",
-      "salt",
-      "mustard",
-      "white wine",
-      "lemon juice",
-      "Worcestershire sauce",
-      "Cayenne pepper",
-      "breadcrumbs",
-      " parsley"
+    "ingredient": [
+      "4 free-range chicken",
+      "3 teaspoon of olive oil",
+      "2 teaspoon of salt",
+      "3 teaspoonof mustard",
+      "2 liter ofwhite wine",
+      "1 liter of lemon juice",
+      "4 Worcestershire sauce",
+      "3 teaspoon of Cayenne pepper",
+      "5 breadcrumbs",
+      "3 parsley"
     ],
     "preparationTime": 20,
     "cookingTime": 60,
@@ -321,16 +321,16 @@
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marinade_d%27espadon.JPG/1600px-Marinade_d%27espadon.JPG",
     "section": "Starter,Dish",
     "title": "Lemon marinade",
-    "ingredients": [
-      "lemon",
-      "lime",
-      "sunflower oil",
-      "Worcestershire sauce",
-      "lemongrass",
-      "white pepper or lemon pepper"
+    "ingredient": [
+      "8 lemon",
+      "4 lime",
+      "9 sunflower oil",
+      "4 Worcestershire sauce",
+      "3 lemongrass",
+      "2 white pepper or lemon pepper"
     ],
     "preparationTime": 15,
     "cookingTime": 0,
@@ -339,57 +339,57 @@
     "allergen": false
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Lasagna.jpg",
     "section": "Dish",
     "title": "Leek lasagna",
-    "ingredients": [
-      "leek",
-      "fresh cream",
-      "vegetable broth",
-      "salt",
-      "pepper",
-      "slices of bacon",
-      "green lasagna sheets (Barilla Collezione)"
+    "ingredient": [
+      "4 leek",
+      "9 fresh cream",
+      "5 vegetable broth",
+      "4 teaspoon of salt",
+      "3 teaspoon of pepper",
+      "2 slices of bacon",
+      "2 green lasagna sheets (Barilla Collezione)"
     ],
     "preparationTime": 10,
     "cookingTime": 25,
-    "regime": "aaa",
+    "diet": "aaa",
     "difficulty": "Medium",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://idata.over-blog.com/2/08/25/08/Juin-2009/Rolls-de-saumon-fum---2-.jpg",
     "section": "Starters, Dish",
     "title": "Salmon rolls",
-    "ingredients": [
-      "noodle dough",
-      "salt water",
-      "smoked salmon",
-      "sour cream",
-      "wasabi paste",
-      "dill",
-      "salt"
+    "ingredient": [
+      "5 noodle dough",
+      "4 salt water",
+      "3 smoked salmon",
+      "2 sour cream",
+      "8 wasabi paste",
+      "7 dill",
+      "6 teaspoon of salt"
     ],
     "preparationTime": 30,
     "cookingTime": 0,
-    "regime": "ddd",
+    "diet": "ddd",
     "difficulty": "easy",
     "allergen": true
   },
   {
-    "picture": "fakepicture.jpg",
+    "picture": "https://images-ext-2.discordapp.net/external/jKE0QUId5S6WFMI46OaLE3nA0_gnoBW86AFYP515nXc/https/www.demotivateur.fr/uploads/iStock-1192551640.jpg?format=webp&width=1320&height=876",
     "section": "Desert",
     "title": "Kiwi-lime salad and coconut sauce",
-    "ingredients": [
-      "coconut milk",
-      "white almond puree",
-      "agave syrup",
-      "hulled almonds",
-      "vanilla pod",
-      "salt",
-      "limes",
-      "kiwi",
-      "pistachios natures"
+    "ingredient": [
+      "3 coconut milk",
+      "4 white almond puree",
+      "10 teaspoon of agave syrup",
+      "5 hulled almonds",
+      "9 vanilla pod",
+      "1 teaspoon of salt",
+      "6 limes",
+      "30 kiwi",
+      "20 kg pistachios natures"
     ],
     "preparationTime": 35,
     "cookingTime": 0,

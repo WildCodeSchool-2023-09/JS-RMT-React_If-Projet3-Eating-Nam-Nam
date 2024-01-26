@@ -8,11 +8,10 @@ import "./Admin.css";
 function Admin() {
   const { connected } = useContext(AuthContext);
 
-  if (connected.role === 1) {
+  if (connected.is_admin === 1) {
     return (
       <div className="contain-dashboard">
         <Navbar />
-        <h2>Dashboard</h2>
         <Outlet />
         <NavbarAdmin />
       </div>

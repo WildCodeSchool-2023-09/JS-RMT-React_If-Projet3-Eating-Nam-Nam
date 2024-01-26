@@ -20,6 +20,17 @@ class UserManager extends AbstractManager {
     return result.insertId;
   }
 
+  async readByAuthId(id) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where auth_id = ?`,
+      [id]
+    );
+
+    // Return the first row of the result, which represents the user
+    return rows[0];
+  }
+
   // The Rs of CRUD - Read operations
 
   /*
@@ -41,6 +52,15 @@ class UserManager extends AbstractManager {
       `select id, username, DATE_FORMAT(birthday, "%Y-%m-%d")birthday, picture, regime_id, auth_id from ${this.table}`
     );
 
+    // Return the array of users
+    return rows;
+  }
+
+  async readAllUsersRegimes() {
+    // Execute the SQL SELECT query to retrieve all users from the "user" table
+    const [rows] = await client.query(
+      `select COUNT(*) AS value, regime.name from ${this.table} INNER JOIN regime ON regime.id = ${this.table}.regime_id GROUP BY ${this.table}.regime_id`
+    );
     // Return the array of users
     return rows;
   }

@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 import "./UserManagement.css";
 
 function UserManagement() {
@@ -28,9 +28,7 @@ function UserManagement() {
 
   const getUsers = async () => {
     try {
-      const myUsers = await axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/users`)
-        .then((res) => res.data);
+      const myUsers = await connexion.get(`/users`).then((res) => res.data);
       setUsers(myUsers);
     } catch (error) {
       console.error(error);
@@ -54,10 +52,7 @@ function UserManagement() {
   const putUser = async (event) => {
     event.preventDefault();
     try {
-      await axios.put(
-        `${import.meta.env.VITE_BACKEND_URL}/api/users/${userValue.id}`,
-        userValue
-      );
+      connexion.put(`/users/${userValue.id}`, userValue);
       showToastMessage();
       getUsers();
       setFormVisible("none");
@@ -77,7 +72,7 @@ function UserManagement() {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/users/${id}`);
+      connexion.delete(`/users/${id}`);
       window.location.reload();
     } catch (error) {
       console.error(error);
@@ -146,7 +141,7 @@ function UserManagement() {
         </form>
       </div>
       <ToastContainer />
-      <table>
+      <table className="tab-users">
         <thead>
           <th>Id</th>
           <th>Username</th>
