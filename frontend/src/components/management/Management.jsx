@@ -25,7 +25,7 @@ function AdminUsers() {
 
       <div className="ingredient-management">
         <button type="button" onClick={ingredientManagementVisible}>
-          Ingredient +
+          Ingredient -
         </button>
         <div
           className="dashboard-ingredient"
