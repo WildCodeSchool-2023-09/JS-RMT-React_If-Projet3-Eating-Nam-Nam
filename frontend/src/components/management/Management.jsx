@@ -1,17 +1,18 @@
+import { useState } from "react";
 import UserManagement from "../usermanagement/UserManagement";
 import IngredientManagement from "../ingredientmanagement/IngredientManagement";
 import "./Management.css";
 
 function AdminUsers() {
-  let ingredientVisible = false;
+  const [ingredientVisible, setIngredientVisible] = useState(false);
+  const [styleVisibleIngredient, setStyleVisibleIngredient] = useState("none");
   const ingredientManagementVisible = () => {
-    const dashboardIngredient = document.querySelector(".dashboard-ingredient");
     if (ingredientVisible) {
-      dashboardIngredient.style.display = "none";
-      ingredientVisible = false;
+      setStyleVisibleIngredient("none");
+      setIngredientVisible(false);
     } else {
-      dashboardIngredient.style.display = "block";
-      ingredientVisible = true;
+      setStyleVisibleIngredient("block");
+      setIngredientVisible(true);
     }
   };
 
@@ -26,7 +27,10 @@ function AdminUsers() {
         <button type="button" onClick={ingredientManagementVisible}>
           Ingredient +
         </button>
-        <div className="dashboard-ingredient" style={{ display: "none" }}>
+        <div
+          className="dashboard-ingredient"
+          style={{ display: styleVisibleIngredient }}
+        >
           <IngredientManagement />
         </div>
       </div>
