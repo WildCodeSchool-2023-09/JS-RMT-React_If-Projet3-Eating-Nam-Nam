@@ -4,11 +4,19 @@ const browse = async (req, res, next) => {
   try {
     const recipes = await tables.recipe.readAll();
 
-    res.status(200).json(recipes);
+    const favoritesByUser = await tables.favorites.readAllById(req.user.id);
+
+    res.status(200).json(
+      recipes.map((rec) => ({
+        ...rec,
+        fav: favoritesByUser.some((fav) => fav.recipe_id === rec.id),
+      }))
+    );
   } catch (err) {
     next(err);
   }
 };
+
 const read = async (req, res, next) => {
   try {
     const recipe = await tables.recipe.readById(req.params.id);

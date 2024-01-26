@@ -26,11 +26,11 @@ function RecipeList({ recip }) {
         <p className="difficulty">{recip.difficulty}</p>
       </div>
 
-      <Hearth className="favorite" recipId={recip.id} />
+      <Hearth className="favorite" recipId={recip.id} isFav={recip.fav} />
     </article>
   );
 }
 RecipeList.propTypes = {
-  recip: PropTypes.string.isRequired,
+  recip: PropTypes.shape().isRequired,
 };
 export default RecipeList;
