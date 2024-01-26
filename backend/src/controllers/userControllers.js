@@ -14,17 +14,35 @@ const browse = async (req, res, next) => {
   }
 };
 
+const usersRegimes = async (req, res, next) => {
+  try {
+    // Fetch all users from the database
+    const userRegime = await tables.user.readAllUsersRegimes();
+    // Respond with the users in JSON format
+    res.status(200).json(userRegime);
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 // The R of BREAD - Read operation
 /*
-const recup = async (req, res, next) => {
+const read = async (req, res, next) => {
   try {
     // Fetch a specific user from the database based on the provided ID
-    const user = await tables.user.readByAuthId(req.body.id);
+    const user = await tables.user.readById(req.body.id);
 
     // If the user is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the user in JSON format
     if (user) {
-      res.status(200).json(user);
+      res.status(200).json({
+        id: user.id,
+        username: user.username,
+        birthday: user.birthday,
+        picture: user.picture,
+        regime: user.regime,
+      });
     } else {
       res.sendStatus(404);
     }
@@ -34,6 +52,7 @@ const recup = async (req, res, next) => {
   }
 };
 */
+
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
 const update = async (req, res, next) => {
@@ -87,6 +106,7 @@ const destroy = async (req, res, next) => {
 // Ready to export the controller functions
 module.exports = {
   browse,
+  usersRegimes,
   update,
   add,
   destroy,

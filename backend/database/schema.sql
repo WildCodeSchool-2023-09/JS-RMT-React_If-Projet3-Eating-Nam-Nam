@@ -48,6 +48,7 @@ create table recipe (
   title VARCHAR(255) not null,
  	preparation_time INTEGER not null,
   cooking_time INTEGER not null,
+  diet VARCHAR(255) not null,
   difficulty ENUM('Easy', 'Medium', 'Difficult') not null,
   allergen BOOLEAN not null
 );
@@ -56,6 +57,7 @@ create table recipe_ingr (
   id int primary key auto_increment not null,
   recipe_id INT NOT NULL,
   ingr_id INT NOT NULL,
+  quantity INT NOT NULL,
   Foreign Key (recipe_id) REFERENCES recipe(id),
   Foreign Key (ingr_id) REFERENCES ingredient(id)
 );

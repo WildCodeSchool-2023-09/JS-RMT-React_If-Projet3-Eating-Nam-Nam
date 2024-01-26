@@ -14,11 +14,13 @@ import Recipe from "./pages/recipe/Recipe";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
 import About from "./pages/About/About";
+import Profile from "./pages/Profile/Profile";
 import SignUp from "./pages/signUp/SignUp";
 import SignUpUser from "./pages/signUpUser/SignUpUser";
 import LogIn from "./pages/logIn/LogIn";
 import Terms from "./pages/terms/Terms";
 import Page404 from "./pages/Page404/Page404";
+import Dashboard from "./components/dashboard/Dashboard";
 import Favorites from "./components/favorite/Favorite";
 
 const router = createBrowserRouter([
@@ -81,6 +83,10 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
         path: "/signup",
         element: <SignUp />,
       },
@@ -106,6 +112,10 @@ const router = createBrowserRouter([
     path: "/administration/",
     element: <Admin />,
     children: [
+      {
+        path: "/administration/",
+        element: <Dashboard />,
+      },
       {
         path: "management",
         element: <Management />,

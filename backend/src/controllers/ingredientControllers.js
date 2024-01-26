@@ -9,25 +9,17 @@ const browse = async (req, res, next) => {
     next(err);
   }
 };
-/*
-// The R of BREAD - Read operation
-const read = async (req, res, next) => {
-  try {
-    // Fetch a specific item from the database based on the provided ID
-    const item = await tables.item.read(req.params.id);
-    // If the item is not found, respond with HTTP 404 (Not Found)
-    // Otherwise, respond with the item in JSON format
-    if (item) {
-      res.status(200).json(item);
-    } else {
-      res.sendStatus(404);
-    }
-  } catch (err) {
-    // Pass any errors to the error-handling middleware
-    next(err);
-  }
-};
-*/
+
+// const read = async (req, res, next) => {
+//   try {
+//     const ingredient = await tables.ingredient.readById(req.params.id);
+
+//     res.status(200).json(ingredient);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
+
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
 // const update = async (req, res, next) => {

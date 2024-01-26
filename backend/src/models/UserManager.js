@@ -20,8 +20,6 @@ class UserManager extends AbstractManager {
     return result.insertId;
   }
 
-  // The Rs of CRUD - Read operations
-
   async readByAuthId(id) {
     // Execute the SQL SELECT query to retrieve a specific user by its ID
     const [rows] = await this.database.query(
@@ -33,12 +31,36 @@ class UserManager extends AbstractManager {
     return rows[0];
   }
 
+  // The Rs of CRUD - Read operations
+
+  /*
+  async readById(id) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [rows] = await this.database.query(
+      `select ${this.table}.id, ${this.table}.username, ${this.table}.DATE_FORMAT(birthday, "%Y-%m-%d")birthday, ${this.table}.picture, ${this.table}.regime_id, ${this.table}.auth_id, regime.name from ${this.table} INNER JOIN regime ON regime.id = ${this.table}.regime_id WHERE ${this.table}.id = ?`[
+        id
+      ]
+    );
+
+    // Return the first row of the result, which represents the user
+    return rows[0];
+  }
+*/
   async readAll() {
     // Execute the SQL SELECT query to retrieve all users from the "user" table
     const [rows] = await client.query(
       `select id, username, DATE_FORMAT(birthday, "%Y-%m-%d")birthday, picture, regime_id, auth_id from ${this.table}`
     );
 
+    // Return the array of users
+    return rows;
+  }
+
+  async readAllUsersRegimes() {
+    // Execute the SQL SELECT query to retrieve all users from the "user" table
+    const [rows] = await client.query(
+      `select COUNT(*) AS value, regime.name from ${this.table} INNER JOIN regime ON regime.id = ${this.table}.regime_id GROUP BY ${this.table}.regime_id`
+    );
     // Return the array of users
     return rows;
   }

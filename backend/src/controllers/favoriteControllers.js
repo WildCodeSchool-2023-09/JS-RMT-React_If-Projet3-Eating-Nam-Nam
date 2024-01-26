@@ -21,7 +21,7 @@ const read = async (req, res, next) => {
 const add = async (req, res, next) => {
   const favorites = req.body;
   try {
-    const insertId = await tables.favorites.create(favorites);
+    const insertId = await tables.favorites.create(favorites, req.user.id);
     res.status(201).json({ insertId });
   } catch (err) {
     next(err);

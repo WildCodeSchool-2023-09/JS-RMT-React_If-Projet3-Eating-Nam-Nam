@@ -1,0 +1,20 @@
+.contain-graphics h2 {
+  margin-bottom: 100px;
+}
+
+.graphics {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.recharts-wrapper {
+  left: 25%;
+}
+
+@media screen and (min-width: 800px) {
+  .graphics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
