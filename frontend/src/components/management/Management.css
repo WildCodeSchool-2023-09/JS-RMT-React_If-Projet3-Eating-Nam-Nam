@@ -5,8 +5,30 @@
   text-align: center;
 }
 
-.user-management {
+.user-management button,
+.recipe-management button {
+  background-color: #e88628;
+  width: 151px;
+  height: 36px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.user-management button:hover,
+.recipe-management button:hover {
   background-color: white;
+  width: 151px;
+  height: 36px;
+  border-radius: 20px;
+  border: none;
+  color: #e88628;
+  border: 1px solid #e88628;
+}
+
+.user-management,
+.recipe-management {
   width: 300px;
   margin: 0 auto;
   padding-top: 20px;
@@ -14,20 +36,28 @@
   border-radius: 10px;
 }
 
+.dashboard-user,
+.dashboard-recipe {
+  background-color: white;
+}
+
 @media screen and (min-width: 480px) {
-  .user-management {
+  .user-management,
+  .recipe-management {
     width: 400px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .user-management {
+  .user-management,
+  .recipe-management {
     width: 700px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .user-management {
+  .user-management,
+  .recipe-management {
     width: 1000px;
   }
 }
