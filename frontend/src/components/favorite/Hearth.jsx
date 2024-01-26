@@ -4,8 +4,8 @@ import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import connexion from "../../services/connexion";
 import "./Fav.css";
 
-function Hearth({ recipId }) {
-  const [fav, setFav] = useState(false);
+function Hearth({ recipId, isFav }) {
+  const [fav, setFav] = useState(isFav === 1);
   const postFavorites = async (id) => {
     try {
       await connexion.post("/favorites", { recipeId: id });
@@ -35,6 +35,7 @@ function Hearth({ recipId }) {
 
 Hearth.propTypes = {
   recipId: PropTypes.string.isRequired,
+  isFav: PropTypes.string.isRequired,
 };
 
 export default Hearth;

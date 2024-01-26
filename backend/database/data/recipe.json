@@ -19,7 +19,7 @@
     "allergen": false
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Chocolate_Fondant.jpg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Praline_with_Cherry.jpg/300px-Praline_with_Cherry.jpg",
     "section": "dessert",
     "title": "Chocolate Rochers",
     "ingredient": [
@@ -36,7 +36,7 @@
     "allergen": true
   },
   {
-    "picture": "https://en.wikipedia.org/wiki/File:Scrambed_eggs.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Beef_fillet_steak_with_mushrooms.jpg/541px-Beef_fillet_steak_with_mushrooms.jpg",
     "section": "stater, dish",
     "title": "Mushrooms with scrambled eggs",
     "ingredient": [
@@ -56,7 +56,7 @@
     "allergen": true
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Caesar_salad_with_chicken_-_Cambridge,_MA.jpg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Caprese-1.jpg/240px-Caprese-1.jpg",
     "section": "starter, dish",
     "title": "Corn salad",
     "ingredient": [
@@ -96,7 +96,7 @@
     "allergen": true
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Eton_Mess.jpeg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Still_life_with_strawberries_in_a_crystal_bowl.jpg/440px-Still_life_with_strawberries_in_a_crystal_bowl.jpg",
     "section": "dessert",
     "title": "Strawberry yogurt",
     "ingredient": [
@@ -237,7 +237,7 @@
   },
   {
     "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/%E4%BA%94%E7%9B%AE%E9%A3%AF.jpg",
-    "section": " ",
+    "section": " Dish ",
     "title": "Japanese rice (Gohan)",
     "ingredient": [
       "3kg sesame seeds",
@@ -253,7 +253,7 @@
     "allergen": false
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Focaccia-erbe-olive.jpg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Focaccia_Barese.jpg/440px-Focaccia_Barese.jpg",
     "section": "Starter, Dish",
     "title": "Focaccia with olives and arugula",
     "ingredient": [
