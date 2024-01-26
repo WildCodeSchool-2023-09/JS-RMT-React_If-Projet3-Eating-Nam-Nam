@@ -9,7 +9,6 @@ class RecipeManager extends AbstractManager {
     const [rows] = await this.database.query(
       `SELECT picture,(favorites.auth_id = 1) as fav, recipe.picture, recipe.section, recipe.title, recipe.preparation_time, recipe.cooking_time, recipe.difficulty FROM recipe LEFT join favorites on favorites.recipe_id = recipe.id LIMIT 100`
     );
-
     return rows;
   }
 
