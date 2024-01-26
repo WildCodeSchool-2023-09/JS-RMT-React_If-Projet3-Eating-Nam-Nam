@@ -170,7 +170,7 @@ function RecipeManagement() {
           </label>
           <div className="contain-submit">
             <button type="submit" className="button-submit">
-              Modifier
+              Modify
             </button>
           </div>
         </form>

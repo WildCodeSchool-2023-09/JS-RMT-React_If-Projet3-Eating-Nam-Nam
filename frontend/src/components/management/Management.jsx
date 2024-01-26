@@ -1,30 +1,31 @@
+import { useState } from "react";
 import UserManagement from "../usermanagement/UserManagement";
 import RecipeManagement from "../recipemanagement/RecipeManagement";
 import "./Management.css";
 
 function AdminUsers() {
-  let userVisible = false;
-  let recipeVisible = false;
+  const [userVisible, setUserVisible] = useState(false);
+  const [styleVisibleUser, setStyleVisibleUser] = useState("none");
+  const [recipeVisible, setRecipeVisible] = useState(false);
+  const [styleVisibleRecipe, setStyleVisibleRecipe] = useState("none");
 
   const userManagementVisible = () => {
-    const dashboardUser = document.querySelector(".dashboard-user");
     if (userVisible) {
-      dashboardUser.style.display = "none";
-      userVisible = false;
+      setStyleVisibleUser("none");
+      setUserVisible(false);
     } else {
-      dashboardUser.style.display = "block";
-      userVisible = true;
+      setStyleVisibleUser("block");
+      setUserVisible(true);
     }
   };
 
   const recipeManagementVisible = () => {
-    const dashboardRecipe = document.querySelector(".dashboard-recipe");
     if (recipeVisible) {
-      dashboardRecipe.style.display = "none";
-      recipeVisible = false;
+      setStyleVisibleRecipe("none");
+      setRecipeVisible(false);
     } else {
-      dashboardRecipe.style.display = "block";
-      recipeVisible = true;
+      setStyleVisibleRecipe("block");
+      setRecipeVisible(true);
     }
   };
 
@@ -35,7 +36,7 @@ function AdminUsers() {
         <button type="button" onClick={userManagementVisible}>
           User +
         </button>
-        <div className="dashboard-user" style={{ display: "none" }}>
+        <div className="dashboard-user" style={{ display: styleVisibleUser }}>
           <UserManagement />
         </div>
       </div>
@@ -43,7 +44,10 @@ function AdminUsers() {
         <button type="button" onClick={recipeManagementVisible}>
           Recipe +
         </button>
-        <div className="dashboard-recipe" style={{ display: "none" }}>
+        <div
+          className="dashboard-recipe"
+          style={{ display: styleVisibleRecipe }}
+        >
           <RecipeManagement />
         </div>
       </div>
