@@ -19,6 +19,7 @@ function AdminUsers() {
    } else {
      setStyleVisibleIngredient("block");
      setIngredientVisible(true);
+   }
   };
 
   const userManagementVisible = () => {
