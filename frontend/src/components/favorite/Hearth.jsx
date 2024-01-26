@@ -5,7 +5,7 @@ import connexion from "../../services/connexion";
 import "./Fav.css";
 
 function Hearth({ recipId, isFav }) {
-  const [fav, setFav] = useState(isFav === 1);
+  const [fav, setFav] = useState(isFav);
   const postFavorites = async (id) => {
     try {
       await connexion.post("/favorites", { recipeId: id });

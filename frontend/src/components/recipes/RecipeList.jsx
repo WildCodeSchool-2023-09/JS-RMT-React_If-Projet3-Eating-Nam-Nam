@@ -31,6 +31,6 @@ function RecipeList({ recip }) {
   );
 }
 RecipeList.propTypes = {
-  recip: PropTypes.string.isRequired,
+  recip: PropTypes.shape().isRequired,
 };
 export default RecipeList;

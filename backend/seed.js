@@ -103,12 +103,12 @@ const seed = async () => {
              VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
           [
             picture,
-            section[Math.floor(Math.random()) * 3],
+            section[Math.floor(Math.random() * 3)],
             title,
             preparationTime,
             cookingTime,
             diet,
-            difficulty[Math.floor(Math.random()) * 3],
+            difficulty[Math.floor(Math.random() * 3)],
             allergen,
           ]
         )

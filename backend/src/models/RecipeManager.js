@@ -7,7 +7,7 @@ class RecipeManager extends AbstractManager {
 
   async readAll() {
     const [rows] = await this.database.query(
-      `SELECT picture,(favorites.auth_id = 1) as fav, recipe.picture, recipe.section, recipe.title, recipe.preparation_time, recipe.cooking_time, recipe.difficulty FROM recipe LEFT join favorites on favorites.recipe_id = recipe.id LIMIT 100`
+      `SELECT * FROM ${this.table} LIMIT 20`
     );
     return rows;
   }
@@ -19,6 +19,27 @@ class RecipeManager extends AbstractManager {
     );
 
     return rows[0];
+  }
+
+  async update(id, recipe) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [result] = await this.database.query(
+      `UPDATE ${this.table} set ? WHERE id = ?`,
+      [recipe, id]
+    );
+
+    // Return the first row of the result, which represents the item
+    return result;
+  }
+
+  async delete(id) {
+    const result = await this.database.query(
+      `DELETE FROM ${this.table} WHERE id = ?`,
+      [id]
+    );
+
+    // Return the first row of the result, which represents the user
+    return result;
   }
 }
 module.exports = RecipeManager;
