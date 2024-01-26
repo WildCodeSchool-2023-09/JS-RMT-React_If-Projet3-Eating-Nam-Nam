@@ -41,14 +41,11 @@ router.delete(
   ingredientControllers.destroy
 );
 router.delete("/recipes/:id", checkCredentials, recipeControllers.destroy);
-
-
 router.post("/ingredients", checkCredentials, ingredientControllers.add);
 router.post("/auth", checkCredentials, authControllers.add);
 router.post("/users", checkCredentials, userControllers.add);
 router.post("/favorites", checkCredentials, favoriteControllers.add);
 router.post("/signup", validateAuth, hashPassword, authControllers.add);
 router.post("/login", validateAuth, authControllers.log);
-
 
 module.exports = router;
