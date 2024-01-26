@@ -1,0 +1,50 @@
+.contain-form {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 350px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 30px;
+  border: 1px solid #feba1c;
+  border-radius: 10px;
+}
+
+.contain-submit {
+  text-align: center;
+  margin-left: -30px;
+}
+
+.form input {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.table-ingredient-management table {
+  margin: 0 auto;
+}
+
+.table-ingredient-management table,
+.table-ingredient-management th,
+.table-ingredient-management td {
+  border: 1px solid transparent;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.table-ingredient-management img {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tab-ingredients .button-delete:hover,
+.tab-ingredients .button-put:hover {
+  color: #feba1c;
+  background-color: transparent;
+}

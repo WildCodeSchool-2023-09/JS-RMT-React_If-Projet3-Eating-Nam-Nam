@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UserManagement from "../usermanagement/UserManagement";
+import IngredientManagement from "../ingredientmanagement/IngredientManagement";
 import RecipeManagement from "../recipemanagement/RecipeManagement";
 import "./Management.css";
 
@@ -8,6 +9,17 @@ function AdminUsers() {
   const [styleVisibleUser, setStyleVisibleUser] = useState("none");
   const [recipeVisible, setRecipeVisible] = useState(false);
   const [styleVisibleRecipe, setStyleVisibleRecipe] = useState("none");
+  const [ingredientVisible, setIngredientVisible] = useState(false);
+  const [styleVisibleIngredient, setStyleVisibleIngredient] = useState("none");
+  const ingredientManagementVisible = () => {
+    if (ingredientVisible) {
+      setStyleVisibleIngredient("none");
+      setIngredientVisible(false);
+    } else {
+      setStyleVisibleIngredient("block");
+      setIngredientVisible(true);
+    }
+  };
 
   const userManagementVisible = () => {
     if (userVisible) {
@@ -49,6 +61,17 @@ function AdminUsers() {
           style={{ display: styleVisibleRecipe }}
         >
           <RecipeManagement />
+        </div>
+      </div>
+      <div className="ingredient-management">
+        <button type="button" onClick={ingredientManagementVisible}>
+          Ingredient -
+        </button>
+        <div
+          className="dashboard-ingredient"
+          style={{ display: styleVisibleIngredient }}
+        >
+          <IngredientManagement />
         </div>
       </div>
     </div>

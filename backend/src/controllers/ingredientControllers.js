@@ -10,6 +10,30 @@ const browse = async (req, res, next) => {
   }
 };
 
+const update = async (req, res, next) => {
+  const ingredient = req.body;
+
+  try {
+    const result = await tables.ingredient.update(req.params.id, ingredient);
+    if (result.affectedRows === 1) {
+      res.sendStatus(204);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+const destroy = async (req, res, next) => {
+  try {
+    await tables.ingredient.delete(req.params.id);
+    res.sendStatus(204);
+  } catch (err) {
+    next(err);
+  }
+};
+
 // const read = async (req, res, next) => {
 //   try {
 //     const ingredient = await tables.ingredient.readById(req.params.id);
@@ -67,7 +91,7 @@ const add = async (req, res, next) => {
 module.exports = {
   browse,
   //   read,
-  //   update,
+  update,
   add,
-  //   destroy,
+  destroy,
 };

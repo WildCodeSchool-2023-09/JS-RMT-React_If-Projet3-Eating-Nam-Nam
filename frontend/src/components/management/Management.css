@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+.ingredient-management button,
 .user-management button,
 .recipe-management button {
   background-color: #e88628;
@@ -16,6 +17,7 @@
   margin-bottom: 30px;
 }
 
+.ingredient-management button:hover,
 .user-management button:hover,
 .recipe-management button:hover {
   background-color: white;
@@ -28,6 +30,7 @@
 }
 
 .user-management,
+.ingredient-management,
 .recipe-management {
   width: 300px;
   margin: 0 auto;
@@ -36,6 +39,7 @@
   border-radius: 10px;
 }
 
+.dashboard-ingredient,
 .dashboard-user,
 .dashboard-recipe {
   background-color: white;
@@ -43,6 +47,7 @@
 
 @media screen and (min-width: 480px) {
   .user-management,
+  .ingredient-management,
   .recipe-management {
     width: 400px;
   }
@@ -50,6 +55,7 @@
 
 @media screen and (min-width: 768px) {
   .user-management,
+  .ingredient-management,
   .recipe-management {
     width: 700px;
   }
@@ -57,6 +63,7 @@
 
 @media screen and (min-width: 1024px) {
   .user-management,
+  .ingredient-management,
   .recipe-management {
     width: 1000px;
   }
