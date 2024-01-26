@@ -11,8 +11,7 @@ function AdminUsers() {
   const [styleVisibleRecipe, setStyleVisibleRecipe] = useState("none");
   const [ingredientVisible, setIngredientVisible] = useState(false);
   const [styleVisibleIngredient, setStyleVisibleIngredient] = useState("none");
-  
- const ingredientManagementVisible = () => {
+  const ingredientManagementVisible = () => {
    if (ingredientVisible) {
      setStyleVisibleIngredient("none");
      setIngredientVisible(false);
