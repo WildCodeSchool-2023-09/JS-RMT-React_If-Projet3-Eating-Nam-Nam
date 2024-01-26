@@ -33,14 +33,15 @@ router.get("/favorites/:id", checkCredentials, favoriteControllers.read);
 // Route to put a user
 router.put("/users/:id", checkCredentials, userControllers.update);
 router.put("/ingredients/:id", checkCredentials, ingredientControllers.update);
-// Route to delete a user
+router.put("/recipes/:id", checkCredentials, recipeControllers.update);
 router.delete("/users/:id", checkCredentials, userControllers.destroy);
 router.delete(
   "/ingredients/:id",
   checkCredentials,
   ingredientControllers.destroy
 );
-// Route to post a new auth
+router.delete("/recipes/:id", checkCredentials, recipeControllers.destroy);
+
 
 router.post("/ingredients", checkCredentials, ingredientControllers.add);
 router.post("/auth", checkCredentials, authControllers.add);
@@ -49,14 +50,5 @@ router.post("/favorites", checkCredentials, favoriteControllers.add);
 router.post("/signup", validateAuth, hashPassword, authControllers.add);
 router.post("/login", validateAuth, authControllers.log);
 
-// Route to get a specific item by ID
-// router.get("/items/:id", itemControllers.read);
-// Route to add a new item
-
-// router.post("/items", itemControllers.add);
-
-// router.post("/items", itemControllers.add);
-
-// Route to get a list of regimes
 
 module.exports = router;

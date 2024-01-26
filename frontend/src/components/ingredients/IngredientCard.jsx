@@ -4,7 +4,7 @@ import IngredientList from "./IngredientList";
 
 function IngredientCard({ ingredients }) {
   return (
-    <div className="container">
+    <div className="frame-container">
       {ingredients.map((ingr) => (
         <IngredientList key={ingr.id} ingr={ingr} />
       ))}
