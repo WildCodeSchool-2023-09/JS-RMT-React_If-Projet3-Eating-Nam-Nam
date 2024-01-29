@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
-
+import FavProfile from "../../components/favorite/FavProfile";
 import "./Profile.css";
 
 function Profile() {
@@ -48,7 +48,7 @@ function Profile() {
         <div className="profile-frame-favorites">
           <div className="profile-title">
             <h2 className="profile-h2">Favorites</h2>
-            <p>Place favorites here</p>
+            <FavProfile />
           </div>
         </div>
       </div>
