@@ -1,7 +1,13 @@
 import React from "react";
+import Favorite from "./Favorite";
 
 function FavProfile() {
-  return <div>FavProfile</div>;
+  return (
+    <div>
+      {" "}
+      <Favorite />
+    </div>
+  );
 }
 
 export default FavProfile;

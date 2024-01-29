@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 function FormIngredients() {
   const initialFormState = {
     name: "",
-    quantity: "",
     image: "",
     calorie: "",
     carbonhydrate: "",
@@ -15,6 +14,7 @@ function FormIngredients() {
     lipid: "",
     fiber: "",
     category: "",
+    allergen: "",
   };
 
   const [formData, setFormData] = useState(initialFormState);
@@ -49,26 +49,36 @@ function FormIngredients() {
 
   return (
     <div className="contain-form-ingredient">
-      <h1>Add an ingredient - Quantities given for 100g</h1>
+      <p className="p-disclaimer">
+        DISCLAIMER <br />
+        Your ingredient will be verified by our Chief Team before been implanted
+        into our database. If your addition violate our Terms & Conditions
+        rules, it will be refused and you may encountered app restrictions or
+        profile banishement.
+      </p>
       <form className="form-ingredients" onSubmit={handleSubmit}>
+        <div className="form-title">
+          <h3>Add an ingredient</h3>
+          <p>(Quantities given for 100g)</p>
+        </div>
         {Object.entries(formData).map(([key, value]) => (
-          <div key={key}>
-            <label>
-              {key.charAt(0).toUpperCase() + key.slice(1)}:
-              <input
-                type="text"
-                id={key}
-                name={key}
-                value={value}
-                onChange={handleInputChange}
-              />
-            </label>
-          </div>
+          <label>
+            {key.charAt(0).toUpperCase() + key.slice(1)}:
+            <input
+              type="text"
+              id={key}
+              name={key}
+              value={value}
+              onChange={handleInputChange}
+            />
+          </label>
         ))}
 
-        <button className="button-fi-submit" type="submit">
-          ADD INGREDIENT
-        </button>
+        <div className="form-submit">
+          <button className="button-form" type="submit">
+            ADD INGREDIENT
+          </button>
+        </div>
       </form>
 
       <ToastContainer />

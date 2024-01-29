@@ -17,6 +17,26 @@ const browse = async (req, res, next) => {
   }
 };
 
+const recipesSections = async (req, res, next) => {
+  try {
+    const sections = await tables.recipe.readAllSections();
+
+    res.status(200).json(sections);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const totalNumber = async (req, res, next) => {
+  try {
+    const numberOfrecipes = await tables.recipe.readNumberOfRecipes();
+
+    res.status(200).json(numberOfrecipes[0]);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const read = async (req, res, next) => {
   try {
     const recipe = await tables.recipe.readById(req.params.id);
@@ -54,6 +74,8 @@ const destroy = async (req, res, next) => {
 
 module.exports = {
   browse,
+  recipesSections,
+  totalNumber,
   read,
   update,
   destroy,

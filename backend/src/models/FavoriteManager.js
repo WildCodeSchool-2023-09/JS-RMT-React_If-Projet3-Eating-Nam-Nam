@@ -37,6 +37,21 @@ class FavoriteManager extends AbstractManager {
     );
     return result.insertId;
   }
-}
 
+  async update(id, recipes) {
+    const [result] = await client.query(
+      `UPDATE ${this.table} set ? WHERE id = ?`,
+      [recipes, id]
+    );
+    return result;
+  }
+
+  async delete(id) {
+    const result = await client.query(
+      `DELETE FROM ${this.table} WHERE recipe_id = ?`,
+      [id]
+    );
+    return result;
+  }
+}
 module.exports = FavoriteManager;

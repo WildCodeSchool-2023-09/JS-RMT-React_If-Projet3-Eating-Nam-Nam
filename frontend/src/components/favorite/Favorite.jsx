@@ -1,22 +1,29 @@
+import PropTypes from "prop-types";
 import { React, useEffect, useState } from "react";
-
 import connexion from "../../services/connexion";
-
 import RecipeCard from "../recipes/RecipeCard";
 
-function Favorite() {
+function Favorite({ recipeId }) {
   const [favories, setFavories] = useState([]);
-  const getFavorises = async () => {
+  const getFavorites = async () => {
     try {
-      const myFavories = await connexion.get(`/api/favorites/`);
-      setFavories(myFavories);
+      await connexion.get("favorites", { recipeId });
+      setFavories(true); // ou (reponse.data);  true ou repose.data qui est le tableau des recipes?
     } catch (error) {
-      console.error(error);
+      console.error("Error fetch favorites", error);
     }
   };
+  // const postFavorites = async () => {
+  //   try {
+  //     await connexion.post("/favorites", { recipeId });
+  //     setFavories(true);
+  //   } catch (err) {
+  //     console.error("Error add favorites", err);
+  //   }
+  // };
 
   useEffect(() => {
-    getFavorises();
+    getFavorites();
   }, []);
 
   return (
@@ -30,5 +37,7 @@ function Favorite() {
     </div>
   );
 }
-
+Favorite.propTypes = {
+  recipeId: PropTypes.string.isRequired,
+};
 export default Favorite;

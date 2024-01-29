@@ -12,6 +12,20 @@ class RecipeManager extends AbstractManager {
     return rows;
   }
 
+  async readAllSections() {
+    const [rows] = await this.database.query(
+      `select COUNT(*) AS value, ${this.table}.section AS name from ${this.table} GROUP BY ${this.table}.section`
+    );
+    return rows;
+  }
+
+  async readNumberOfRecipes() {
+    const [rows] = await this.database.query(
+      `select COUNT(*) AS value from ${this.table}`
+    );
+    return rows;
+  }
+
   async readById(id) {
     const [rows] = await this.database.query(
       `select * from ${this.table} WHERE id  = ? `,

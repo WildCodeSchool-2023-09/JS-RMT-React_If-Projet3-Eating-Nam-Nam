@@ -56,6 +56,16 @@ class UserManager extends AbstractManager {
     return rows;
   }
 
+  async readNumberOfUsers() {
+    // Execute the SQL SELECT query to retrieve all users from the "user" table
+    const [rows] = await client.query(
+      `select COUNT(*) AS value from ${this.table}`
+    );
+
+    // Return the array of users
+    return rows;
+  }
+
   async readAllUsersRegimes() {
     // Execute the SQL SELECT query to retrieve all users from the "user" table
     const [rows] = await client.query(

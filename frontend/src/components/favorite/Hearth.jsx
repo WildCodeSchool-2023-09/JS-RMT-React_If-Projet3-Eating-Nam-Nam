@@ -14,14 +14,23 @@ function Hearth({ recipId, isFav }) {
       console.error(err);
     }
   };
-
+  const deleteFavorites = async (id) => {
+    try {
+      await connexion.delete(`/favorites/${id}`);
+      setFav(false);
+    } catch (error) {
+      console.error("Error remove favorites", error);
+    }
+  };
   return (
     <div className="container-fav">
       <button
         type="button"
         aria-label="add favorites"
         className="button_fav"
-        onClick={() => postFavorites(recipId)}
+        onClick={() =>
+          fav ? deleteFavorites(recipId) : postFavorites(recipId)
+        }
         style={{
           color: fav ? "red" : "#fae7c0",
           fontWeight: fav ? "bold" : "normal",

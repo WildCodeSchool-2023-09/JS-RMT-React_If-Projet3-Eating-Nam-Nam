@@ -14,6 +14,16 @@ const browse = async (req, res, next) => {
   }
 };
 
+const totalNumber = async (req, res, next) => {
+  try {
+    const numberOfUsers = await tables.user.readNumberOfUsers();
+
+    res.status(200).json(numberOfUsers[0]);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const usersRegimes = async (req, res, next) => {
   try {
     // Fetch all users from the database
@@ -107,6 +117,7 @@ const destroy = async (req, res, next) => {
 module.exports = {
   browse,
   usersRegimes,
+  totalNumber,
   update,
   add,
   destroy,

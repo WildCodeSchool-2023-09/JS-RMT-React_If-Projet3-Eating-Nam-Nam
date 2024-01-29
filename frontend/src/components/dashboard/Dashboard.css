@@ -1,7 +1,3 @@
-.contain-graphics h2 {
-  margin-bottom: 100px;
-}
-
 .graphics {
   display: grid;
   grid-template-columns: 1fr;
@@ -10,10 +6,41 @@
 }
 
 .recharts-wrapper {
-  left: 25%;
+  left: 0;
 }
 
-@media screen and (min-width: 800px) {
+.user-per-diet,
+.percentage-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-per-diet h2 {
+  margin-bottom: 50px;
+}
+
+.percentage-section h2 {
+  margin-bottom: 100px;
+}
+
+.green {
+  color: #5e9732;
+  margin-right: 10px;
+}
+
+.yellow {
+  color: #ffd910;
+  margin-right: 10px;
+}
+
+.red {
+  color: #c11c43;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1200px) {
   .graphics {
     grid-template-columns: 1fr 1fr;
   }
