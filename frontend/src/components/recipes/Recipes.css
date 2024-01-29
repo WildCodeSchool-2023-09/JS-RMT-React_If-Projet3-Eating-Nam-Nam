@@ -1,3 +1,14 @@
+.section-recipe {
+  margin-top: 120px;
+}
+
+.section-recipe select {
+  margin-right: 50px;
+  padding: 10px;
+  border: 2px solid #e88628;
+  border-radius: 10px;
+}
+
 .recipe {
   border: 1px solid #ddd;
   border-radius: 8px;
