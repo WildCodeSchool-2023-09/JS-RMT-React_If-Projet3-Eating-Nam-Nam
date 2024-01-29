@@ -22,9 +22,17 @@ const checkCredentials = require("./middleware/checkCredentials");
 // Route to get a list of users
 
 router.get("/users/regimes", userControllers.usersRegimes);
+router.get("/recipes/sections", recipeControllers.recipesSections);
 router.get("/users", checkCredentials, userControllers.browse);
+router.get("/totalUsers", checkCredentials, userControllers.totalNumber);
 router.get("/recipes", checkCredentials, recipeControllers.browse);
+router.get("/totalRecipes", checkCredentials, recipeControllers.totalNumber);
 router.get("/ingredients", checkCredentials, ingredientControllers.browse);
+router.get(
+  "/totalIngredients",
+  checkCredentials,
+  ingredientControllers.totalNumber
+);
 router.get("/favorites", checkCredentials, favoriteControllers.browse);
 router.get("/regime", checkCredentials, regimeControllers.browse);
 router.get("/recipes/:id", checkCredentials, recipeControllers.read);
