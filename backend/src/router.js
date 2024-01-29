@@ -24,12 +24,16 @@ const checkCredentials = require("./middleware/checkCredentials");
 router.get("/users/regimes", userControllers.usersRegimes);
 router.get("/recipes/sections", recipeControllers.recipesSections);
 router.get("/users", checkCredentials, userControllers.browse);
-router.get("/totalUsers", checkCredentials, userControllers.totalNumber);
+router.get("/users/stats/nb", checkCredentials, userControllers.totalNumber);
 router.get("/recipes", checkCredentials, recipeControllers.browse);
-router.get("/totalRecipes", checkCredentials, recipeControllers.totalNumber);
+router.get(
+  "/recipes/stats/nb",
+  checkCredentials,
+  recipeControllers.totalNumber
+);
 router.get("/ingredients", checkCredentials, ingredientControllers.browse);
 router.get(
-  "/totalIngredients",
+  "/ingredients/stats/nb",
   checkCredentials,
   ingredientControllers.totalNumber
 );

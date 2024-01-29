@@ -95,7 +95,9 @@ function Dashboard() {
 
   const getNumberOfUsers = async () => {
     try {
-      const users = await connexion.get(`/totalUsers`).then((res) => res.data);
+      const users = await connexion
+        .get(`/users/stats/nb`)
+        .then((res) => res.data);
       setNumberOfUsers(users.value);
     } catch (error) {
       console.error(error);
@@ -105,7 +107,7 @@ function Dashboard() {
   const getNumberOfRecipes = async () => {
     try {
       const recipes = await connexion
-        .get(`/totalRecipes`)
+        .get(`/recipes/stats/nb`)
         .then((res) => res.data);
       setNumberOfRecipes(recipes.value);
     } catch (error) {
@@ -116,7 +118,7 @@ function Dashboard() {
   const getNumberOfIngredients = async () => {
     try {
       const ingredients = await connexion
-        .get(`/totalIngredients`)
+        .get(`/ingredients/stats/nb`)
         .then((res) => res.data);
       setNumberOfIngredients(ingredients.value);
     } catch (error) {
