@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import RecipeList from "./RecipeList";
+import RecipeSelect from "./RecipeSelect";
 import "./Recipes.css";
 
 function RecipeCard({ recipes }) {
@@ -15,32 +16,23 @@ function RecipeCard({ recipes }) {
   return (
     <div>
       <form className="section-recipe">
-        <select onChange={(e) => setSectionFilter(e.target.value)}>
-          <option value="all">All sections</option>
-          {Array.from(sections).map((section) => (
-            <option key={section} value={section}>
-              {section}
-            </option>
-          ))}
-        </select>
+        <RecipeSelect
+          functionFilter={setSectionFilter}
+          title="All sections"
+          tab={sections}
+        />
 
-        <select onChange={(e) => setDifficultiesFilter(e.target.value)}>
-          <option value="all">All difficulties</option>
-          {Array.from(difficulties).map((difficulty) => (
-            <option key={difficulty} value={difficulty}>
-              {difficulty}
-            </option>
-          ))}
-        </select>
+        <RecipeSelect
+          functionFilter={setDifficultiesFilter}
+          title="All difficulties"
+          tab={difficulties}
+        />
 
-        <select onChange={(e) => setDietsFilter(e.target.value)}>
-          <option value="all">All diet</option>
-          {Array.from(diets).map((diet) => (
-            <option key={diet} value={diet}>
-              {diet}
-            </option>
-          ))}
-        </select>
+        <RecipeSelect
+          functionFilter={setDietsFilter}
+          title="All diet"
+          tab={diets}
+        />
       </form>
       <div className="frame-container">
         {recipes
