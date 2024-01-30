@@ -52,6 +52,6 @@ function RecipeCard({ recipes }) {
 }
 
 RecipeCard.propTypes = {
-  recipes: PropTypes.string.isRequired,
+  recipes: PropTypes.shape.isRequired,
 };
 export default RecipeCard;

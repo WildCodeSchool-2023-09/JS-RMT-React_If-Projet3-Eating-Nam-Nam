@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import PropTypes from "prop-types";
 
 function RecipeSelect({ functionFilter, title, tab }) {
@@ -15,9 +14,9 @@ function RecipeSelect({ functionFilter, title, tab }) {
 }
 
 RecipeSelect.propTypes = {
-  functionFilter: PropTypes.string.isRequired,
+  functionFilter: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  tab: PropTypes.string.isRequired,
+  tab: PropTypes.shape.isRequired,
 };
 
 export default RecipeSelect;
