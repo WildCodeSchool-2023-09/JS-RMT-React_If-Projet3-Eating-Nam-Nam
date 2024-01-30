@@ -4,7 +4,6 @@ import RecipeList from "../recipes/RecipeList";
 
 function Favorite() {
   const [favories, setFavories] = useState([]);
-
   const getFavorites = async () => {
     try {
       const favoritesUser = await connexion
