@@ -2,31 +2,33 @@ const tables = require("../tables");
 
 const browse = async (req, res, next) => {
   try {
-    const favorites = await tables.favorites.readAll();
+    const favorites = await tables.favorites.readAllByUser(req.user.id);
 
     res.status(200).json(favorites);
   } catch (err) {
     next(err);
   }
 };
-const read = async (req, res, next) => {
-  try {
-    const favorite = await tables.favorites.readByUserId(req.params.id);
 
-    res.status(200).json(favorite);
-  } catch (err) {
-    next(err);
-  }
-};
-const readFavorites = async (req, res, next) => {
-  try {
-    const favorite = await tables.favorites.readByAuthId(req.params.id);
+// const read = async (req, res, next) => {
+//   try {
+//     const favorite = await tables.favorites.readByUserId(req.params.id);
 
-    res.status(200).json(favorite);
-  } catch (err) {
-    next(err);
-  }
-};
+//     res.status(200).json(favorite);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
+
+// const readFavorites = async (req, res, next) => {
+//   try {
+//     const favorite = await tables.favorites.readByAuthId(req.params.id);
+
+//     res.status(200).json(favorite);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
 
 const add = async (req, res, next) => {
   const favorites = req.body;
@@ -37,6 +39,7 @@ const add = async (req, res, next) => {
     next(err);
   }
 };
+
 const update = async (req, res, next) => {
   const favorites = req.body;
 
@@ -62,8 +65,8 @@ const destroy = async (req, res, next) => {
 };
 module.exports = {
   browse,
-  read,
-  readFavorites,
+  // read,
+  // readFavorites,
   add,
   update,
   destroy,

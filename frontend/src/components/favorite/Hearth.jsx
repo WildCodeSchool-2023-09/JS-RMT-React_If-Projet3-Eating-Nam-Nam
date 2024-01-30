@@ -24,20 +24,22 @@ function Hearth({ recipId, isFav }) {
   };
   return (
     <div className="container-fav">
-      <button
-        type="button"
-        aria-label="add favorites"
-        className="button_fav"
-        onClick={() =>
-          fav ? deleteFavorites(recipId) : postFavorites(recipId)
-        }
-        style={{
-          color: fav ? "red" : "#fae7c0",
-          fontWeight: fav ? "bold" : "normal",
-        }}
-      >
-        {fav ? <MdFavorite /> : <MdFavoriteBorder />}
-      </button>
+      <div>
+        <button
+          type="button"
+          aria-label="add favorites"
+          className="button_fav"
+          onClick={() =>
+            fav ? deleteFavorites(recipId) : postFavorites(recipId)
+          }
+          style={{
+            color: fav ? "red" : "#fae7c0",
+            fontWeight: fav ? "bold" : "normal",
+          }}
+        >
+          {fav ? <MdFavorite /> : <MdFavoriteBorder />}
+        </button>
+      </div>
     </div>
   );
 }
@@ -48,3 +50,8 @@ Hearth.propTypes = {
 };
 
 export default Hearth;
+
+// const { favoriesUser } = useContext(AuthContext);
+// setFavoriesUser(response.data.insertId);
+// , useContext
+// AuthContext: PropTypes.string.isRequired,
