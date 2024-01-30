@@ -50,8 +50,3 @@ Hearth.propTypes = {
 };
 
 export default Hearth;
-
-// const { favoriesUser } = useContext(AuthContext);
-// setFavoriesUser(response.data.insertId);
-// , useContext
-// AuthContext: PropTypes.string.isRequired,

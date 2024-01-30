@@ -12,8 +12,7 @@ function Favorite() {
       const favoritesUser = await connexion
         .get("/favorites", infosUser.auth_id)
         .then((res) => res.data);
-      // console.log(favoritesUser);
-      setFavories(favoritesUser); // ou (reponse.data);  true ou reponse.data qui est le tableau des recipes?
+      setFavories(favoritesUser);
     } catch (error) {
       console.error("Error fetch favorites", error);
     }
@@ -28,7 +27,7 @@ function Favorite() {
       <h2>My Favorites</h2>
       <div className="favori">
         {favories.map((favori) => (
-          <RecipeList key={favori.id} recip={favori} /> // user={recipeId} ou user={userId}
+          <RecipeList key={favori.id} recip={favori} />
         ))}
       </div>
     </div>
