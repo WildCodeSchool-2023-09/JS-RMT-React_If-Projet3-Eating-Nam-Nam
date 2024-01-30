@@ -21,6 +21,15 @@ class FavoriteManager extends AbstractManager {
     return rows[0];
   }
 
+  async readByAuthId(id) {
+    const [rows] = await client.query(
+      `select * from ${this.table} WHERE auth_id  = ? `,
+      [id]
+    );
+
+    return rows[0];
+  }
+
   async readAllById(id) {
     const [rows] = await client.query(
       `select recipe_id from ${this.table} WHERE auth_id  = ? `,
