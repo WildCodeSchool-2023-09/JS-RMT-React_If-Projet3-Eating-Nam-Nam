@@ -16,7 +16,7 @@ function RecipeSelect({ functionFilter, title, tab }) {
 RecipeSelect.propTypes = {
   functionFilter: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  tab: PropTypes.shape.isRequired,
+  tab: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default RecipeSelect;
