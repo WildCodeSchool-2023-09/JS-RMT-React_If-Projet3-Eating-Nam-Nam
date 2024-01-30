@@ -44,8 +44,12 @@ router.get(
 router.get("/favorites", checkCredentials, favoriteControllers.browse);
 router.get("/regime", checkCredentials, regimeControllers.browse);
 router.get("/recipes/:id", checkCredentials, recipeControllers.read);
+router.get(
+  "/favorites/:id",
+  checkCredentials,
+  favoriteControllers.readFavorites
+);
 router.get("/favorites/:id", checkCredentials, favoriteControllers.read);
-
 // Route to put a user
 router.put("/users/:id", checkCredentials, userControllers.update);
 router.put("/ingredients/:id", checkCredentials, ingredientControllers.update);

@@ -18,6 +18,16 @@ const read = async (req, res, next) => {
     next(err);
   }
 };
+const readFavorites = async (req, res, next) => {
+  try {
+    const favorite = await tables.favorites.readByAuthId(req.params.id);
+
+    res.status(200).json(favorite);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const add = async (req, res, next) => {
   const favorites = req.body;
   try {
@@ -53,6 +63,7 @@ const destroy = async (req, res, next) => {
 module.exports = {
   browse,
   read,
+  readFavorites,
   add,
   update,
   destroy,

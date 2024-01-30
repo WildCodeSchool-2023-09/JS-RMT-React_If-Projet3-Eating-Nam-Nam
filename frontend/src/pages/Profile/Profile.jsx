@@ -5,7 +5,6 @@ import "./Profile.css";
 
 function Profile() {
   const { infosUser } = useContext(AuthContext);
-
   const formattedBirthday = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "2-digit",
