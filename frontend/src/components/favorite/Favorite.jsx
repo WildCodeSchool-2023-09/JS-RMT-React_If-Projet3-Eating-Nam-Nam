@@ -1,16 +1,14 @@
-import { React, useEffect, useState, useContext } from "react";
-import { AuthContext } from "../../contexts/Auth";
+import { React, useEffect, useState } from "react";
 import connexion from "../../services/connexion";
 import RecipeList from "../recipes/RecipeList";
 
 function Favorite() {
   const [favories, setFavories] = useState([]);
-  const { infosUser } = useContext(AuthContext);
 
   const getFavorites = async () => {
     try {
       const favoritesUser = await connexion
-        .get("/favorites", infosUser.auth_id)
+        .get("/favorites")
         .then((res) => res.data);
       setFavories(favoritesUser);
     } catch (error) {
@@ -20,7 +18,7 @@ function Favorite() {
 
   useEffect(() => {
     getFavorites();
-  }, [infosUser.auth_id]);
+  }, []);
 
   return (
     <div className="contain-favorite">
