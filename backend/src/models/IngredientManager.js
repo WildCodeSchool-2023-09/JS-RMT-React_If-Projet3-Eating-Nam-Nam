@@ -50,6 +50,37 @@ class IngredientManager extends AbstractManager {
     return rows;
   }
 
+  async readNumberOfIngredients() {
+    // Execute the SQL SELECT query to retrieve all users from the "user" table
+    const [rows] = await client.query(
+      `select COUNT(*) AS value from ${this.table}`
+    );
+
+    //     // Return the array of users
+    return rows;
+  }
+
+  async update(id, ingredient) {
+    // Execute the SQL SELECT query to retrieve a specific user by its ID
+    const [result] = await client.query(
+      `UPDATE ${this.table} set ? WHERE id = ?`,
+      [ingredient, id]
+    );
+
+    // Return the first row of the result, which represents the item
+    return result;
+  }
+
+  async delete(id) {
+    const result = await client.query(
+      `DELETE FROM ${this.table} WHERE id = ?`,
+      [id]
+    );
+
+    // Return the first row of the result, which represents the user
+    return result;
+  }
+
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing item
 

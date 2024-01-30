@@ -1,21 +1,20 @@
 [
-  { "name": "Flexitarien", "description": " Mange de tout" },
-  { "name": "Végétarien", "description": " Ne mange ni poisson" },
+  { "name": "Flexitarian", "description": "Eat from everything" },
+  { "name": "Vegetarian", "description": " Eat no fish" },
   {
-    "name": "Cétogène",
-    "description": " Privilégie uniquement les aliments à haute teneur en gras saturé"
-  },
-  { "name": "Végétalien", "description": " Ne mange ni viande" },
-  {
-    "name": "Végan",
-    "description": " Ne consomme aucun aliment ou produit en lien avec un animal"
+    "name": "Ketogenic",
+    "description": "Only prefers foods high in saturated fat"
   },
   {
-    "name": "Sans gluten",
-    "description": " Ne peut pas consommer de gluten pour des raisons de santé"
+    "name": "Vegan",
+    "description": "Does not consume any food or product related to an animal"
   },
   {
-    "name": "Sans lactose",
-    "description": " Ne peut pas consommer de produits laitiers"
+    "name": "Gluten free",
+    "description": "Cannot consume gluten for health reasons"
+  },
+  {
+    "name": "Lactose free",
+    "description": "Cannot consume dairy products"
   }
 ]

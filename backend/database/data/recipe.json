@@ -14,12 +14,12 @@
     ],
     "preparationTime": 15,
     "cookingTime": 30,
-    "diet": "Vegetarian, Flexitarian ",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": false
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Chocolate_Fondant.jpg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Praline_with_Cherry.jpg/300px-Praline_with_Cherry.jpg",
     "section": "dessert",
     "title": "Chocolate Rochers",
     "ingredient": [
@@ -31,12 +31,12 @@
     ],
     "preparationTime": 20,
     "cookingTime": 60,
-    "diet": "Vétarisme ",
+    "diet": "Ketogenic ",
     "difficulty": "medium",
     "allergen": true
   },
   {
-    "picture": "https://en.wikipedia.org/wiki/File:Scrambed_eggs.jpg",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Beef_fillet_steak_with_mushrooms.jpg/541px-Beef_fillet_steak_with_mushrooms.jpg",
     "section": "stater, dish",
     "title": "Mushrooms with scrambled eggs",
     "ingredient": [
@@ -51,12 +51,12 @@
     ],
     "preparationTime": 18,
     "cookingTime": 12,
-    "diet": "Flexitarian, Lactose Free",
+    "diet": "Vegan",
     "difficulty": "difficulty",
     "allergen": true
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Caesar_salad_with_chicken_-_Cambridge,_MA.jpg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Caprese-1.jpg/240px-Caprese-1.jpg",
     "section": "starter, dish",
     "title": "Corn salad",
     "ingredient": [
@@ -71,7 +71,7 @@
     ],
     "preparationTime": 15,
     "cookingTime": 0,
-    "diet": "Veterinarianism, lactose-free,",
+    "diet": "Gluten free",
     "difficulty": "easy",
     "allergen": false
   },
@@ -91,12 +91,12 @@
     ],
     "preparationTime": 15,
     "cookingTime": 20,
-    "diet": "Veterinarianism, Vegetarianism, lactose-free",
+    "diet": "Lactose free",
     "difficulty": "medium",
     "allergen": true
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Eton_Mess.jpeg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Still_life_with_strawberries_in_a_crystal_bowl.jpg/440px-Still_life_with_strawberries_in_a_crystal_bowl.jpg",
     "section": "dessert",
     "title": "Strawberry yogurt",
     "ingredient": [
@@ -108,7 +108,7 @@
     ],
     "preparationTime": 10,
     "cookingTime": 0,
-    "diet": "Veterinarianism, lactose-free",
+    "diet": "Lactose free",
     "difficulty": "easy",
     "allergen": true
   },
@@ -127,7 +127,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 20,
-    "diet": "Veterinarianism, lactose-free,",
+    "diet": "Vegan",
     "difficulty": "easy",
     "allergen": true
   },
@@ -145,7 +145,7 @@
     ],
     "preparationTime": 45,
     "cookingTime": 0,
-    "diet": "Veterinarianism",
+    "diet": "Ketogenic",
     "difficulty": "easy",
     "allergen": true
   },
@@ -162,7 +162,7 @@
     ],
     "preparationTime": 20,
     "cookingTime": 0,
-    "diet": "Veterinarianism",
+    "diet": "Vegetarian",
     "difficulty": "easy",
     "allergen": false
   },
@@ -183,7 +183,7 @@
     ],
     "preparationTime": "10",
     "cookingTime": "25",
-    "diet": "Veterinarianism, lactose-free,",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": false
   },
@@ -209,7 +209,7 @@
     ],
     "preparationTime": 25,
     "cookingTime": "25",
-    "diet": "Veterinarianism",
+    "diet": "Vegetarian",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -231,13 +231,13 @@
     ],
     "preparationTime": 20,
     "cookingTime": 20,
-    "diet": "jfebkv",
+    "diet": "Gluten free",
     "difficulty": "Medium",
     "allergen": true
   },
   {
     "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/%E4%BA%94%E7%9B%AE%E9%A3%AF.jpg",
-    "section": " ",
+    "section": " Dish ",
     "title": "Japanese rice (Gohan)",
     "ingredient": [
       "3kg sesame seeds",
@@ -248,12 +248,12 @@
     ],
     "preparationTime": 30,
     "cookingTime": 10,
-    "diet": "Veterinarianism, Vegetarianism, lactose-free,",
+    "diet": "Vegan",
     "difficulty": "Easy",
     "allergen": false
   },
   {
-    "picture": "https://commons.wikimedia.org/wiki/File:Focaccia-erbe-olive.jpg?uselang=fr",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Focaccia_Barese.jpg/440px-Focaccia_Barese.jpg",
     "section": "Starter, Dish",
     "title": "Focaccia with olives and arugula",
     "ingredient": [
@@ -270,7 +270,7 @@
     ],
     "preparationTime": 55,
     "cookingTime": 15,
-    "diet": "fffff",
+    "diet": "Flexitarian",
     "difficulty": "Easy",
     "allergen": true
   },
@@ -294,7 +294,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 20,
-    "diet": "dddd",
+    "diet": "Ketogenic",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -316,7 +316,7 @@
     ],
     "preparationTime": 20,
     "cookingTime": 60,
-    "diet": "lactose-free",
+    "diet": "Lactose free",
     "difficulty": "Easy",
     "allergen": false
   },
@@ -334,7 +334,7 @@
     ],
     "preparationTime": 15,
     "cookingTime": 0,
-    "diet": "Veterinarianism,Veterinarianism, lactose-free,",
+    "diet": "Vegetarian",
     "difficulty": "Easy",
     "allergen": false
   },
@@ -353,7 +353,7 @@
     ],
     "preparationTime": 10,
     "cookingTime": 25,
-    "diet": "aaa",
+    "diet": "Ketogenic",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -372,7 +372,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 0,
-    "diet": "ddd",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": true
   },
@@ -393,7 +393,7 @@
     ],
     "preparationTime": 35,
     "cookingTime": 0,
-    "diet": "Veterinarianism,Veterinarianism",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": true
   }

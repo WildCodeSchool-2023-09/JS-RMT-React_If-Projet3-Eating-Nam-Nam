@@ -103,12 +103,12 @@ const seed = async () => {
              VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
           [
             picture,
-            section[Math.floor(Math.random()) * 3],
+            section[Math.floor(Math.random() * 3)],
             title,
             preparationTime,
             cookingTime,
             diet,
-            difficulty[Math.floor(Math.random()) * 3],
+            difficulty[Math.floor(Math.random() * 3)],
             allergen,
           ]
         )
@@ -116,6 +116,29 @@ const seed = async () => {
     }
 
     await Promise.all(queriesRecipes);
+
+    const queriesFavorites = [];
+    for (let i = 0; i < 5; i += 1) {
+      const arr = [1, 3, 5, 6, 7];
+      queriesFavorites.push(
+        database.query(
+          `INSERT INTO favorites(recipe_id, auth_id)
+           VALUES (?, ?)`,
+          [arr[i], 1]
+        )
+      );
+    }
+    for (let i = 0; i < 5; i += 1) {
+      const arr = [2, 8, 12, 15, 16];
+      queriesFavorites.push(
+        database.query(
+          `INSERT INTO favorites(recipe_id, auth_id)
+           VALUES (?, ?)`,
+          [arr[i], 2]
+        )
+      );
+    }
+    await Promise.all(queriesFavorites);
 
     const queriesIngrByRecip = [];
 
