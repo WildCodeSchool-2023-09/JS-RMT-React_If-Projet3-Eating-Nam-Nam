@@ -17,6 +17,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
   background-color: white;
   width: 25rem;
   height: 25rem;

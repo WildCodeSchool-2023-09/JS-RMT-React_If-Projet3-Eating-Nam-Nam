@@ -55,6 +55,18 @@ li {
   text-decoration: none;
 }
 
+input,
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #e88628;
+  max-width: 300px;
+}
+
+input {
+  height: 17px;
+}
+
 /* CSS - Frame List */
 
 .frame-image {
