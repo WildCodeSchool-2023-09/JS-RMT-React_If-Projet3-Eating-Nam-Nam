@@ -45,8 +45,8 @@ function Hearth({ recipId, isFav }) {
 }
 
 Hearth.propTypes = {
-  recipId: PropTypes.string.isRequired,
-  isFav: PropTypes.string.isRequired,
+  recipId: PropTypes.shape.isRequired,
+  isFav: PropTypes.shape.isRequired,
 };
 
 export default Hearth;
