@@ -1,22 +1,22 @@
 import { React, useEffect, useState } from "react";
-
 import connexion from "../../services/connexion";
-
-import RecipeCard from "../recipes/RecipeCard";
+import RecipeList from "../recipes/RecipeList";
 
 function Favorite() {
   const [favories, setFavories] = useState([]);
-  const getFavorises = async () => {
+  const getFavorites = async () => {
     try {
-      const myFavories = await connexion.get(`/api/favorites/`);
-      setFavories(myFavories);
+      const favoritesUser = await connexion
+        .get("/favorites")
+        .then((res) => res.data);
+      setFavories(favoritesUser);
     } catch (error) {
-      console.error(error);
+      console.error("Error fetch favorites", error);
     }
   };
 
   useEffect(() => {
-    getFavorises();
+    getFavorites();
   }, []);
 
   return (
@@ -24,7 +24,7 @@ function Favorite() {
       <h2>My Favorites</h2>
       <div className="favori">
         {favories.map((favori) => (
-          <RecipeCard key={favori.id} favori={favori} />
+          <RecipeList key={favori.id} recip={favori} />
         ))}
       </div>
     </div>

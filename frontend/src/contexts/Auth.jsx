@@ -7,6 +7,7 @@ function AuthProvider({ children }) {
   const [connected, setConnected] = useState({ role: null });
   const [idNewUser, setIdNewUser] = useState({ id: 0 });
   const [infosUser, setInfosUser] = useState({ username: "" });
+  const [favoriesUser, setFavoriesUser] = useState({ id: 0 });
   const contextValue = useMemo(
     () => ({
       connected,
@@ -15,8 +16,19 @@ function AuthProvider({ children }) {
       setInfosUser,
       idNewUser,
       setIdNewUser,
+      favoriesUser,
+      setFavoriesUser,
     }),
-    [connected, setConnected, infosUser, setInfosUser, idNewUser, setIdNewUser]
+    [
+      connected,
+      setConnected,
+      infosUser,
+      setInfosUser,
+      idNewUser,
+      setIdNewUser,
+      favoriesUser,
+      setFavoriesUser,
+    ]
   );
 
   return (
