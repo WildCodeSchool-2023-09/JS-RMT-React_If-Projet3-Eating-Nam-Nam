@@ -30,7 +30,7 @@ create table user (
 create table ingredient (
   id int primary key auto_increment not null,
   name VARCHAR(255) not null,
-  quantity VARCHAR(255) not null,
+  unity VARCHAR(255) not null,
   image VARCHAR(255) not null,
   calorie VARCHAR(255) not null,
   carbonhydrate VARCHAR(255) not null,

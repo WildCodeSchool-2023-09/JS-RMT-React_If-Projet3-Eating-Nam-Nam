@@ -69,7 +69,7 @@ const seed = async () => {
       } = ingredients[i];
       queriesIngredients.push(
         database.query(
-          `INSERT INTO ingredient(name, quantity, image, calorie, carbonhydrate, protein, lipid, fiber, is_validated, category)
+          `INSERT INTO ingredient(name, unity, image, calorie, carbonhydrate, protein, lipid, fiber, is_validated, category)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           [
             name,
@@ -143,7 +143,7 @@ const seed = async () => {
     const queriesIngrByRecip = [];
 
     for (let i = 0; i < recipe.length; i += 1) {
-      const nbOfIngr = Math.ceil(Math.random() * 7) + 3;
+      const nbOfIngr = 6;
       for (let j = 0; j < nbOfIngr; j += 1) {
         queriesIngrByRecip.push(
           database.query(

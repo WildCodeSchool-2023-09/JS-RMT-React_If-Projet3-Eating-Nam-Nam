@@ -51,11 +51,7 @@ const router = createBrowserRouter([
           const recipes = await connexion
             .get(`/recipes/${params.id}`)
             .then((response) => response.data);
-          const ingredients = await connexion
-            .get(`/ingredients`)
-            .then((response) => response.data)
-            .catch((err) => console.error(err));
-          return { recipes, ingredients };
+          return { recipes };
         },
       },
       {
