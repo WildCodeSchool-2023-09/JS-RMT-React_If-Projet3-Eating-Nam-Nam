@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
   .nav-menu-mobile {
-    visibility: hidden;
+    display: none;
   }
 }
 
