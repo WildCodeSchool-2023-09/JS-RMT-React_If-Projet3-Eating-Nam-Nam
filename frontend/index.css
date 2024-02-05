@@ -107,3 +107,8 @@ input {
   height: 30px;
   padding-top: 5px;
 }
+
+.card-link {
+  color: #2e2e2e;
+  text-decoration: none;
+}
