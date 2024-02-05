@@ -105,13 +105,13 @@
 }
 
 .ingr-image {
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
 }
 
 .ingr-title {
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .ingr-display {

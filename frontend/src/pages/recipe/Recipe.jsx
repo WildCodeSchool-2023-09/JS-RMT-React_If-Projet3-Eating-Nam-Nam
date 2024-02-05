@@ -10,20 +10,7 @@ import IngrDisplay from "../../components/ingredientDisplay/IngrDisplay";
 import "./Recipe.css";
 
 function Recipe() {
-  const { recipes, ingredients } = useLoaderData();
-
-  function shuffleAndSlice(array, size) {
-    const shuffledArray = array.slice();
-    for (let i = shuffledArray.length - 1; i > 0; i -= 1) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = shuffledArray[i];
-      shuffledArray[i] = shuffledArray[j];
-      shuffledArray[j] = temp;
-    }
-    return shuffledArray.slice(0, size);
-  }
-
-  const shuffledIngredients = shuffleAndSlice(ingredients, 6);
+  const { recipes } = useLoaderData();
 
   return (
     <div className="recipe-page">
@@ -65,7 +52,7 @@ function Recipe() {
         <div className="recipe-frame-ingredients">
           <h2 className="recipe-h2">Ingredients</h2>
           <div className="ingr-display">
-            {shuffledIngredients.map((ingredient) => (
+            {recipes.ingredients.map((ingredient) => (
               <IngrDisplay key={ingredient.id} ingredient={ingredient} />
             ))}
           </div>
