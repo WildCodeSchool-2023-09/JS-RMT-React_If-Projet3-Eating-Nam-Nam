@@ -104,40 +104,39 @@ function FormRecipes() {
           <h3>Add a recipe</h3>
         </div>
         <div className="form-display">
+          <label>
+            Name :
+            <input
+              type="text"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Picture :
+            <input
+              type="text"
+              name="picture"
+              value={formData.picture}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Cooking Time :
+            <input
+              type="text"
+              name="cooktime"
+              required
+              value={formData.cooktime}
+              onChange={handleChange}
+            />
+          </label>
+
           <div>
             <label>
-              <p className="label-text">Name : </p>
-              <input
-                type="text"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              <p className="label-text">Picture : </p>
-              <input
-                type="text"
-                name="picture"
-                value={formData.picture}
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              <p className="label-text">Cooking Time : </p>
-              <input
-                type="text"
-                name="cooktime"
-                required
-                value={formData.cooktime}
-                onChange={handleChange}
-              />
-            </label>
-          </div>
-          <div>
-            <label>
-              <p>Regime :</p>
+              Regime :
               <select
                 name="regime_id"
                 value={formData.regime_id}
@@ -154,7 +153,7 @@ function FormRecipes() {
               </select>
             </label>
             <label>
-              <p className="label-text">Difficulty : </p>
+              Difficulty :
               <select name="difficulty" onChange={handleChange}>
                 <option value="">Choose the difficulty</option>
                 <option value="Easy">Easy</option>
@@ -164,7 +163,7 @@ function FormRecipes() {
             </label>
 
             <label>
-              <p className="label-text">Categorie : </p>
+              Categorie :
               <select name="categorie" onChange={handleChange}>
                 <option value="">Choose the categorie</option>
                 <option value="Starter">Starter</option>

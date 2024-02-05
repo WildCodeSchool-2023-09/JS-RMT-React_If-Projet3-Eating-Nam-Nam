@@ -10,7 +10,7 @@ function Recipes() {
       <div>Recipes</div>;
       <div>
         <Link to="/addrecipes" className="p-link">
-          <p className="p-login">+ Add a recipe</p>
+          <p className="p-login-add">+ Add a recipe</p>
         </Link>
         <RecipesCard recipes={recipes} />
       </div>

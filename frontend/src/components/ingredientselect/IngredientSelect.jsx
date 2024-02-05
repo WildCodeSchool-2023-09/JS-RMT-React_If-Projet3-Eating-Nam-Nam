@@ -23,7 +23,7 @@ function IngredientSelect({ handleSelect, index }) {
   return (
     <div>
       <label className="list-regime">
-        <p>Ingredients :</p>
+        Ingredients :
         <select
           name="ingredients"
           value={null}
@@ -52,7 +52,7 @@ function IngredientSelect({ handleSelect, index }) {
   );
 }
 IngredientSelect.propTypes = {
-  handleSelect: PropTypes.string.isRequired,
-  index: PropTypes.string.isRequired,
+  handleSelect: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
 };
 export default IngredientSelect;

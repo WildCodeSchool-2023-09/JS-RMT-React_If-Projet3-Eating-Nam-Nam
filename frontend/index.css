@@ -51,6 +51,12 @@ li {
   font-weight: bold;
 }
 
+.p-login-add {
+  margin: 150px 0 50px 0;
+  color: #e88628;
+  font-weight: bold;
+}
+
 .p-link {
   text-decoration: none;
 }
