@@ -10,6 +10,16 @@ const browse = async (req, res, next) => {
   }
 };
 
+const totalNumber = async (req, res, next) => {
+  try {
+    const numberOfIngredients =
+      await tables.ingredient.readNumberOfIngredients();
+    res.status(200).json(numberOfIngredients[0]);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const update = async (req, res, next) => {
   const ingredient = req.body;
 
@@ -90,6 +100,7 @@ const add = async (req, res, next) => {
 // Ready to export the controller functions
 module.exports = {
   browse,
+  totalNumber,
   //   read,
   update,
   add,
