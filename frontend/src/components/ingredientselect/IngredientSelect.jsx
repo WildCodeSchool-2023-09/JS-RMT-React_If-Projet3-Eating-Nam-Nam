@@ -39,7 +39,7 @@ function IngredientSelect({ handleSelect, index }) {
         </select>
       </label>
       <label>
-        <p className="label-text">Quantity : </p>
+        Quantity :
         <input
           type="text"
           name="ingredients"
