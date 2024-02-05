@@ -13,6 +13,7 @@ import Recipes from "./pages/Recipes";
 import Recipe from "./pages/recipe/Recipe";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
+import FormRecipes from "./components/formrecipes/FormRecipes";
 import About from "./pages/About/About";
 import Profile from "./pages/Profile/Profile";
 import SignUp from "./pages/signUp/SignUp";
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       {
         path: "/addingredients",
         element: <AddIngredients />,
+      },
+      {
+        path: "/addrecipes",
+        element: <FormRecipes />,
       },
       {
         path: "/about",
