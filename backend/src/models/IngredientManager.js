@@ -50,6 +50,16 @@ class IngredientManager extends AbstractManager {
     return rows;
   }
 
+  async readNumberOfIngredients() {
+    // Execute the SQL SELECT query to retrieve all users from the "user" table
+    const [rows] = await client.query(
+      `select COUNT(*) AS value from ${this.table}`
+    );
+
+    //     // Return the array of users
+    return rows;
+  }
+
   async update(id, ingredient) {
     // Execute the SQL SELECT query to retrieve a specific user by its ID
     const [result] = await client.query(

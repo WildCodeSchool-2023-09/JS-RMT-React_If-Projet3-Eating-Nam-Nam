@@ -14,7 +14,7 @@
     ],
     "preparationTime": 15,
     "cookingTime": 30,
-    "diet": "Vegetarian, Flexitarian ",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": false
   },
@@ -31,7 +31,7 @@
     ],
     "preparationTime": 20,
     "cookingTime": 60,
-    "diet": "Vétarisme ",
+    "diet": "Ketogenic ",
     "difficulty": "medium",
     "allergen": true
   },
@@ -51,7 +51,7 @@
     ],
     "preparationTime": 18,
     "cookingTime": 12,
-    "diet": "Flexitarian, Lactose Free",
+    "diet": "Vegan",
     "difficulty": "difficulty",
     "allergen": true
   },
@@ -71,7 +71,7 @@
     ],
     "preparationTime": 15,
     "cookingTime": 0,
-    "diet": "Veterinarianism, lactose-free,",
+    "diet": "Gluten free",
     "difficulty": "easy",
     "allergen": false
   },
@@ -91,7 +91,7 @@
     ],
     "preparationTime": 15,
     "cookingTime": 20,
-    "diet": "Veterinarianism, Vegetarianism, lactose-free",
+    "diet": "Lactose free",
     "difficulty": "medium",
     "allergen": true
   },
@@ -108,7 +108,7 @@
     ],
     "preparationTime": 10,
     "cookingTime": 0,
-    "diet": "Veterinarianism, lactose-free",
+    "diet": "Lactose free",
     "difficulty": "easy",
     "allergen": true
   },
@@ -127,7 +127,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 20,
-    "diet": "Veterinarianism, lactose-free,",
+    "diet": "Vegan",
     "difficulty": "easy",
     "allergen": true
   },
@@ -145,7 +145,7 @@
     ],
     "preparationTime": 45,
     "cookingTime": 0,
-    "diet": "Veterinarianism",
+    "diet": "Ketogenic",
     "difficulty": "easy",
     "allergen": true
   },
@@ -162,7 +162,7 @@
     ],
     "preparationTime": 20,
     "cookingTime": 0,
-    "diet": "Veterinarianism",
+    "diet": "Vegetarian",
     "difficulty": "easy",
     "allergen": false
   },
@@ -183,7 +183,7 @@
     ],
     "preparationTime": "10",
     "cookingTime": "25",
-    "diet": "Veterinarianism, lactose-free,",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": false
   },
@@ -209,7 +209,7 @@
     ],
     "preparationTime": 25,
     "cookingTime": "25",
-    "diet": "Veterinarianism",
+    "diet": "Vegetarian",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -231,7 +231,7 @@
     ],
     "preparationTime": 20,
     "cookingTime": 20,
-    "diet": "jfebkv",
+    "diet": "Gluten free",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -248,7 +248,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 10,
-    "diet": "Veterinarianism, Vegetarianism, lactose-free,",
+    "diet": "Vegan",
     "difficulty": "Easy",
     "allergen": false
   },
@@ -270,7 +270,7 @@
     ],
     "preparationTime": 55,
     "cookingTime": 15,
-    "diet": "fffff",
+    "diet": "Flexitarian",
     "difficulty": "Easy",
     "allergen": true
   },
@@ -294,7 +294,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 20,
-    "diet": "dddd",
+    "diet": "Ketogenic",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -316,7 +316,7 @@
     ],
     "preparationTime": 20,
     "cookingTime": 60,
-    "diet": "lactose-free",
+    "diet": "Lactose free",
     "difficulty": "Easy",
     "allergen": false
   },
@@ -334,7 +334,7 @@
     ],
     "preparationTime": 15,
     "cookingTime": 0,
-    "diet": "Veterinarianism,Veterinarianism, lactose-free,",
+    "diet": "Vegetarian",
     "difficulty": "Easy",
     "allergen": false
   },
@@ -353,7 +353,7 @@
     ],
     "preparationTime": 10,
     "cookingTime": 25,
-    "diet": "aaa",
+    "diet": "Ketogenic",
     "difficulty": "Medium",
     "allergen": true
   },
@@ -372,7 +372,7 @@
     ],
     "preparationTime": 30,
     "cookingTime": 0,
-    "diet": "ddd",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": true
   },
@@ -393,7 +393,7 @@
     ],
     "preparationTime": 35,
     "cookingTime": 0,
-    "diet": "Veterinarianism,Veterinarianism",
+    "diet": "Flexitarian",
     "difficulty": "easy",
     "allergen": true
   }

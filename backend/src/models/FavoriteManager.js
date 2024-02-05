@@ -21,6 +21,15 @@ class FavoriteManager extends AbstractManager {
     return rows[0];
   }
 
+  async readAllByUser(id) {
+    const [rows] = await client.query(
+      `select * from ${this.table} INNER JOIN recipe as r ON r.id =  ${this.table}.recipe_id  WHERE auth_id  = ? `,
+      [id]
+    );
+
+    return rows;
+  }
+
   async readAllById(id) {
     const [rows] = await client.query(
       `select recipe_id from ${this.table} WHERE auth_id  = ? `,
@@ -37,6 +46,21 @@ class FavoriteManager extends AbstractManager {
     );
     return result.insertId;
   }
-}
 
+  async update(id, recipes) {
+    const [result] = await client.query(
+      `UPDATE ${this.table} set ? WHERE id = ?`,
+      [recipes, id]
+    );
+    return result;
+  }
+
+  async delete(id) {
+    const result = await client.query(
+      `DELETE FROM ${this.table} WHERE recipe_id = ?`,
+      [id]
+    );
+    return result;
+  }
+}
 module.exports = FavoriteManager;
