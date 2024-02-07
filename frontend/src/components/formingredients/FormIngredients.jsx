@@ -56,24 +56,26 @@ function FormIngredients() {
         rules, it will be refused and you may encountered app restrictions or
         profile banishement.
       </p>
-      <form className="form-ingredients" onSubmit={handleSubmit}>
+      <form className="form-recipes" onSubmit={handleSubmit}>
         <div className="form-title">
           <h3>Add an ingredient</h3>
           <p>(Quantities given for 100g)</p>
         </div>
-        {Object.entries(formData).map(([key, value]) => (
-          <label>
-            {key.charAt(0).toUpperCase() + key.slice(1)}:
-            <input
-              type="text"
-              id={key}
-              name={key}
-              value={value}
-              onChange={handleInputChange}
-            />
-          </label>
-        ))}
-
+        <div className="form-display">
+          {Object.entries(formData).map(([key, value]) => (
+            <label>
+              {key.charAt(0).toUpperCase() + key.slice(1)}:
+              <input
+                type="text"
+                id={key}
+                name={key}
+                value={value}
+                onChange={handleInputChange}
+                className="input-form"
+              />
+            </label>
+          ))}
+        </div>
         <div className="form-submit">
           <button className="button-form" type="submit">
             ADD INGREDIENT

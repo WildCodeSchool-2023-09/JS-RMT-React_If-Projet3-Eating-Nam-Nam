@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
-
+import Favorite from "../../components/favorite/Favorite";
 import "./Profile.css";
 
 function Profile() {
   const { infosUser } = useContext(AuthContext);
-
   const formattedBirthday = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "2-digit",
@@ -48,7 +47,7 @@ function Profile() {
         <div className="profile-frame-favorites">
           <div className="profile-title">
             <h2 className="profile-h2">Favorites</h2>
-            <p>Place favorites here</p>
+            <Favorite />
           </div>
         </div>
       </div>

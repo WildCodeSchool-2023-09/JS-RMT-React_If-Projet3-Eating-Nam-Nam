@@ -13,6 +13,7 @@ import Recipes from "./pages/Recipes";
 import Recipe from "./pages/recipe/Recipe";
 import Ingredients from "./pages/Ingredients";
 import AddIngredients from "./pages/AddIngredients";
+import FormRecipes from "./components/formrecipes/FormRecipes";
 import About from "./pages/About/About";
 import Profile from "./pages/Profile/Profile";
 import SignUp from "./pages/signUp/SignUp";
@@ -47,17 +48,10 @@ const router = createBrowserRouter([
         element: <Recipe />,
         errorElement: <Page404 />,
         loader: async ({ params }) => {
-          try {
-            const response = await connexion.get(`/recipes/${params.id}`);
-            return response.data;
-          } catch (error) {
-            if (error.response && error.response.status === 404) {
-              throw new Response("Not Found", { status: 404 });
-            } else {
-              console.error(error);
-              throw new Error("Failed to fetch data");
-            }
-          }
+          const recipes = await connexion
+            .get(`/recipes/${params.id}`)
+            .then((response) => response.data);
+          return { recipes };
         },
       },
       {
@@ -77,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/addingredients",
         element: <AddIngredients />,
+      },
+      {
+        path: "/addrecipes",
+        element: <FormRecipes />,
       },
       {
         path: "/about",

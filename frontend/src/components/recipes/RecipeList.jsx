@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Time from "../../assets/svg/Time.svg";
 import Fork from "../../assets/svg/Fork.svg";
@@ -11,10 +12,12 @@ import "./Recipes.css";
 function RecipeList({ recip }) {
   return (
     <article className="recipe">
-      <img className="frame-image" src={recip.picture} alt={recip.title} />
-      <div className="frame-title">
-        <h5>{recip.title}</h5>
-      </div>
+      <Link to={`/recipes/${recip.id}`} className="card-link">
+        <img className="frame-image" src={recip.picture} alt={recip.title} />
+        <div className="frame-title">
+          <h5>{recip.title}</h5>
+        </div>
+      </Link>
       <div className="recipe-desc">
         <img src={Fork} alt="Fork" />
         <img src={Time} alt="Time" />
